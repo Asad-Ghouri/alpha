@@ -4,6 +4,8 @@ import Navbar from "./Nav";
 
 import { ConnectWallet } from "@thirdweb-dev/react";
 
+import Link from "next/link";
+
 import { SocialIcon } from "react-social-icons";
 
 export const Header = () => {
@@ -15,7 +17,7 @@ export const Header = () => {
       </div>
       <div className="main-header">
         <div>
-          <div className="elementor-container elementor-column-gap-default">
+          <div className="elementor-container elementor-column-gap-default head">
             <div
               className="elementor-column elementor-col-25 elementor-element elementor-element-5bdcc19"
               data-element_type="column"
@@ -57,19 +59,19 @@ export const Header = () => {
                     <nav className="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-grow">
                       <ul className="elementor-nav-menu">
                         <li>
-                          <a
-                            href="#home"
+                          <Link
+                            href="/"
                             className="elementor-item elementor-item-active"
                           >
                             HOME
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#team" className="elementor-item">
-                            TEAM
-                          </a>
+                          <Link href="/mint" className="elementor-item">
+                            Mint
+                          </Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="#paper" className="elementor-item">
                             WHITEPAPER
                           </a>
@@ -78,14 +80,11 @@ export const Header = () => {
                           <a href="#nft" className="elementor-item">
                             NFTs
                           </a>
-                        </li>
+                        </li> */}
                         <li>
-                          <a
-                            href="https://shopinose.com/swap/"
-                            className="elementor-item"
-                          >
+                          <Link href="/swap" className="elementor-item">
                             Swap
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </nav>
@@ -115,10 +114,10 @@ export const Header = () => {
                             href="https://shopinose.com/#team"
                             className="elementor-item"
                           >
-                            TEAM
+                            Mint
                           </a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a
                             href="https://shopinose.com/#paper"
                             className="elementor-item"
@@ -133,7 +132,7 @@ export const Header = () => {
                           >
                             NFTs
                           </a>
-                        </li>
+                        </li> */}
                         <li>
                           <a
                             href="https://shopinose.com/swap/"
@@ -202,7 +201,7 @@ export const Header = () => {
               </div>
             </div>
             <div
-              className="elementor-column elementor-col-25 elementor-element elementor-element-911ef74"
+              className="elementor-column elementor-col-25 elementor-element elementor-element-911ef74 con-btn"
               data-element_type="column"
             >
               <div className="elementor-widget-wrap elementor-element-populated">

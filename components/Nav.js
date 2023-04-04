@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-// import "./navbar.css";
 
-// import { GiHamburgerMenu } from "react-icons/gi";
-
-// import { a } from "react-router-dom";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -26,19 +23,19 @@ const Navbar = () => {
         >
           <ul>
             <li>
-              <a href="https://shopinose.com/">HOME</a>
+              <Link href="/" className="elementor-item elementor-item-active">
+                HOME
+              </Link>
             </li>
             <li>
-              <a href="https://shopinose.com/">TEAM</a>
+              <Link href="/mint" className="elementor-item">
+                Mint
+              </Link>
             </li>
             <li>
-              <a href="https://shopinose.com/">WHITPAPER</a>
-            </li>
-            <li>
-              <a href="https://shopinose.com/">NFTs</a>
-            </li>
-            <li>
-              <a href="https://shopinose.com/swap">Swap</a>
+              <Link href="/swap" className="elementor-item">
+                Swap
+              </Link>
             </li>
           </ul>
         </div>

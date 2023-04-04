@@ -8,13 +8,14 @@ import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 
 
+
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.BinanceSmartChainMainnet;
+const activeChainId = ChainId.Mumbai;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>
-      <Header />
+      {/* <Header /> */}
       <Component {...pageProps} />
       {/* <Footer /> */}
     </ThirdwebProvider>
