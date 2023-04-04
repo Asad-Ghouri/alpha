@@ -232,7 +232,7 @@ function Mint() {
                           setListingValue(e.target.value);
                         }}
                         className="listingInput"
-                        placeholder="Enter listing price"
+                        placeholder="Enter Referral ID"
                       />
                     </form>
                     {/* <button
@@ -266,7 +266,7 @@ function Mint() {
                         value: 0.5, // send 0.1 ether with the contract call
                       }}
                     >
-                      Stake
+                      Buy Now
                     </Web3Button>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ function Mint() {
                           setListingValue(e.target.value);
                         }}
                         className="listingInput"
-                        placeholder="Enter listing price"
+                        placeholder="Enter Referral ID"
                       />
                     </form>
                     {/* <button
@@ -342,7 +342,7 @@ function Mint() {
                         value: 0.5, // send 0.1 ether with the contract call
                       }}
                     >
-                      Stake
+                      Buy Now
                     </Web3Button>
                   </div>
                 </div>
@@ -384,7 +384,7 @@ function Mint() {
                           setListingValue(e.target.value);
                         }}
                         className="listingInput"
-                        placeholder="Enter listing price"
+                        placeholder="Enter Referral ID"
                       />
                     </form>
                     {/* <button
@@ -417,7 +417,7 @@ function Mint() {
                         value: 0.5, // send 0.1 ether with the contract call
                       }}
                     >
-                      Stake
+                      Buy Now
                     </Web3Button>
                   </div>
                 </div>
@@ -470,7 +470,7 @@ function Mint() {
                           setListingValue(e.target.value);
                         }}
                         className="listingInput"
-                        placeholder="Enter listing price"
+                        placeholder="Enter Referral ID"
                       />
                     </form>
                     {/* <button
@@ -503,7 +503,7 @@ function Mint() {
                         value: 0.5, // send 0.1 ether with the contract call
                       }}
                     >
-                      Stake
+                      Buy Now
                     </Web3Button>
                   </div>
                 </div>
@@ -545,7 +545,7 @@ function Mint() {
                           setListingValue(e.target.value);
                         }}
                         className="listingInput"
-                        placeholder="Enter listing price"
+                        placeholder="Enter Referral ID"
                       />
                     </form>
                     {/* <button
@@ -578,7 +578,7 @@ function Mint() {
                         value: 0.5, // send 0.1 ether with the contract call
                       }}
                     >
-                      Stake
+                      Buy Now
                     </Web3Button>
                   </div>
                 </div>
@@ -621,7 +621,7 @@ function Mint() {
                           setListingValue(e.target.value);
                         }}
                         className="listingInput"
-                        placeholder="Enter listing price"
+                        placeholder="Enter Referral ID"
                       />
                     </form>
                     {/* <button
@@ -654,7 +654,7 @@ function Mint() {
                         value: 0.5, // send 0.1 ether with the contract call
                       }}
                     >
-                      Stake
+                      Buy Now
                     </Web3Button>
                   </div>
                 </div>

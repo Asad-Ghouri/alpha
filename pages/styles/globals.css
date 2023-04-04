@@ -29,7 +29,7 @@ body {
 
 .mint{
   
-  background-color: #000000;
+  /* background-color: #000000; */
     background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
     background-size: cover;
     padding: 0;
@@ -43,6 +43,10 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.main-header{
+  background-color: #000;
+}
 @media (max-width: 850px) {
   .main-header {
     display: none !important;
@@ -50,10 +54,16 @@ body {
  
 }
 
+
 @media (min-width: 850px) {
   .menu-for-mobile {
     display: none !important;
   }
+}
+
+.menu-for-mobile{
+  background: black;
+  margin-bottom: 2rem;
 }
 /* .main-header {
   position: absolute;
@@ -70,8 +80,8 @@ body {
   height: 10rem;
   display: grid;
   grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
 
 .logo {
@@ -140,7 +150,9 @@ body {
 }
 .menu-link ul li:hover > a {
   transform-origin: left;
-  color: rgba(0, 0, 3, 1);
+  /* color: rgba(0, 0, 3, 1);
+   */
+   color: white;
   text-decoration: underline;
   transition: 0.5s;
 }
@@ -1023,7 +1035,7 @@ ul li{
   } 
 
   .elementor-element.elementor-element-34e382e .elementor-nav-menu--main .elementor-item  { 
-    color: black; 
+    color: white; 
     fill: #fff;
   } 
 
@@ -2807,5 +2819,8 @@ background-color: #000;
 @media (max-width:600px){
   .flexd{
     padding-top: 5rem;
+  }
+  #Homeiframe{
+    height: 8000px;
   }
 }
