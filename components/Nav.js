@@ -10,7 +10,7 @@ const Navbar = () => {
         {/* 1st logo part  */}
         <div className="logo">
           <img
-            src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/logo/62d170f22994a0bed7213b80-1658926016888.png"
+            src="https://shopinose.com/wp-content/uploads/2023/03/78b4ba1d-c647-4d6f-aab6-a2eff6d6957e-removebg-preview-e1680104061890-150x150.png"
             className=""
           />
         </div>

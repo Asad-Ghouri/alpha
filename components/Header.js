@@ -34,7 +34,7 @@ export const Header = () => {
                           '\n            /*! elementor - v3.11.5 - 14-03-2023 */\n            .elementor-widget-image{\n              text-align:center}\n            .elementor-widget-image a{\n              display:inline-block}\n            .elementor-widget-image a img[src$=".svg"]{\n              width:48px}\n            .elementor-widget-image img{\n              vertical-align:middle;\n              display:inline-block}\n          ',
                       }}
                     />
-                    <a href="https://shopinose.com">
+                    <a href="#">
                       <img
                         width={150}
                         height={150}
