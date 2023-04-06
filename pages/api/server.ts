@@ -1,7 +1,7 @@
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import type { NextApiRequest, NextApiResponse } from "next";
 import animalNames from "../../animalNames";
-import "../styles/globals.css";
+import "../../styles/globals.css";
 
 export default async function server(
   req: NextApiRequest,
