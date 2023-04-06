@@ -19,8 +19,8 @@ export const Footer = () => {
               >
                 <div className="elementor-widget-container">
                   <img
-                    width={364}
-                    height={376}
+                    width={100}
+                    height={100}
                     src="https://shopinose.com/wp-content/uploads/2023/03/78b4ba1d-c647-4d6f-aab6-a2eff6d6957e-removebg-preview-e1680104061890.png"
                   />
                 </div>

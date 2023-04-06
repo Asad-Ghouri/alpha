@@ -21,30 +21,158 @@ function Mint() {
   const [ListingValue, setListingValue] = useState("200");
   const [selectedOption, setSelectedOption] = useState("option1");
 
+  const [count, setcount] = useState();
+  const [count1, setcount1] = useState();
+  const [count2, setcount2] = useState();
+  const [count3, setcount3] = useState();
+  const [count4, setcount4] = useState();
+  const [count5, setcount5] = useState();
+
+  console.log("value of count is " + count);
+  console.log("value of count is1 " + count1);
+  console.log("value of count is2 " + count2);
+  console.log("value of count is3 " + count3);
+  console.log("value of count is4 " + count4);
+  console.log("value of count is5 " + count5);
+
   function handleOptionChange(event) {
     setSelectedOption(event.target.value);
   }
 
   const { contract } = useContract(
-    "0x5c178b13293411634911ea292a1cdf931629fae7"
+    "0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
   );
   const { mutateAsync: mintStarter_without_id, isLoading } = useContractWrite(
     contract,
     "mintStarter_without_id"
   );
 
-  const call = async () => {
+  const { mutateAsync: mintBasic_without_id, isLoading: bisloading } =
+    useContractWrite(contract, "mintBasic_without_id");
+  const { mutateAsync: mintDiamond_without_id, isLoading: dloading } =
+    useContractWrite(contract, "mintDiamond_without_id");
+  const { mutateAsync: mintStandard_without_id, isLoading: sisLoading } =
+    useContractWrite(contract, "mintStandard_without_id");
+  const { mutateAsync: mintVIP_without_id, isLoading: wisLoading } =
+    useContractWrite(contract, "mintVIP_without_id");
+  const { mutateAsync: mintPremium_without_id, isLoading: misloading } =
+    useContractWrite(contract, "mintPremium_without_id");
+  const address = useAddress();
+
+  const { mutateAsync: mintBasic, isLoading: msisLoading } = useContractWrite(
+    contract,
+    "mintBasic"
+  );
+  const { mutateAsync: mintDiamond, isLoading: smisLoading } = useContractWrite(
+    contract,
+    "mintDiamond"
+  );
+  const { mutateAsync: mintPremium, isLoading: ad } = useContractWrite(
+    contract,
+    "mintPremium"
+  );
+  const { mutateAsync: mintStandard, isLoading: as } = useContractWrite(
+    contract,
+    "mintStandard"
+  );
+  const { mutateAsync: mintStarter, isLoading: gh } = useContractWrite(
+    contract,
+    "mintStarter"
+  );
+  const { mutateAsync: mintVIP, isLoading: oy } = useContractWrite(
+    contract,
+    "mintVIP"
+  );
+
+  const StarterCall = async () => {
     try {
-      const data = await mintStarter_without_id();
+      const data = await mintStarter([
+        count,
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("0.01"), // send 0.1 ether with the contract call
+        },
+      ]);
       console.info("contract call successs", data);
-      alert("successful data is " + data);
     } catch (err) {
       console.error("contract call failure", err);
-      alert("erroe is" + err);
     }
   };
 
-  const address = useAddress();
+  const MintBasic = async () => {
+    try {
+      const data = await mintBasic([
+        count1,
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("0.02"), // send 0.1 ether with the contract call
+        },
+      ]);
+      console.info("contract call successs", data);
+    } catch (err) {
+      console.error("contract call failure", err);
+    }
+  };
+
+  const MintStandard = async () => {
+    try {
+      const data = await mintStandard([
+        count2,
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("0.03"), // send 0.1 ether with the contract call
+        },
+      ]);
+      console.info("contract call successs", data);
+    } catch (err) {
+      console.error("contract call failure", err);
+    }
+  };
+
+  const MintVIP = async () => {
+    try {
+      const data = await mintVIP([
+        count3,
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("0.04"), // send 0.1 ether with the contract call
+        },
+      ]);
+      console.info("contract call successs", data);
+    } catch (err) {
+      console.error("contract call failure", err);
+    }
+  };
+
+  const MintPremium = async () => {
+    try {
+      const data = await mintPremium([
+        count4,
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("0.05"), // send 0.1 ether with the contract call
+        },
+      ]);
+      console.info("contract call successs", data);
+    } catch (err) {
+      console.error("contract call failure", err);
+    }
+  };
+
+  const MintDiamond = async () => {
+    try {
+      const data = await mintDiamond([
+        count5,
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("0.06"), // send 0.1 ether with the contract call
+        },
+      ]);
+      console.info("contract call successs", data);
+    } catch (err) {
+      console.error("contract call failure", err);
+    }
+  };
 
   return (
     <>
@@ -169,7 +297,7 @@ function Mint() {
                   checked={selectedOption === "option1"}
                   onChange={handleOptionChange}
                 />
-                With Raffle
+                With Referral
               </label>
             </div>
             <div className="radio">
@@ -180,7 +308,7 @@ function Mint() {
                   checked={selectedOption === "option2"}
                   onChange={handleOptionChange}
                 />
-                WithOut Raffle
+                WithOut Referral
               </label>
             </div>
           </div>
@@ -229,7 +357,7 @@ function Mint() {
                       <input
                         type="text"
                         onChange={(e) => {
-                          setListingValue(e.target.value);
+                          setcount(e.target.value);
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -245,29 +373,28 @@ function Mint() {
                     >
                       Stake
                     </button> */}
-
-                    <Web3Button
-                      contractAddress="0x5c178b13293411634911ea292a1cdf931629fae7"
-                      action={(contract) => {
-                        contract.call("mintStarter_without_id");
-                      }}
-                      overrides={{
-                        accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                        blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                        ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                        customData: {}, // The transaction data.
-                        from: address, // The address this transaction is from.
-                        gasLimit: 700000, // The maximum amount of gas this transaction is permitted to use.
-                        gasPrice: 700000, // The price (in wei) per unit of gas this transaction will pay.
-                        maxFeePerGas: 700000, // The maximum price (in wei) per unit of gas this transaction will pay
-                        maxPriorityFeePerGas: 1, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                        nonce: 2, // The nonce used as part of the proof-of-work to mine this block.
-                        type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
-                        value: 0.5, // send 0.1 ether with the contract call
-                      }}
-                    >
-                      Buy Now
-                    </Web3Button>
+                    {selectedOption === "option1" ? (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() => StarterCall()}
+                      >
+                        Buy Now
+                      </Web3Button>
+                    ) : (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() =>
+                          mintStarter_without_id([
+                            {
+                              gasLimit: 1000000, // override default gas limit
+                              value: ethers.utils.parseEther("0.01"), // send 0.1 ether with the contract call
+                            },
+                          ])
+                        }
+                      >
+                        Buy Now
+                      </Web3Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -306,7 +433,7 @@ function Mint() {
                       <input
                         type="text"
                         onChange={(e) => {
-                          setListingValue(e.target.value);
+                          setcount1(e.target.value);
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -322,28 +449,28 @@ function Mint() {
                     >
                       Stake
                     </button> */}
-                    <Web3Button
-                      contractAddress="0x5c178b13293411634911ea292a1cdf931629fae7"
-                      action={(contract) => {
-                        contract.call("mintStarter_without_id");
-                      }}
-                      overrides={{
-                        accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                        blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                        ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                        customData: {}, // The transaction data.
-                        from: address, // The address this transaction is from.
-                        gasLimit: 700000, // The maximum amount of gas this transaction is permitted to use.
-                        gasPrice: 700000, // The price (in wei) per unit of gas this transaction will pay.
-                        maxFeePerGas: 700000, // The maximum price (in wei) per unit of gas this transaction will pay
-                        maxPriorityFeePerGas: 1, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                        nonce: 2, // The nonce used as part of the proof-of-work to mine this block.
-                        type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
-                        value: 0.5, // send 0.1 ether with the contract call
-                      }}
-                    >
-                      Buy Now
-                    </Web3Button>
+                    {selectedOption === "option1" ? (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() => MintBasic()}
+                      >
+                        Buy Now
+                      </Web3Button>
+                    ) : (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() =>
+                          mintBasic_without_id([
+                            {
+                              gasLimit: 1000000, // override default gas limit
+                              value: ethers.utils.parseEther("0.02"), // send 0.1 ether with the contract call
+                            },
+                          ])
+                        }
+                      >
+                        Buy Now
+                      </Web3Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -381,7 +508,7 @@ function Mint() {
                       <input
                         type="text"
                         onChange={(e) => {
-                          setListingValue(e.target.value);
+                          setcount2(e.target.value);
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -397,28 +524,28 @@ function Mint() {
                     >
                       Stake
                     </button> */}
-                    <Web3Button
-                      contractAddress="0x5c178b13293411634911ea292a1cdf931629fae7"
-                      action={(contract) => {
-                        contract.call("mintStarter_without_id");
-                      }}
-                      overrides={{
-                        accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                        blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                        ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                        customData: {}, // The transaction data.
-                        from: address, // The address this transaction is from.
-                        gasLimit: 700000, // The maximum amount of gas this transaction is permitted to use.
-                        gasPrice: 700000, // The price (in wei) per unit of gas this transaction will pay.
-                        maxFeePerGas: 700000, // The maximum price (in wei) per unit of gas this transaction will pay
-                        maxPriorityFeePerGas: 1, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                        nonce: 2, // The nonce used as part of the proof-of-work to mine this block.
-                        type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
-                        value: 0.5, // send 0.1 ether with the contract call
-                      }}
-                    >
-                      Buy Now
-                    </Web3Button>
+                    {selectedOption === "option1" ? (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() => MintStandard()}
+                      >
+                        Buy Now
+                      </Web3Button>
+                    ) : (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() =>
+                          mintStandard_without_id([
+                            {
+                              gasLimit: 1000000, // override default gas limit
+                              value: ethers.utils.parseEther("0.03"), // send 0.1 ether with the contract call
+                            },
+                          ])
+                        }
+                      >
+                        Buy Now
+                      </Web3Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -467,7 +594,7 @@ function Mint() {
                       <input
                         type="text"
                         onChange={(e) => {
-                          setListingValue(e.target.value);
+                          setcount3(e.target.value);
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -483,28 +610,28 @@ function Mint() {
                     >
                       Stake
                     </button> */}
-                    <Web3Button
-                      contractAddress="0x5c178b13293411634911ea292a1cdf931629fae7"
-                      action={(contract) => {
-                        contract.call("mintStarter_without_id");
-                      }}
-                      overrides={{
-                        accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                        blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                        ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                        customData: {}, // The transaction data.
-                        from: address, // The address this transaction is from.
-                        gasLimit: 700000, // The maximum amount of gas this transaction is permitted to use.
-                        gasPrice: 700000, // The price (in wei) per unit of gas this transaction will pay.
-                        maxFeePerGas: 700000, // The maximum price (in wei) per unit of gas this transaction will pay
-                        maxPriorityFeePerGas: 1, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                        nonce: 2, // The nonce used as part of the proof-of-work to mine this block.
-                        type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
-                        value: 0.5, // send 0.1 ether with the contract call
-                      }}
-                    >
-                      Buy Now
-                    </Web3Button>
+                    {selectedOption === "option1" ? (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() => MintVIP()}
+                      >
+                        Buy Now
+                      </Web3Button>
+                    ) : (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() =>
+                          mintVIP_without_id([
+                            {
+                              gasLimit: 1000000, // override default gas limit
+                              value: ethers.utils.parseEther("0.04"), // send 0.1 ether with the contract call
+                            },
+                          ])
+                        }
+                      >
+                        Buy Now
+                      </Web3Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -531,7 +658,7 @@ function Mint() {
                     }}
                   />
                   <div className="giftext">
-                    DIAMOND
+                    PREMIUM
                     <br />
                     COMMUNITY
                   </div>
@@ -542,7 +669,7 @@ function Mint() {
                       <input
                         type="text"
                         onChange={(e) => {
-                          setListingValue(e.target.value);
+                          setcount4(e.target.value);
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -558,28 +685,28 @@ function Mint() {
                     >
                       Stake
                     </button> */}
-                    <Web3Button
-                      contractAddress="0x5c178b13293411634911ea292a1cdf931629fae7"
-                      action={(contract) => {
-                        contract.call("mintStarter_without_id");
-                      }}
-                      overrides={{
-                        accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                        blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                        ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                        customData: {}, // The transaction data.
-                        from: address, // The address this transaction is from.
-                        gasLimit: 700000, // The maximum amount of gas this transaction is permitted to use.
-                        gasPrice: 700000, // The price (in wei) per unit of gas this transaction will pay.
-                        maxFeePerGas: 700000, // The maximum price (in wei) per unit of gas this transaction will pay
-                        maxPriorityFeePerGas: 1, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                        nonce: 2, // The nonce used as part of the proof-of-work to mine this block.
-                        type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
-                        value: 0.5, // send 0.1 ether with the contract call
-                      }}
-                    >
-                      Buy Now
-                    </Web3Button>
+                    {selectedOption === "option1" ? (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() => MintPremium()}
+                      >
+                        Buy Now
+                      </Web3Button>
+                    ) : (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() =>
+                          mintPremium_without_id([
+                            {
+                              gasLimit: 1000000, // override default gas limit
+                              value: ethers.utils.parseEther("0.05"), // send 0.1 ether with the contract call
+                            },
+                          ])
+                        }
+                      >
+                        Buy Now
+                      </Web3Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -618,7 +745,7 @@ function Mint() {
                       <input
                         type="text"
                         onChange={(e) => {
-                          setListingValue(e.target.value);
+                          setcount5(e.target.value);
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -634,28 +761,28 @@ function Mint() {
                     >
                       Stake
                     </button> */}
-                    <Web3Button
-                      contractAddress="0x5c178b13293411634911ea292a1cdf931629fae7"
-                      action={(contract) => {
-                        contract.call("mintStarter_without_id");
-                      }}
-                      overrides={{
-                        accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                        blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                        ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                        customData: {}, // The transaction data.
-                        from: address, // The address this transaction is from.
-                        gasLimit: 700000, // The maximum amount of gas this transaction is permitted to use.
-                        gasPrice: 700000, // The price (in wei) per unit of gas this transaction will pay.
-                        maxFeePerGas: 700000, // The maximum price (in wei) per unit of gas this transaction will pay
-                        maxPriorityFeePerGas: 1, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                        nonce: 2, // The nonce used as part of the proof-of-work to mine this block.
-                        type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
-                        value: 0.5, // send 0.1 ether with the contract call
-                      }}
-                    >
-                      Buy Now
-                    </Web3Button>
+                    {selectedOption === "option1" ? (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() => MintDiamond()}
+                      >
+                        Buy Now
+                      </Web3Button>
+                    ) : (
+                      <Web3Button
+                        contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+                        action={() =>
+                          mintDiamond_without_id([
+                            {
+                              gasLimit: 1000000, // override default gas limit
+                              value: ethers.utils.parseEther("0.06"), // send 0.1 ether with the contract call
+                            },
+                          ])
+                        }
+                      >
+                        Buy Now
+                      </Web3Button>
+                    )}
                   </div>
                 </div>
               </div>

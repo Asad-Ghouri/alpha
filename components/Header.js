@@ -8,13 +8,20 @@ import Link from "next/link";
 
 import { SocialIcon } from "react-social-icons";
 
+function Connectbtn() {
+  var cbtn = document.getElementById("connectWallet");
+  if (cbtn) {
+    cbtn.click();
+  } else {
+    console.log("id is not get");
+  }
+}
 export const Header = () => {
   return (
     <>
-      <div className="connect-wall">
-        {" "}
-        <ConnectWallet id="connect-Wallet" />{" "}
-      </div>
+      {/* <div className="connect-wallss">
+        <ConnectWallet id="connectWallet" />{" "}
+      </div> */}
       <div className="main-header">
         <div>
           <div className="elementor-container elementor-column-gap-default head">
@@ -86,6 +93,11 @@ export const Header = () => {
                             Swap
                           </Link>
                         </li>
+
+                        {/* <li>
+                          {" "}
+                          <Link href="/whitePaper">WHITEPAPER</Link>{" "}
+                        </li> */}
                       </ul>
                     </nav>
                     <div
@@ -201,23 +213,23 @@ export const Header = () => {
               </div>
             </div>
             <div
-              className="elementor-column elementor-col-25 elementor-element elementor-element-911ef74 con-btn"
+              className="elementor-column_ elementor-col-25 elementor-element_ elementor-element-911ef74_ con-btn_"
               data-element_type="column"
             >
               <div className="elementor-widget-wrap elementor-element-populated">
                 <div
-                  className="elementor-element elementor-element-6b99b87 elementor-align-center elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button"
+                  className="elementor-element_ elementor-element-6b99b87_ elementor-align-center_ elementor-hidden-tablet_ elementor-hidden-mobile_ elementor-widget_ elementor-widget-button_"
                   data-element_type="widget"
                 >
-                  <div className="elementor-widget-container">
+                  <div className="elementor-widget-container_">
                     <div>
-                      <a href="#" className="elementor-button">
-                        <span className="elementor-button-content-wrapper">
-                          <span className="elementor-button-text">
-                            Connect Wallet
+                      <button className="elementor-button_c">
+                        <span className="elementor-button-content-wrapper_">
+                          <span className="elementor-button-text_">
+                            <ConnectWallet />
                           </span>
                         </span>
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
