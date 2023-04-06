@@ -21,12 +21,12 @@ function Mint() {
   const [ListingValue, setListingValue] = useState("200");
   const [selectedOption, setSelectedOption] = useState("option1");
 
-  const [count, setcount] = useState();
-  const [count1, setcount1] = useState();
-  const [count2, setcount2] = useState();
-  const [count3, setcount3] = useState();
-  const [count4, setcount4] = useState();
-  const [count5, setcount5] = useState();
+  const [count, setcount] = useState(2);
+  const [count1, setcount1] = useState(2);
+  const [count2, setcount2] = useState(2);
+  const [count3, setcount3] = useState(2);
+  const [count4, setcount4] = useState(2);
+  const [count5, setcount5] = useState(2);
 
   console.log("value of count is " + count);
   console.log("value of count is1 " + count1);

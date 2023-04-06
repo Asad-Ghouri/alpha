@@ -482,7 +482,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-7b8be8a elementor-widget elementor-widget-heading">
                       <div className="elementor-widget-container">
                         <h2 className="elementor-heading-title">
-                          Eugenio Palmeri
+                          Palmeri
                         </h2>
                       </div>
                     </div>
