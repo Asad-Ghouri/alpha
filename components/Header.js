@@ -53,7 +53,7 @@ export const Header = () => {
               </div>
             </div>
             <div
-              className="elementor-column elementor-col-25 elementor-element elementor-element-07e6ea8"
+              className="elementor-column elementor-col-25 elementor-element elementor-element-07e6ea8 iw"
               data-element_type="column"
             >
               <div className="elementor-widget-wrap elementor-element-populated">
@@ -91,6 +91,17 @@ export const Header = () => {
                         <li>
                           <Link href="/swap" className="elementor-item">
                             Swap
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            href="/whitePaper"
+                            target="_blank"
+                            className="elementor-item"
+                            passHref
+                          >
+                            Whitepaper
                           </Link>
                         </li>
 

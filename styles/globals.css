@@ -39,13 +39,20 @@ body {
 }
 
 .homepage{
-  background-color: #000000;
+    background-color: #000000;
     background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
     background-size: cover;
     padding: 0;
     margin: 0;
 }
 
+.form{
+  background-color: #000000;
+  background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
 .main-header{
   /* background-color: #000; */
 }
@@ -3042,9 +3049,9 @@ background-color: #000;
 }     
 
 @media (min-width: 768px){ 
-  .elementor-column.elementor-col-25 { 
+  /* .elementor-column.elementor-col-25 { 
     width: 25%;
-  } 
+  }  */
 
   .elementor-column.elementor-col-33 { 
     width: 33.333%;
@@ -3560,6 +3567,7 @@ background-color: #000;
     color: #000; 
     /* font-family: risque,Sans-serif;  */
     font-weight: 400;
+    color: white;
   } 
 
   .elementor-clearfix:after { 
@@ -3584,6 +3592,7 @@ background-color: #000;
     color: #020202; 
     /* font-family: risque,Sans-serif;  */
     font-weight: 400;
+    color: white;
   } 
 
   a { 
@@ -3767,6 +3776,7 @@ background-color: #000;
    color: #000000;  
     /* font-family: Risque, sans-serif;   */
     text-align: justify;  
+    color: white;
 }  
 #style-zozLR.style-zozLR {  
    font-weight: var( --e-global-typography-text-font-weight );  
@@ -3776,6 +3786,7 @@ background-color: #000;
    color: #000000;  
     /* font-family: Risque, sans-serif;   */
     text-align: justify;  
+    color: white;
 }  
 #style-hh9GZ.style-hh9GZ {  
    color: #000000;  
@@ -3793,6 +3804,7 @@ background-color: #000;
 #style-Sss8z.style-Sss8z {  
    font-weight: var( --e-global-typography-text-font-weight );  
     font-size: 1rem;  
+    color: white;
 }  
 #style-SMJwh.style-SMJwh {  
    text-align: justify;  
@@ -3800,6 +3812,7 @@ background-color: #000;
 #style-Wc2KA.style-Wc2KA {  
    color: #000000;  
     /* font-family: Risque, sans-serif;   */
+    color: white;
 }  
 #style-q7Jmn.style-q7Jmn {  
    text-align: justify;  
@@ -3807,6 +3820,7 @@ background-color: #000;
 #style-BQYQr.style-BQYQr {  
    color: #000000;  
     /* font-family: Risque, sans-serif;   */
+    color: white;
 }  
 
 .db{
@@ -3856,4 +3870,150 @@ background-color: #000;
 
 .elementor-button_c:hover{
   background-color: transparent!important;
+}
+
+@media (max-width:600px){
+  .pl {
+    padding-bottom: 7rem;
+}
+.indexfooter{
+  
+  margin-top: 152%;
+}
+}
+
+.iw{
+  width: 58%;
+}
+
+
+.form .nform {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #16161d;
+  border-radius: 8px;
+  color: white;
+}
+
+.form h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.form .input,
+.form .input,
+.form .input,
+.form .input,
+.form .input,
+.form .input,
+.form .input,
+.form .input,
+.form .input,
+.form .input,
+.form textarea,
+.form select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+.form .input,
+.form .input {
+  margin: 0 4px 8px 0;
+}
+
+.form select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+.form .signupbtn {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+.form fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+.form legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.form .label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.form .number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+  .form .nform {
+    max-width: 480px;
+  }
+
+}
+
+@media (min-width: 850px){
+ .alphafooter .footer {
+    margin-top: 10%;
+    background-color: #000;
+}
+.readmore{
+  margin-top: 30rem;
+}
+.indexfooter .footer {
+  margin-top: 10%;
+}
+}
+@media (max-width: 600px)
+{
+  .alphafooter {
+      margin-top: 155%;
+   
+  }
+  .readmore{
+    margin-top: 106rem;
+  }
 }

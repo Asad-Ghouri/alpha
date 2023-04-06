@@ -348,7 +348,7 @@ function Mint() {
                   <div className="giftext">
                     STARTER
                     <br />
-                    COMMUNITY
+                    (0.065)
                   </div>
                   <div>
                     <form
@@ -424,7 +424,7 @@ function Mint() {
                   <div className="giftext">
                     Basic
                     <br />
-                    COMMUNITY
+                    (0.18)
                   </div>
                   <div>
                     <form
@@ -488,7 +488,7 @@ function Mint() {
                   }}
                 >
                   <Image
-                    src={three}
+                    src={five}
                     alt="GIF 3"
                     style={{
                       width: "100%",
@@ -499,7 +499,7 @@ function Mint() {
                   <div className="giftext">
                     STANDARD
                     <br />
-                    COMMUNITY
+                    (0.33)
                   </div>
                   <div>
                     <form
@@ -585,7 +585,7 @@ function Mint() {
                   <div className="giftext">
                     VIP
                     <br />
-                    COMMUNITY
+                    (1.60)
                   </div>
                   <div>
                     <form
@@ -649,7 +649,7 @@ function Mint() {
                   }}
                 >
                   <Image
-                    src={five}
+                    src={three}
                     alt="GIF 2"
                     style={{
                       width: "100%",
@@ -660,7 +660,7 @@ function Mint() {
                   <div className="giftext">
                     PREMIUM
                     <br />
-                    COMMUNITY
+                    (3.20)
                   </div>
                   <div>
                     <form
@@ -735,7 +735,7 @@ function Mint() {
                   <div className="giftext">
                     DIAMOND
                     <br />
-                    COMMUNITY
+                    (16.00)
                   </div>
 
                   <div>
