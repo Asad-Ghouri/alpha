@@ -45,7 +45,7 @@ export const Header = () => {
                       <img
                         width={150}
                         height={150}
-                        src="https://shopinose.com/wp-content/uploads/2023/03/78b4ba1d-c647-4d6f-aab6-a2eff6d6957e-removebg-preview-e1680104061890-150x150.png"
+                        src="https://itishstudios.net/assert/78b4ba1d-c647-4d6f-aab6-a2eff6d6957e-removebg-preview-e1680104061890.png"
                       />
                     </a>
                   </div>

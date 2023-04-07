@@ -21,7 +21,7 @@ body {
   /* min-height: 100vh; */
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "RubikBeastly"!important;
+  font-family: "RubikBeastly";
   /* --hello: -100%; */
   /* padding-bottom: 250px; */
   overflow-x: hidden;
@@ -3886,7 +3886,7 @@ background-color: #000;
 }
 .indexfooter{
   
-  margin-top: 152%;
+  margin-top: 25%;
 }
 }
 
@@ -4050,6 +4050,9 @@ background-color: #000;
 }
 @media (max-width: 600px)
 {
+  .mintfooter{
+        margin-top: 735%;
+  }
   .alphafooter {
       margin-top: 155%;
    
@@ -4137,4 +4140,11 @@ margin-top: 1rem;
 #stake   
 {
   margin-top: 10px;
+}
+
+.connect{
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 }

@@ -472,7 +472,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-e9f5ee7 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://shopinose.com/wp-content/uploads/2023/03/fotor_2023-3-27_3_40_26.png"
+                          src="https://itishstudios.net/assert/fotor_2023-3-27_3_40_26.png"
                           className="t-img"
                         />
                       </div>
@@ -538,7 +538,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-29324f1 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://shopinose.com/wp-content/uploads/2023/03/fotor_2023-3-29_19_23_31.png"
+                          src="https://itishstudios.net/assert/fotor_2023-3-29_19_23_31.png"
                           className="t-img"
                         />
                       </div>
@@ -594,7 +594,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-9b96701 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://shopinose.com/wp-content/uploads/2023/03/fotor_2023-3-27_3_39_25.png"
+                          src="https://itishstudios.net/assert/fotor_2023-3-27_3_39_25.png"
                           className="t-img"
                         />
                       </div>
@@ -654,7 +654,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-9746d08 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://shopinose.com/wp-content/uploads/2023/03/WhatsApp_Image_2023-03-29_at_7.52.46_PM-removebg-preview.png"
+                          src="https://itishstudios.net/assert/WhatsApp_Image_2023-03-29_at_7.52.46_PM-removebg-preview.png"
                           className="t-img"
                         />
                       </div>
@@ -715,7 +715,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-edac993 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://shopinose.com/wp-content/uploads/2023/03/fotor_2023-3-27_9_37_20.png"
+                          src="https://itishstudios.net/assert/fotor_2023-3-27_9_37_20.png"
                           className="t-img"
                         />
                       </div>
@@ -769,7 +769,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-b3ee127 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://shopinose.com/wp-content/uploads/2023/03/fotor_2023-3-29_19_25_40.png"
+                          src="https://itishstudios.net/assert/fotor_2023-3-29_19_25_40.png"
                           className="t-img"
                         />
                       </div>
@@ -825,7 +825,7 @@ function Mint() {
                     <div className="elementor-element elementor-element-385589f elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://shopinose.com/wp-content/uploads/2023/03/fotor_2023-3-27_3_40_3.png"
+                          src="https://itishstudios.net/assert/fotor_2023-3-27_3_40_3.png"
                           className="t-img"
                         />
                       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 export const Footer = () => {
   return (
     <div className="footer">
@@ -21,7 +21,7 @@ export const Footer = () => {
                   <img
                     width={100}
                     height={100}
-                    src="https://shopinose.com/wp-content/uploads/2023/03/78b4ba1d-c647-4d6f-aab6-a2eff6d6957e-removebg-preview-e1680104061890.png"
+                    src="https://itishstudios.net/assert/78b4ba1d-c647-4d6f-aab6-a2eff6d6957e-removebg-preview-e1680104061890.png"
                   />
                 </div>
               </div>
@@ -40,36 +40,35 @@ export const Footer = () => {
                   <nav className="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline">
                     <ul className="elementor-nav-menu">
                       <li>
-                        <a href="#home" className="elementor-item">
+                        <Link href="/" className="elementor-item">
                           HOME
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#team" className="elementor-item">
-                          TEAM
-                        </a>
+                        <Link href="/mint" className="elementor-item">
+                          Mint
+                        </Link>
                       </li>
                       <li>
-                        <a href="#paper" className="elementor-item">
-                          WHITEPAPER
-                        </a>
+                        <Link href="/stake" className="elementor-item">
+                          Stake
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="#nft"
-                          className="elementor-item elementor-item-active"
-                        >
-                          NFTs
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://shopinose.com/swap/"
-                          className="elementor-item"
-                        >
+                        <Link href="/swap" className="elementor-item">
                           Swap
-                        </a>
+                        </Link>
                       </li>
+                      {/* <li>
+                        <Link href="/swap" className="elementor-item">
+                          Swap
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/whitePaper" className="elementor-item">
+                          WhitePaper
+                        </Link>
+                      </li> */}
                     </ul>
                   </nav>
                   <nav
