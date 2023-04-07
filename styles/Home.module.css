@@ -286,7 +286,7 @@
   @media (min-width:850px){
   
   .wi  {
-      margin-left: -11rem;
+      margin-left: 1rem;
       margin-top: 6rem;
   
     }
@@ -343,7 +343,7 @@
       justify-content: center;
     }
     .nftBox {
-      width: 52%;
+      width: 90%;
       padding: 10px;
       margin-top: 16px;
       margin-left: 16px;
@@ -388,8 +388,8 @@
   .tokenLabel {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
+    font-weight: 100;
+    /* color: black; */
   }
   
   /* Second tokenLabel item */
@@ -421,6 +421,8 @@
   
   .spacerTop {
     margin-top: 16px;
+    color: white;
+    font-weight: 100;
   }
   
   .bigSpacerTop {
@@ -429,6 +431,8 @@
   
   .spacerBottom {
     margin-bottom: 16px;
+    color: white;
+    font-weight: 100;
   }
   
   .cardName {
@@ -502,6 +506,8 @@
   
   .tokenValue b{
     font-size: 15px;
+    color: white;
+    font-weight: 100;
   }
   .mintImg{
     /* width: 7rem; */
@@ -515,4 +521,14 @@
   .buttonContainer{
     display: flex;
     justify-content: center;
+  }
+  .nftBox h3{
+    font-weight: 100;
+    text-align: center;
+  }
+
+  @media (min-width:850px){
+    .nftBox video{
+      width: 120%!important;
+    }
   }

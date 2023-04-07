@@ -1,49 +1,31 @@
 import {
     ThirdwebNftMedia,
     useAddress,
-    useMetamask,
-    useTokenBalance,
-    useOwnedNFTs,
     useContract,
 } from "@thirdweb-dev/react";
 import { BigNumber, ethers } from "ethers";
 import type { NextPage } from "next";
-import { ConnectWallet, useSDK } from "@thirdweb-dev/react";
+import { ConnectWallet } from "@thirdweb-dev/react";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import Link from "next/link";
-// import BackIcon from "../public/icons/BackIcon.png";
-import Image from "next/image";
-// import GetTokenId from "./getTokenId";
 
-import { useRef } from "react";
-
-// import { ConnectWallet } from "@thirdweb-dev/react";
 import StakeBalance from "./StakeBalance";
+import { Header } from "../components/Header";
 
+const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
 
-const stakingContractAddress = "0x5289D2c34559f25fd6d7045Dd95a2a4936702b9b";
-
-const nftCatContractAddress = "0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD";
+const ContractAddress = "0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD";
 
 const Stake: NextPage = () => {
-    // const [claimableRewards1, setClaimableRewards1] = useState<BigNumber>();
 
     const [selectval, setselectval] = useState<string>(
-        "0x5289D2c34559f25fd6d7045Dd95a2a4936702b9b"
+        "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
     );
 
-    const [value, setValue] = useState("");
-
-    // const connectWithMetamask = useMetamask();
     const address = useAddress();
 
-    console.log("balance is " + value);
-
-
     const { contract: nftCatDropContract } = useContract(
-        nftCatContractAddress,
+        ContractAddress,
         "nft-drop"
     );
 
@@ -52,10 +34,6 @@ const Stake: NextPage = () => {
 
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
 
-
-
-
-    // ----------for Cat ----------
     useEffect(() => {
         if (!contract) return;
 
@@ -98,15 +76,6 @@ const Stake: NextPage = () => {
         loadClaimableRewards();
     }, [address, contract]);
 
-    useEffect(() => {
-        var autoas = document.getElementById("autom");
-        if (autoas) {
-            autoas.click();
-            console.log("function is calling");
-        } else {
-            console.log("function is not calling");
-        }
-    }, []);
 
     async function withdraw(id: BigNumber) {
         const withdraw = await contract?.call("withdraw", id, selectval);
@@ -117,117 +86,114 @@ const Stake: NextPage = () => {
     }
 
     if (isLoading) {
-        return <div>Loading</div>;
+        return (
+            <div className="stake loadingstake">
+
+                <Header />
+
+                <div className="loading">Loading</div>
+            </div>
+        )
     }
 
     return (
         <>
-            <div
-                className={
-                    !address
-                        ? styles.container +
-                        " " +
-                        styles.stakecontainer +
-                        " " +
-                        styles.stakeco
-                        : styles.container + styles.stakecontainer
-                }
-            >
-                <hr className={`${styles.divider} ${styles.spacerTop}`} />
 
-                {!address ? (
-                    <>
-                        <ConnectWallet accentColor="#f213a4" colorMode="dark" />
-                    </>
-                ) : (
-                    <>
-                        <h2 className={styles.walletbalance}>WALLET BALANCE</h2>
+            <div className="stake">
 
-                        <div className={styles.tokenGrid}>
-                            <div className={styles.tokenItem}>
-                                <h3 className={styles.tokenLabel}>Claimable Rewards</h3>
-                                <p className={styles.tokenValue}>
-                                    <b>
-                                        {!claimableRewards
-                                            ? "Loading..."
-                                            : ethers.utils.formatUnits(claimableRewards, 9)}
-                                        {/* : ethers.utils.formatUnits(claimableRewards, 11)} */}
-                                        {/* :
-                         ethers.utils.mul} */}
-                                        {/* } */}
-                                    </b>{" "}
-                                    {/* {tokenBalance?.symbol} */}
-                                </p>
+                <Header />
+                <div
+                    className={
+                        !address
+                            ? styles.container +
+                            " " +
+                            styles.stakecontainer +
+                            " " +
+                            styles.stakeco
+                            : styles.container + styles.stakecontainer
+                    }
+                >
+
+                    {!address ? (
+                        <>
+                            <ConnectWallet accentColor="#f213a4" colorMode="dark" />
+                        </>
+                    ) : (
+                        <>
+                            <h2 className={styles.walletbalance}>WALLET BALANCE</h2>
+
+                            <div className={styles.tokenGrid}>
+                                <div className={styles.tokenItem}>
+                                    <h3 className={styles.tokenLabel}>Claimable Rewards</h3>
+                                    <p className={styles.tokenValue}>
+                                        <b>
+                                            {!claimableRewards
+                                                ? "Loading..."
+                                                : ethers.utils.formatUnits(claimableRewards, 9)}
+                                        </b>
+                                    </p>
+                                </div>
+                                <div className={styles.tokenItem}>
+                                    <h3 className={styles.tokenLabel}>Your Gianky Balance</h3>
+                                    <p className={styles.tokenValue}>
+                                        <b>
+                                            <StakeBalance />
+                                        </b>
+                                    </p>
+                                </div>
                             </div>
-                            <div className={styles.tokenItem}>
-                                <h3 className={styles.tokenLabel}>Your Shera Balance</h3>
-                                <p className={styles.tokenValue}>
-                                    <b>
-                                        <StakeBalance />
-                                    </b>
-                                </p>
+
+                            <div className={styles.buttonContainer}>
+                                <button
+                                    className={`${styles.mainButton} ${styles.spacerTop}`}
+                                    onClick={() => claimRewards()}
+                                >
+                                    Claim Rewards
+                                </button>
                             </div>
-                        </div>
 
-                        <div className={styles.buttonContainer}>
-                            <button
-                                className={`${styles.mainButton} ${styles.spacerTop}`}
-                                onClick={() => claimRewards()}
-                            >
-                                Claim Rewards
-                            </button>
-                        </div>
+                            <hr className={`${styles.divider} ${styles.spacerTop}`} />
 
-                        <hr className={`${styles.divider} ${styles.spacerTop}`} />
+                            <div className={styles.buttonContainer}>
+                                <h2 className="uc">Your Staked NFTs</h2>
+                            </div>
 
-                        <div className={styles.buttonContainer}>
-                            <h2 className="uc">Your Staked NFTs</h2>
-                        </div>
-
-
-
-
-
-                        {/* ---- for Cat ---- */}
-                        {selectval === "0x551c03246cc1d5e276f2dc264253decfa9b011c6" ? (
-                            <div className={styles.nftBoxGrid + " " + styles.imgcenter}>
-                                {stakedCatNfts?.map((nft: any) => (
-                                    <div className="console log" key="12">
-                                        {nft ? (
-                                            <div
-                                                className={styles.nftBox}
-                                                key={nft.metadata.id.toString()}
-                                            >
-                                                <h3>{nft.metadata.name}</h3>
-                                                <ThirdwebNftMedia
-                                                    metadata={nft.metadata}
-                                                    className={styles.nftMedia}
-                                                />
-                                                <button
-                                                    className={`${styles.mainButton} ${styles.spacerBottom} ${styles.wi}`}
-                                                    onClick={() => withdraw(nft.metadata.id)}
+                            {/* ---- for Cat ---- */}
+                            {selectval === "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7" ? (
+                                <div className={styles.nftBoxGrid + " " + styles.imgcenter}>
+                                    {stakedCatNfts?.map((nft: any) => (
+                                        <div className="console log" key="12">
+                                            {nft ? (
+                                                <div
+                                                    className={styles.nftBox}
+                                                    key={nft.metadata.id.toString()}
                                                 >
-                                                    Withdraw
-                                                </button>
-                                            </div>
-                                        ) : (
-                                            <div key="1">{""}</div>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        ) : (
-                            console.log("Cat is not calling ")
-                        )}
-
-
-
-                        <hr className={`${styles.divider} ${styles.spacerTop}`} />
-
-                        {/* <GetTokenId /> */}
-                    </>
-                )}
+                                                    <h3>{nft.metadata.name}</h3>
+                                                    <ThirdwebNftMedia
+                                                        metadata={nft.metadata}
+                                                        className={styles.nftMedia}
+                                                    />
+                                                    <button
+                                                        className={`${styles.mainButton} ${styles.spacerBottom} ${styles.wi}`}
+                                                        onClick={() => withdraw(nft.metadata.id)}
+                                                    >
+                                                        Withdraw
+                                                    </button>
+                                                </div>
+                                            ) : (
+                                                <div key="1">{""}</div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            ) :
+                                undefined
+                            }
+                        </>
+                    )}
+                </div>
             </div>
+
         </>
     );
 };

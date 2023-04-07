@@ -33,8 +33,23 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link href="/stake" className="elementor-item">
+                Stake
+              </Link>
+            </li>
+            <li>
               <Link href="/swap" className="elementor-item">
                 Swap
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/whitePaper"
+                target="_blank"
+                className="elementor-item"
+                passHref
+              >
+                Whitepaper
               </Link>
             </li>
           </ul>

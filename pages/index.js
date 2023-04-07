@@ -9,6 +9,7 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { SetStateAction, useState } from "react";
 import { ethers } from "ethers";
+import Model from "../components/Model";
 
 import {
   useContract,
@@ -20,6 +21,69 @@ import {
 function Mint() {
   const [ListingValue, setListingValue] = useState("200");
   const [selectedOption, setSelectedOption] = useState("option1");
+
+  const [showModal, setShowModal] = useState(false);
+
+  const person = {
+    name: "Alpha",
+    age: "Owner and Founder",
+    occupation:
+      " I have a long standing experience in computing and a master’s degree in business management, so I have done several projects in the field of internet service provision and traditiona business consultancy.I started my business with Gianky Coin to provide innovative technological solutions that can contribute to the growth of the financial sector, knowledge of blockchain and DeFi (decentralized finance). We have developed an easy-to-use and accessible NFT platform, but also a BSC (binance smart chain) token that I hope will become a beneficial payment and investment tool for our supporters (holders), In addition, we are working on other blockchain-based products to help people understand, invest and benefit from the rapidly evolving technological environment.With the help of our team of experts, we have created a product that is both simple to use for those without experience in this sector and powerful for the experienced users. Our goal is to provide a superior quality service that allows everyone to use DeFi safely and conveniently. We hope that our platform will contribute to the spread of the blockchain &amp; DeFi-based financial culture and to the growth of the global economy.Gianky Coin is a product created, managed, controlled and exclusively owned by the company “Il Dattero” based in Catania, Via Ferrante Aporti, 8 CAP 95123 Italy. P.I 05632770870; REA: CT-418000; tel.+39 095 8998538 website: www.ildattero.cloud",
+  };
+
+  const person1 = {
+    name: "ONJI",
+    age: "Chief Technical Officer",
+    occupation:
+      "With over 100 successful crypto token creations under his belt, he has a deep understanding of the technical and practical aspects of blockchain and its related applications. One of our most experienced and knowledgeable team members, he specializes in smart contracts, a key technology that underpins blockchain and enables the creation of decentralized applications. His expertise in smart contracts has helped many clients build robust and secure systems on top of blockchain, and he is always pushing the boundaries of what’s possible in this exciting and rapidly-evolving field. With a keen eye for detail and a passion for innovation, our blockchain and cryptocurrency expert is the go-to resource for anyone looking to explore the potential of blockchain and digital currencies. Whether you’re a seasoned investor, a startup looking to launch a new crypto token, or just curious about the technology behind this rapidly-growing industry, he’s the person you want on your side.",
+  };
+
+  const person2 = {
+    name: "VINCENZO",
+    age: "Senior Ambassador",
+    occupation:
+      "He has led the direction and management of computer and physics laboratories. He has developed specific skills as a team principal in managing teams in motorsports competitions, formula kart, formula azzurra, and formula three, where he has achieved various successes in the Italian championships. He has also directed the organization of events in various sailing and chess clubs.",
+  };
+
+  const person3 = {
+    name: "Sirtre",
+    age: "General Manager",
+    occupation:
+      "He started his career as a financial consultant at a prestigious bank, where he developed his skills in finance, risk management, and financial planning. After a few years, he took on the role of finance director and risk manager for a publicly listed company. Later, he held high-level positions in various investment firms and financial institutions. Currently, he is the general manager of a large software development company, where he is responsible for all aspects of financial management, from planning to risk management, and he is also the owner of high-profile hotel properties. Sirtre is actively involved in the community, attending numerous charity events and providing consulting to various non-profit organizations.",
+  };
+
+  const person4 = {
+    name: "MASSIMO",
+    age: "Team Leader",
+    occupation:
+      "He has served as a consultant for companies of all sizes, both in the software and hardware domains. Massimo is able to quickly identify the customer’s needs and provide swift and effective solutions. He has a great passion for technology and a solid knowledge of his area of expertise. Massimo is a dedicated team leader who is constantly committed to the goal of bringing his team to success. He loves to share his knowledge with team members and encourages their professional growth. Massimo has a strong strategic vision and a deep understanding of business issues. He is an excellent communicator and a natural motivator.",
+  };
+
+  const person5 = {
+    name: "Eugenio",
+    age: "International Ambassador",
+    occupation:
+      "He has obtained a license to conduct competitions in karting, track racing, Formula Azzurra, and Formula Three. He has participated in national and international championships, winning at regional and national levels. Sirtre is an experienced financial sector general manager with over 25 years of experience. He holds a degree in Business Economics and has a master’s degree in Finance. He started his career as a financial consultant at a prestigious bank, where he developed his skills in finance, risk management, and financial planning. After a few years, he took on the role of finance director and risk manager for a publicly listed company. Later, he held high-level positions in various investment firms and financial institutions. Currently, he is the general manager of a large software development company, where he is responsible for all aspects of financial management, from planning to risk management, and he is also the owner of high-profile hotel properties. Sirtre is actively involved in the community, attending numerous charity events and providing consulting to various non-profit organizations. Giancarlo Marketing Director Giancarlo is a seasoned professional in marketing and communication. He has spent many years in the financial technology sector, working with leading global companies.",
+  };
+
+  const person6 = {
+    name: "Giancarlo",
+    age: "Marketing Director",
+    occupation:
+      "He has always had a passion for technology and innovation, and this led him to join the Giankycoin project as the Marketing Director. With his extensive knowledge of the financial sector and innovative technologies, Giancarlo is able to develop and implement effective marketing strategies to promote Giankycoin globally. His goal is to make cryptocurrency known to an increasingly wider audience and make the world of cryptocurrencies accessible to everyone. Giancarlo is known for his communication and leadership skills, and these qualities allow him to work closely with the Giankycoin team to achieve the project’s long-term goals. Thanks to his experience and abilities, Giancarlo is a valuable asset to the Giankycoin team and a strong representative of the cryptocurrency to the public and stakeholders. We are confident that his contribution will be key to the success of Giankycoin.",
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
+    setReadmore(false);
+    setReadmore1(false);
+    setReadmore2(false);
+    setReadmore3(false);
+    setReadmore4(false);
+    setReadmore5(false);
+    setReadmore6(false);
+    setReadmore7(false);
+  };
 
   const [readmore, setReadmore] = useState(false);
   const [readmore1, setReadmore1] = useState(false);
@@ -208,7 +272,7 @@ function Mint() {
                 <div className="giftext">
                   STARTER
                   <br />
-                  COMMUNITY
+                  (0.065 BNB)
                 </div>
                 <div></div>
               </div>
@@ -239,7 +303,7 @@ function Mint() {
                 <div className="giftext">
                   Basic
                   <br />
-                  COMMUNITY
+                  (0.18 BNB)
                 </div>
                 <div></div>
               </div>
@@ -269,7 +333,7 @@ function Mint() {
                 <div className="giftext">
                   STANDARD
                   <br />
-                  COMMUNITY
+                  (0.33 BNB)
                 </div>
                 <div></div>
               </div>
@@ -310,7 +374,7 @@ function Mint() {
                 <div className="giftext">
                   VIP
                   <br />
-                  COMMUNITY
+                  (1.60 BNB)
                 </div>
                 <div></div>
               </div>
@@ -340,7 +404,7 @@ function Mint() {
                 <div className="giftext">
                   Premium
                   <br />
-                  COMMUNITY
+                  (3.20 BNB)
                 </div>
                 <div></div>
               </div>
@@ -370,7 +434,7 @@ function Mint() {
                 <div className="giftext">
                   DIAMOND
                   <br />
-                  COMMUNITY
+                  (16.00 BNB)
                 </div>
 
                 <div></div>
@@ -433,7 +497,7 @@ function Mint() {
                               "\n                /*! elementor - v3.11.5 - 14-03-2023 */\n                .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{\n                  background-color:#818a91;\n                  color:#fff}\n                .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{\n                  color:#818a91;\n                  border:3px solid;\n                  background-color:transparent}\n                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{\n                  margin-top:8px}\n                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{\n                  width:1em;\n                  height:1em}\n                .elementor-widget-text-editor .elementor-drop-cap{\n                  float:left;\n                  text-align:center;\n                  line-height:1;\n                  font-size:50px}\n                .elementor-widget-text-editor .elementor-drop-cap-letter{\n                  display:inline-block}\n              ",
                           }}
                         />
-                        <p className="para">
+                        <p className="para para1">
                           A technological startup aiming to create innovative
                           products for the financial, blockchain and internet
                           service provision sectors in general
@@ -448,67 +512,20 @@ function Mint() {
                               "\n                /*! elementor - v3.11.5 - 14-03-2023 */\n                .elementor-toggle{\n                  text-align:left}\n                .elementor-toggle .elementor-tab-title{\n                  font-weight:700;\n                  line-height:1;\n                  margin:0;\n                  padding:15px;\n                  border-bottom:1px solid #d4d4d4;\n                  cursor:pointer;\n                  outline:none}\n                .elementor-toggle .elementor-tab-title .elementor-toggle-icon{\n                  display:inline-block;\n                  width:1em}\n                .elementor-toggle .elementor-tab-title .elementor-toggle-icon svg{\n                  -webkit-margin-start:-5px;\n                  margin-inline-start:-5px;\n                  width:1em;\n                  height:1em}\n                .elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-right{\n                  float:right;\n                  text-align:right}\n                .elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-left{\n                  float:left;\n                  text-align:left}\n                .elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-closed{\n                  display:block}\n                .elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-opened{\n                  display:none}\n                .elementor-toggle .elementor-tab-title.elementor-active{\n                  border-bottom:none}\n                .elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-closed{\n                  display:none}\n                .elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-opened{\n                  display:block}\n                .elementor-toggle .elementor-tab-content{\n                  padding:15px;\n                  border-bottom:1px solid #d4d4d4;\n                  display:none}\n                @media (max-width:767px){\n                  .elementor-toggle .elementor-tab-title{\n                    padding:12px}\n                  .elementor-toggle .elementor-tab-content{\n                    padding:12px 10px}\n                }\n                .e-con-inner>.elementor-widget-toggle,.e-con>.elementor-widget-toggle{\n                  width:var(--container-widget-width);\n                  --flex-grow:var(--container-widget-flex-grow)}\n              ",
                           }}
                         />
-                        <div className="elementor-toggle">
+                        <div className="elementor-toggle elementor-toggle1">
                           <div>
                             <div className="elementor-tab-title">
                               <button
                                 className="elementor-toggle-title"
-                                onClick={() => {
-                                  setReadmore7((_readmore) => !_readmore);
-                                }}
+                                onClick={() => setShowModal(true)}
                               >
                                 Read more
                               </button>
-                            </div>
-                            <div
-                              className={
-                                readmore7 == true
-                                  ? "elementor-tab-content elementor-clearfix db"
-                                  : "elementor-tab-content elementor-clearfix"
-                              }
-                            >
-                              <p>
-                                I have a long standing experience in computing
-                                and a master’s degree in business management, so
-                                I have done several projects in the field of
-                                internet service provision and traditional
-                                business consultancy.
-                              </p>
-                              <p>
-                                I started my business with Gianky Coin to
-                                provide innovative technological solutions that
-                                can contribute to the growth of the financial
-                                sector, knowledge of blockchain and DeFi
-                                (decentralized finance). We have developed an
-                                easy-to-use and accessible NFT platform, but
-                                also a BSC (binance smart chain) token that I
-                                hope will become a beneficial payment and
-                                investment tool for our supporters (holders), In
-                                addition, we are working on other
-                                blockchain-based products to help people
-                                understand, invest and benefit from the rapidly
-                                evolving technological environment.
-                              </p>
-                              <p>
-                                With the help of our team of experts, we have
-                                created a product that is both simple to use for
-                                those without experience in this sector and
-                                powerful for the experienced users. Our goal is
-                                to provide a superior quality service that
-                                allows everyone to use DeFi safely and
-                                conveniently. We hope that our platform will
-                                contribute to the spread of the blockchain &amp;
-                                DeFi-based financial culture and to the growth
-                                of the global economy.
-                              </p>
-                              <p>
-                                Gianky Coin is a product created, managed,
-                                controlled and exclusively owned by the company
-                                “Il Dattero” based in Catania, Via Ferrante
-                                Aporti, 8 CAP 95123 Italy. P.I 05632770870; REA:
-                                CT-418000; tel.+39 095 8998538 website:
-                                www.ildattero.cloud
-                              </p>
+                              <Model
+                                show={showModal}
+                                handleClose={handleClose}
+                                person={person}
+                              />
                             </div>
                           </div>
                         </div>
@@ -555,44 +572,16 @@ function Mint() {
                               <button
                                 className="elementor-toggle-title mt-2"
                                 onClick={() => {
-                                  setReadmore6((_readmore) => !_readmore);
+                                  setReadmore6(true);
                                 }}
                               >
                                 Read more
                               </button>
-                            </div>
-                            <div
-                              className={
-                                readmore6 == true
-                                  ? "elementor-tab-content elementor-clearfix db"
-                                  : "elementor-tab-content elementor-clearfix"
-                              }
-                            >
-                              <p id="style-xtMwO" className="style-xtMwO">
-                                With over 100 successful crypto token creations
-                                under his belt, he has a deep understanding of
-                                the technical and practical aspects of
-                                blockchain and its related applications. One of
-                                our most experienced and knowledgeable team
-                                members, he specializes in smart contracts, a
-                                key technology that underpins blockchain and
-                                enables the creation of decentralized
-                                applications. His expertise in smart contracts
-                                has helped many clients build robust and secure
-                                systems on top of blockchain, and he is always
-                                pushing the boundaries of what’s possible in
-                                this exciting and rapidly-evolving field.
-                                <br />
-                                With a keen eye for detail and a passion for
-                                innovation, our blockchain and cryptocurrency
-                                expert is the go-to resource for anyone looking
-                                to explore the potential of blockchain and
-                                digital currencies. Whether you’re a seasoned
-                                investor, a startup looking to launch a new
-                                crypto token, or just curious about the
-                                technology behind this rapidly-growing industry,
-                                he’s the person you want on your side.
-                              </p>
+                              <Model
+                                show={readmore6}
+                                handleClose={handleClose}
+                                person={person1}
+                              />
                             </div>
                           </div>
                         </div>
@@ -637,39 +626,22 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-45d0bc6 elementor-widget elementor-widget-toggle">
                       <div className="elementor-widget-container">
-                        <div className="elementor-toggle">
+                        <div className="elementor-toggle elementor-toggle3">
                           <div>
                             <div className="elementor-tab-title">
                               <button
                                 className="elementor-toggle-title"
                                 onClick={() => {
-                                  setReadmore5((_readmore) => !_readmore);
+                                  setReadmore5(true);
                                 }}
                               >
                                 Read more
                               </button>
-                            </div>
-                            <div
-                              className={
-                                readmore5 == true
-                                  ? "elementor-tab-content elementor-clearfix db"
-                                  : "elementor-tab-content elementor-clearfix"
-                              }
-                            >
-                              <p id="style-Gkvl5" className="style-Gkvl5">
-                                &nbsp;
-                                <span id="style-zozLR" className="style-zozLR">
-                                  &nbsp;He has led the direction and management
-                                  of computer and physics laboratories. He has
-                                  developed specific skills as a team principal
-                                  in managing teams in motorsports competitions,
-                                  formula kart, formula azzurra, and formula
-                                  three, where he has achieved various successes
-                                  in the Italian championships. He has also
-                                  directed the organization of events in various
-                                  sailing and chess clubs.
-                                </span>
-                              </p>
+                              <Model
+                                show={readmore5}
+                                handleClose={handleClose}
+                                person={person2}
+                              />
                             </div>
                           </div>
                         </div>
@@ -701,7 +673,7 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-ea378f3 elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para">
+                        <p className="para para4">
                           Sirtre is an experienced financial sector general
                           manager with over 25 years of experience. He holds a
                           degree in Business Economics and has a master’s degree
@@ -711,43 +683,22 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-7b8c75f elementor-widget elementor-widget-toggle">
                       <div className="elementor-widget-container">
-                        <div className="elementor-toggle">
+                        <div className="elementor-toggle elementor-toggle4">
                           <div>
                             <div className="elementor-tab-title">
                               <button
                                 className="elementor-toggle-title"
                                 onClick={() => {
-                                  setReadmore4((_readmore) => !_readmore);
+                                  setReadmore4(true);
                                 }}
                               >
                                 Read more
                               </button>
-                            </div>
-                            <div
-                              className={
-                                readmore4 == true
-                                  ? "elementor-tab-content elementor-clearfix db"
-                                  : "elementor-tab-content elementor-clearfix"
-                              }
-                            >
-                              <p id="style-RkBfb" className="style-RkBfb">
-                                He started his career as a financial consultant
-                                at a prestigious bank, where he developed his
-                                skills in finance, risk management, and
-                                financial planning. After a few years, he took
-                                on the role of finance director and risk manager
-                                for a publicly listed company. Later, he held
-                                high-level positions in various investment firms
-                                and financial institutions. Currently, he is the
-                                general manager of a large software development
-                                company, where he is responsible for all aspects
-                                of financial management, from planning to risk
-                                management, and he is also the owner of
-                                high-profile hotel properties. Sirtre is
-                                actively involved in the community, attending
-                                numerous charity events and providing consulting
-                                to various non-profit organizations.
-                              </p>
+                              <Model
+                                show={readmore4}
+                                handleClose={handleClose}
+                                person={person3}
+                              />
                             </div>
                           </div>
                         </div>
@@ -781,7 +732,7 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-d11496e elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para">
+                        <p className="para para5">
                           Massimo is an experienced team leader with a wealth of
                           experience in the field of information management
                           technologies.
@@ -790,52 +741,23 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-dae6723 elementor-widget elementor-widget-toggle">
                       <div className="elementor-widget-container">
-                        <div className="elementor-toggle">
+                        <div className="elementor-toggle elementor-toggle5">
                           <div>
                             <div className="elementor-tab-title">
                               <button
                                 className="elementor-toggle-title"
                                 onClick={() => {
-                                  setReadmore2((_readmore) => !_readmore);
+                                  setReadmore2(true);
                                 }}
                               >
                                 Read more
                               </button>
                             </div>
-                            <div
-                              className={
-                                readmore2 == true
-                                  ? "elementor-tab-content elementor-clearfix db"
-                                  : "elementor-tab-content elementor-clearfix"
-                              }
-                            >
-                              <p id="style-hh9GZ" className="style-hh9GZ">
-                                &nbsp;
-                                <span id="style-LtDSr" className="style-LtDSr">
-                                  &nbsp;
-                                </span>
-                                <span id="style-M9xD4" className="style-M9xD4">
-                                  &nbsp;
-                                </span>
-                                <span id="style-Sss8z" className="style-Sss8z">
-                                  He has served as a consultant for companies of
-                                  all sizes, both in the software and hardware
-                                  domains. Massimo is able to quickly identify
-                                  the customer’s needs and provide swift and
-                                  effective solutions. He has a great passion
-                                  for technology and a solid knowledge of his
-                                  area of expertise. Massimo is a dedicated team
-                                  leader who is constantly committed to the goal
-                                  of bringing his team to success. He loves to
-                                  share his knowledge with team members and
-                                  encourages their professional growth. Massimo
-                                  has a strong strategic vision and a deep
-                                  understanding of business issues. He is an
-                                  excellent communicator and a natural
-                                  motivator.
-                                </span>
-                              </p>
-                            </div>
+                            <Model
+                              show={readmore2}
+                              handleClose={handleClose}
+                              person={person4}
+                            />
                           </div>
                         </div>
                       </div>
@@ -881,55 +803,16 @@ function Mint() {
                               <button
                                 className="elementor-toggle-title"
                                 onClick={() => {
-                                  setReadmore1((_readmore) => !_readmore);
+                                  setReadmore1(true);
                                 }}
                               >
                                 Read More
                               </button>
-                            </div>
-                            <div
-                              className={
-                                readmore1 == true
-                                  ? "elementor-tab-content elementor-clearfix db"
-                                  : "elementor-tab-content elementor-clearfix"
-                              }
-                            >
-                              <p id="style-SMJwh" className="style-SMJwh">
-                                <span id="style-Wc2KA" className="style-Wc2KA">
-                                  &nbsp;He has obtained a license to conduct
-                                  competitions in karting, track racing, Formula
-                                  Azzurra, and Formula Three. He has
-                                  participated in national and international
-                                  championships, winning at regional and
-                                  national levels.
-                                </span>
-                              </p>
-                              <p id="style-q7Jmn" className="style-q7Jmn">
-                                <span id="style-BQYQr" className="style-BQYQr">
-                                  Sirtre is an experienced financial sector
-                                  general manager with over 25 years of
-                                  experience. He holds a degree in Business
-                                  Economics and has a master’s degree in
-                                  Finance. He started his career as a financial
-                                  consultant at a prestigious bank, where he
-                                  developed his skills in finance, risk
-                                  management, and financial planning. After a
-                                  few years, he took on the role of finance
-                                  director and risk manager for a publicly
-                                  listed company. Later, he held high-level
-                                  positions in various investment firms and
-                                  financial institutions. Currently, he is the
-                                  general manager of a large software
-                                  development company, where he is responsible
-                                  for all aspects of financial management, from
-                                  planning to risk management, and he is also
-                                  the owner of high-profile hotel properties.
-                                  Sirtre is actively involved in the community,
-                                  attending numerous charity events and
-                                  providing consulting to various non-profit
-                                  organizations.
-                                </span>
-                              </p>
+                              <Model
+                                show={readmore1}
+                                handleClose={handleClose}
+                                person={person5}
+                              />
                             </div>
                           </div>
                         </div>
@@ -961,7 +844,7 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-564374d elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para">
+                        <p className="para para7">
                           Giancarlo is a seasoned professional in marketing and
                           communication. He has spent many years in the
                           financial technology sector, working with leading
@@ -971,54 +854,23 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-827dbfd elementor-widget elementor-widget-toggle">
                       <div className="elementor-widget-container">
-                        <div className="elementor-toggle">
+                        <div className="elementor-toggle elementor-toggle7">
                           <div>
                             <div className="elementor-tab-title">
                               <button
                                 className="elementor-toggle-title"
                                 onClick={() => {
-                                  setReadmore((_readmore) => !_readmore);
+                                  setReadmore(true);
                                 }}
                               >
                                 Read more
                               </button>
-                            </div>
-                            <div
-                              className={
-                                readmore == true
-                                  ? "elementor-tab-content elementor-clearfix db"
-                                  : "elementor-tab-content elementor-clearfix"
-                              }
-                            >
-                              <p>
-                                He has always had a passion for technology and
-                                innovation, and this led him to join the
-                                Giankycoin project as the Marketing Director.
-                              </p>
-                              <p>
-                                With his extensive knowledge of the financial
-                                sector and innovative technologies, Giancarlo is
-                                able to develop and implement effective
-                                marketing strategies to promote Giankycoin
-                                globally. His goal is to make cryptocurrency
-                                known to an increasingly wider audience and make
-                                the world of cryptocurrencies accessible to
-                                everyone.
-                              </p>
-                              <p>
-                                Giancarlo is known for his communication and
-                                leadership skills, and these qualities allow him
-                                to work closely with the Giankycoin team to
-                                achieve the project’s long-term goals.
-                              </p>
-                              <p>
-                                Thanks to his experience and abilities,
-                                Giancarlo is a valuable asset to the Giankycoin
-                                team and a strong representative of the
-                                cryptocurrency to the public and stakeholders.
-                                We are confident that his contribution will be
-                                key to the success of Giankycoin.
-                              </p>
+
+                              <Model
+                                show={readmore}
+                                handleClose={handleClose}
+                                person={person6}
+                              />
                             </div>
                           </div>
                         </div>
@@ -1031,7 +883,6 @@ function Mint() {
           </div>
         </div>
 
-
         <div>
           <div
             className={
@@ -1043,7 +894,6 @@ function Mint() {
             <Footer />
           </div>
         </div>
-
       </div>
 
       {/* <div className={selectedOption === "option1" ? "footer" : "footerb"}>

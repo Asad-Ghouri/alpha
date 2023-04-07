@@ -89,6 +89,12 @@ export const Header = () => {
                           </a>
                         </li> */}
                         <li>
+                          <Link href="/stake" className="elementor-item">
+                            Stake
+                          </Link>
+                        </li>
+
+                        <li>
                           <Link href="/swap" className="elementor-item">
                             Swap
                           </Link>

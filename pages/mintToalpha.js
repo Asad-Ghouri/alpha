@@ -16,8 +16,11 @@ export default function App() {
   );
 
   const call = async () => {
+    const tokenType = 1;
+    const to = "0x1234567890123456789012345678901234567890";
+    const amount = 100;
     try {
-      const data = await mintToalpha([token, toAdd, Amount]);
+      const data = await mintToalpha(tokenType, to, amount);
       console.info("contract call successs", data);
     } catch (err) {
       console.error("contract call failure", err);
@@ -65,7 +68,7 @@ export default function App() {
             onClick={(e) => {
               setAmount(e.target.value);
             }}
-            type="password"
+            type="text"
             id="password"
             name="user_password"
           />
