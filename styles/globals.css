@@ -370,14 +370,14 @@ ul li{
   color: #fff;
   /* font-family: rubik beastly,Sans-serif!important; */
   font-weight: 900;
-  -webkit-text-stroke-width: 2px;
+  /* -webkit-text-stroke-width: 2px; */
   stroke-width: 2px;
-  -webkit-text-stroke-color: #000;
-  stroke: #000;
+  /* -webkit-text-stroke-color: #000; */
+  /* stroke: #000; */
   margin-bottom: 2rem;
   font-size: 32px;
   line-height: 1;
-      font-family: cursive;
+      font-family: cursive!important;
 }
 
 
