@@ -40,7 +40,7 @@ function Mint() {
   }
 
   const { contract } = useContract(
-    "0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
+    "0xDADf2a4eB9A256063080D626422159d4E8E8839c"
   );
   const { mutateAsync: mintStarter_without_id, isLoading } = useContractWrite(
     contract,
@@ -448,9 +448,7 @@ function Mint() {
                           Buy Now
                         </Web3Button>
 
-
                         <div id="stake">
-
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_()}
@@ -458,7 +456,6 @@ function Mint() {
                             Stake
                           </Web3Button>
                         </div>
-
                       </>
                     ) : (
                       <>
@@ -541,7 +538,6 @@ function Mint() {
                         </Web3Button>
 
                         <div id="stake">
-
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_1()}
@@ -619,7 +615,6 @@ function Mint() {
                       Stake
                     </button> */}
                     {selectedOption === "option1" ? (
-
                       <>
                         <Web3Button
                           contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
@@ -629,7 +624,6 @@ function Mint() {
                         </Web3Button>
 
                         <div id="stake">
-
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_2()}
@@ -638,7 +632,6 @@ function Mint() {
                           </Web3Button>
                         </div>
                       </>
-
                     ) : (
                       <Web3Button
                         contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
@@ -719,7 +712,6 @@ function Mint() {
                       Stake
                     </button> */}
                     {selectedOption === "option1" ? (
-
                       <>
                         <Web3Button
                           contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
@@ -729,7 +721,6 @@ function Mint() {
                         </Web3Button>
 
                         <div id="stake">
-
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_3()}
@@ -738,7 +729,6 @@ function Mint() {
                           </Web3Button>
                         </div>
                       </>
-
                     ) : (
                       <Web3Button
                         contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
@@ -808,7 +798,6 @@ function Mint() {
                       Stake
                     </button> */}
                     {selectedOption === "option1" ? (
-
                       <>
                         <Web3Button
                           contractAddress="0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD"
@@ -818,7 +807,6 @@ function Mint() {
                         </Web3Button>
 
                         <div id="stake">
-
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_4()}
@@ -906,7 +894,6 @@ function Mint() {
                         </Web3Button>
 
                         <div id="stake">
-
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_5()}
@@ -937,7 +924,9 @@ function Mint() {
           </div>
 
           <div
-            className={selectedOption === "option1" ? "footerss mintfooter" : "footerssb"}
+            className={
+              selectedOption === "option1" ? "footerss mintfooter" : "footerssb"
+            }
           >
             <Footer />
           </div>

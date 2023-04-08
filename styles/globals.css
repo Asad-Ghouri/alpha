@@ -32,6 +32,7 @@ body {
 .mint,.stake{
   
   /* background-color: #000000; */
+  background-color: red;
     background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
     background-size: cover;
     padding: 0;

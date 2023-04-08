@@ -219,7 +219,7 @@ function Mint() {
                               <img
                                 width={300}
                                 height={242}
-                                src="https://shopinose.com/wp-content/uploads/2023/03/hand-putting-coin-pink-piggy-money-savings-concept-pink-background-3d-rendering-removebg-preview-e1680108538161-300x242.png"
+                                src="https://pngimg.com/d/piggy_bank_PNG109.png"
                               />
                             </div>
                           </div>
