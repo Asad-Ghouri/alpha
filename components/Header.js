@@ -101,6 +101,12 @@ export const Header = () => {
                         </li>
 
                         <li>
+                          <Link className="cw" href="/#team">
+                            Team
+                          </Link>
+                        </li>
+
+                        <li>
                           <a
                             className="cw"
                             href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"

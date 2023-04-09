@@ -1,10 +1,23 @@
 import Link from "next/link";
 
+import React, { useState } from "react";
+
 import { Header } from "../components/Header";
 
 import { Footer } from "../components/Footer";
 
 export default function MainSwap() {
+
+  const [copiedText, setCopiedText] = useState('');
+  const [showToast, setShowToast] = useState(false);
+  function handleToastClose() {
+    setShowToast(false);
+  }
+  function handleCopy(text) {
+    navigator.clipboard.writeText(text);
+    setCopiedText(text);
+    setShowToast(true);
+  }
   return (
     <>
       <div className="mint">
@@ -19,7 +32,7 @@ export default function MainSwap() {
         </center>
 
         <center>
-          <h3 className="swap-contract">0x834619439294Beb318e1b73Be3D20d2b581D4bFb</h3>
+          <h3 className="swap-contract" onClick={() => handleCopy('0x834619439294Beb318e1b73Be3D20d2b581D4bFb')}>0x834619439294Beb318e1b73Be3D20d2b581D4bFb</h3>
         </center>
         <div className="swappage">
           <iframe

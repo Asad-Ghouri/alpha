@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import info from "../public/info-removebg-preview.png"
+import Image from "next/image";
+import Model from "./Model";
+
 export const Footer = () => {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const person = {
+    name: "",
+    age: "",
+    occupation: "Gianky Coin is a product created, managed, controlled and exclusively owned by the company Il Dattero based in Catania, Via Ferrante Aporti, 8 CAP 95123 Italy. P.I / VAT IT05632770870; REA: CT-418000; tel.+39 095 8998538 website: www.ildattero.cloud",
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="footer">
       <section
@@ -189,7 +206,16 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <center className="cw copytext">Copyright @ 2023 Gianky Coin</center>
+        <div className="info">
+          <center className="cw copytext">Copyright @ 2023 Gianky Coin
+            <Image className="info-img" src={info} width={40} height={40} alt="" onClick={() => setShowModal(true)} />
+          </center>
+        </div>
+        <Model
+          show={showModal}
+          handleClose={handleClose}
+          person={person}
+        />
       </section>
     </div>
   );

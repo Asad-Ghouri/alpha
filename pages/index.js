@@ -24,11 +24,20 @@ function Mint() {
 
   const [showModal, setShowModal] = useState(false);
 
+  const [changeLan, setchangeLan] = useState(true);
+
   const person = {
     name: "Alpha",
     age: "Owner and Founder",
     occupation:
       "I'm Enrico, also known as Alpha, founder and CEO of Gianky Coin, a technological startup aiming to create innovative products for the financial, blockchain and internet service provision sectors in general. I have a long standing experience in computing and a master's degree in business management, so I have done several projects in the field of internet service provision and traditional business consultancy. I started my business with Gianky Coin to provide innovative technological solutions that can contribute to the growth of the financial sector, knowledge of blockchain and DeFi (decentralized finance). We have developed an easy-to-use and accessible NFT platform, but also a BSC (binance smart chain) token that I hope will become a beneficial payment and investment tool for our supporters (holders), In addition, we are working on other blockchain-based products to help people understand, invest and benefit from the rapidly evolving technological environment. We hope that our platform will contribute to the spread of the blockchain & DeFi-based financial culture and to the growth of the global economy.",
+  };
+
+  const person_i = {
+    name: "Alpha",
+    age: "Owner and Founder",
+    occupation:
+      "Ho un esperienza  pluriventennale in informatica ed un master in gestione aziendale, quindi ho fatto diversi progetti nel campo della fornitura servizi internet e consulenza aziendale tradizionale . Ho iniziato la mia attività con Gianky Coin per offrire soluzioni tecnologiche innovative che possano contribuire alla crescita del settore finanziario , conoscenza della blockchain e della DeFi (finanza decentralizzata) . Abbiamo sviluppato una piattaforma di NFT facile da usare e accessibile a tutti , ma anche un token BSC ( binance smart chain ) che spero diventi uno strumento di pagamento e investimento vantaggioso per i nostri sostenitori ( holder ) ,Inoltre, stiamo lavorando su altri prodotti basati su blockchain per aiutare le persone a capire, investire e trarre vantaggio dall'ambiente tecnologico in rapida evoluzione. Con l'aiuto della nostra squadra di esperti, abbiamo creato un prodotto che è allo stesso tempo semplice da usare per chi non ha esperienza in questo settore e potente per gli utenti esperti.",
   };
 
   const person1 = {
@@ -443,7 +452,29 @@ function Mint() {
           </div>
         </div>
 
-        <div className="readmore">
+        <div className="setchangeLang">
+          {changeLan ? (
+            <button
+              className="changelang"
+              onClick={() => {
+                setchangeLan(false);
+              }}
+            >
+              English
+            </button>
+          ) : (
+            <button
+              className="changelang"
+              onClick={() => {
+                setchangeLan(true);
+              }}
+            >
+              Italian
+            </button>
+          )}
+        </div>
+
+        <div className="readmore" id="team">
           <div className="elementor-widget-wrap elementor-element-populated">
             <div className="elementor-element elementor-element-d8fb732 elementor-widget elementor-widget-heading">
               <div className="elementor-widget-container">
@@ -497,12 +528,22 @@ function Mint() {
                               "\n                /*! elementor - v3.11.5 - 14-03-2023 */\n                .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{\n                  background-color:#818a91;\n                  color:#fff}\n                .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{\n                  color:#818a91;\n                  border:3px solid;\n                  background-color:transparent}\n                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{\n                  margin-top:8px}\n                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{\n                  width:1em;\n                  height:1em}\n                .elementor-widget-text-editor .elementor-drop-cap{\n                  float:left;\n                  text-align:center;\n                  line-height:1;\n                  font-size:50px}\n                .elementor-widget-text-editor .elementor-drop-cap-letter{\n                  display:inline-block}\n              ",
                           }}
                         />
-                        <p className="para para1">
-                          I'm Enrico, also known as Alpha, founder and CEO of
-                          Gianky Coin, a technological startup aiming to create
-                          innovative products for the financial, blockchain and
-                          internet service provision sectors in general
-                        </p>
+                        {changeLan ? (
+                          <p className="para para1">
+                            Im Enrico, also known as Alpha, founder and CEO of
+                            Gianky Coin, a technological startup aiming to
+                            create innovative products for the financial,
+                            blockchain and internet service provision sectors in
+                            general
+                          </p>
+                        ) : (
+                          <p className="para para1">
+                            Sono Enrico alias Alpha , fondatore e CEO di Gianky
+                            Coin, una startup tecnologica che mira a creare
+                            prodotti innovativi per il settore finanziario ,
+                            blockchain e fornitura servizi internet in generale.
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-8192d16 elementor-widget elementor-widget-toggle">
@@ -522,11 +563,20 @@ function Mint() {
                               >
                                 Read more
                               </button>
-                              <Model
-                                show={showModal}
-                                handleClose={handleClose}
-                                person={person}
-                              />
+
+                              {changeLan ? (
+                                <Model
+                                  show={showModal}
+                                  handleClose={handleClose}
+                                  person={person}
+                                />
+                              ) : (
+                                <Model
+                                  show={showModal}
+                                  handleClose={handleClose}
+                                  person={person_i}
+                                />
+                              )}
                             </div>
                           </div>
                         </div>

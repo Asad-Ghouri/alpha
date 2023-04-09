@@ -43,6 +43,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link className="cw" href="/#team">
+                Team
+              </Link>
+            </li>
+            <li>
               {/* <Link
                 href="/whitePaper"
                 target="_blank"
