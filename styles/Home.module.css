@@ -529,6 +529,9 @@
 
   @media (min-width:850px){
     .nftBox video{
-      width: 120%!important;
+      width: 110%!important;
+    }
+    .sh{
+      height: 100vh;
     }
   }

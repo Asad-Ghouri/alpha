@@ -99,7 +99,7 @@ const Stake: NextPage = () => {
     return (
         <>
 
-            <div className={address ? "stake" : "stake loadingstake"}>
+            <div className={address ? "stake loadingstake" : "stake loadingstake"}>
 
                 <Header />
                 <div
@@ -116,7 +116,7 @@ const Stake: NextPage = () => {
                         <div className="connect"> <ConnectWallet accentColor="#f213a4" colorMode="dark" /> </div>
 
                     ) : (
-                        <>
+                        <div>
                             <h2 className={styles.walletbalance}>WALLET BALANCE</h2>
 
                             <div className={styles.tokenGrid}>
@@ -186,7 +186,7 @@ const Stake: NextPage = () => {
                             ) :
                                 undefined
                             }
-                        </>
+                        </div>
                     )}
                 </div>
             </div>

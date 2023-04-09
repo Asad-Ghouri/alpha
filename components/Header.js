@@ -68,7 +68,7 @@ export const Header = () => {
                         <li>
                           <Link
                             href="/"
-                            className="elementor-item elementor-item-active"
+                            className="elementor-item"
                           >
                             HOME
                           </Link>
@@ -101,14 +101,13 @@ export const Header = () => {
                         </li>
 
                         <li>
-                          <Link
-                            href="/whitePaper"
-                            target="_blank"
-                            className="elementor-item"
-                            passHref
+                          <a
+                            className="cw"
+                            href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
+                            download
                           >
                             Whitepaper
-                          </Link>
+                          </a>
                         </li>
 
                         {/* <li>

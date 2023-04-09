@@ -23,6 +23,11 @@ body {
   font-family: "RubikBeastly";
   font-family: "Roboto-Black";
 
+  background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
   /* --hello: -100%; */
   /* padding-bottom: 250px; */
   overflow-x: hidden;
@@ -30,7 +35,7 @@ body {
   margin: 0;
 }
 
-.mint,.stake{
+.mint,.take{
   
   /* background-color: #000000; */
   background-color: red;
@@ -4018,7 +4023,10 @@ background-color: #000;
   padding-bottom: 20px;
 }
 @media (min-width: 850px){
- 
+
+  .sh{
+    height: 100vh!important;
+  }
   
   .para3{
     margin-top: 48px;
