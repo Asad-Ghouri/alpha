@@ -9,7 +9,9 @@ function Model({ show, handleClose, person }) {
         <h2 className="elementor-heading-title _title">{person.name}</h2>
         <p className="elementor-heading-title agetitle">{person.age}</p>
         <p className="person-detail">{person.occupation}</p>
-        <button onClick={handleClose}>Close</button>
+        <button className="close-btn" onClick={handleClose}>
+          Close
+        </button>
       </section>
     </div>
   );

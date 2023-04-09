@@ -198,11 +198,13 @@ export const Header = () => {
                           <span className="elementor-screen-only">Twitter</span>
                           <i className="fab fa-twitter"></i>
                         </a> */}
-                        <SocialIcon
-                          network="twitter"
-                          bgColor="black"
-                          style={{ height: 40, width: 40 }}
-                        />
+                        <a href="https://www.facebook.com/GiankyCoinOfficial">
+                          <SocialIcon
+                            network="facebook"
+                            bgColor="black"
+                            style={{ height: 40, width: 40 }}
+                          />
+                        </a>
                       </span>
                       <span className="elementor-grid-item">
                         {/* <a className="elementor-icon elementor-social-icon elementor-social-icon-telegram elementor-animation-pulse-grow elementor-repeater-item-24500b6">
@@ -211,18 +213,22 @@ export const Header = () => {
                           </span>
                           <i className="fab fa-telegram"></i>
                         </a> */}
-                        <SocialIcon
-                          network="telegram"
-                          bgColor="black"
-                          style={{ height: 40, width: 40 }}
-                        />
+                        <a href="https://t.me/giankycoin2">
+                          <SocialIcon
+                            network="telegram"
+                            bgColor="black"
+                            style={{ height: 40, width: 40 }}
+                          />
+                        </a>
                       </span>
                       <span className="elementor-grid-item">
-                        <SocialIcon
-                          network="discord"
-                          bgColor="black"
-                          style={{ height: 40, width: 40 }}
-                        />
+                        <a href="https://discord.gg/CK53tNQTHX">
+                          <SocialIcon
+                            network="discord"
+                            bgColor="black"
+                            style={{ height: 40, width: 40 }}
+                          />
+                        </a>
                       </span>
                     </div>
                   </div>

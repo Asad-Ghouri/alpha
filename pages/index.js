@@ -199,7 +199,7 @@ function Mint() {
                           >
                             <div className="elementor-widget-container">
                               <h2 className="elementor-heading-title">
-                                Collect this super rear NFT &amp; Digital
+                                Collect this super rare NFT &amp; Digital
                                 Artwork
                               </h2>
                             </div>
@@ -498,9 +498,10 @@ function Mint() {
                           }}
                         />
                         <p className="para para1">
-                          A technological startup aiming to create innovative
-                          products for the financial, blockchain and internet
-                          service provision sectors in general
+                          I'm Enrico, also known as Alpha, founder and CEO of
+                          Gianky Coin, a technological startup aiming to create
+                          innovative products for the financial, blockchain and
+                          internet service provision sectors in general
                         </p>
                       </div>
                     </div>
@@ -613,7 +614,7 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-443e706 elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para">
+                        <p className="para para3">
                           Vincenzo Palmeri, who holds degrees in mathematics
                           with qualifications in mathematics and CS,
                           {/* <span id="style-of7yo" className="style-of7yo"> */}
@@ -788,7 +789,7 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-2684daa elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para">
+                        <p className="para para6">
                           Eugenio Palmeri, a Mechanical Engineering graduate,
                           works in a Swiss company that specializes in machine
                           inspections and checks of mechanical components.

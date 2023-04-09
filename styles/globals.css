@@ -2738,11 +2738,19 @@ background-color: #000;
 .d-n{
   display: none;
 }
+
+.cw{
+  color: white!important;
+}
+.close-btn{
+  color: white;
+  border: 2px solid white;
+}
 @media (max-width:600px){
   .elementor-element.elementor-element-56ff30a img{
     padding-bottom: 44px;
-    margin-top: -3rem;
-    margin-left: 11%;
+    margin-top: 0;
+    margin-left: -5%;
   }
   .elementor-column{
     margin-top: 1rem;
@@ -4005,6 +4013,10 @@ background-color: #000;
 
 }
 
+.copytext{
+  margin-top: 5px;
+  padding-bottom: 20px;
+}
 @media (min-width: 850px){
  
   
@@ -4034,7 +4046,7 @@ background-color: #000;
   margin-top: 50px;
 } 
 .elementor-toggle1{
-  margin-top: 51px;
+  margin-top: -17px;
 }
 .elementor-toggle3{
   margin-top: -16px;
@@ -4053,6 +4065,12 @@ background-color: #000;
 }
 .elementor-toggle7{
   margin-top: 40px;
+}
+.para3{
+  margin-top: 48px;
+}
+.para6{
+  margin-top: 48px;
 }
 }
 @media (max-width: 600px)

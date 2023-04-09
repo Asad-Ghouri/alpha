@@ -120,7 +120,9 @@ export const Footer = () => {
                 data-element_type="widget"
               >
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title">Subscribe To Us</h2>
+                  <h2 className="elementor-heading-title cw">
+                    Subscribe To Us
+                  </h2>
                 </div>
               </div>
               <div
@@ -187,6 +189,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+        <center className="cw copytext">Copyright @ 2023 Gianky Coin</center>
       </section>
     </div>
   );
