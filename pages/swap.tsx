@@ -6,7 +6,12 @@ import { Header } from "../components/Header";
 
 import { Footer } from "../components/Footer";
 
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function MainSwap() {
+
 
   const [copiedText, setCopiedText] = useState('');
   const [showToast, setShowToast] = useState(false);
@@ -31,8 +36,17 @@ export default function MainSwap() {
           <h3 className="swap-contract">Gianky Coin Smart Contract :</h3>
         </center>
 
-        <center>
-          <h3 className="swap-contract" onClick={() => handleCopy('0x834619439294Beb318e1b73Be3D20d2b581D4bFb')}>0x834619439294Beb318e1b73Be3D20d2b581D4bFb</h3>
+
+
+        <ToastContainer />
+        <center onClick={() =>
+          toast.success('successfully copied!')
+        }>
+          <h3 className="swap-contract" onClick={() =>
+            handleCopy('0x834619439294Beb318e1b73Be3D20d2b581D4bFb')
+          }>
+            0x834619439294Beb318e1b73Be3D20d2b581D4bFb
+          </h3>
         </center>
         <div className="swappage">
           <iframe

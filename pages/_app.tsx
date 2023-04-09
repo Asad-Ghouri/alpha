@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import type { AppProps } from "next/app";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import Head from "next/head";
@@ -13,10 +13,33 @@ import { Footer } from "../components/Footer"
 const activeChainId = ChainId.Mumbai;
 
 function MyApp({ Component, pageProps }: AppProps) {
+
+  const [changeLan, setchangeLan] = useState(true);
+
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>
-      {/* <Header /> */}
-      <Component {...pageProps} />
+      <div className="setchangeLang">
+        {changeLan ? (
+          <button
+            className="changelang"
+            onClick={() => {
+              setchangeLan(false);
+            }}
+          >
+            English
+          </button>
+        ) : (
+          <button
+            className="changelang"
+            onClick={() => {
+              setchangeLan(true);
+            }}
+          >
+            Italian
+          </button>
+        )}
+      </div>
+      <Component {...pageProps} changeLan={changeLan} />
       {/* <Footer /> */}
     </ThirdwebProvider>
   );

@@ -423,7 +423,7 @@ function Mint() {
                   <div className="giftext">
                     STARTER
                     <br />
-                    (0.065 BNB)
+                    (20$)
                   </div>
                   <div>
                     <form
@@ -503,7 +503,7 @@ function Mint() {
                   <div className="giftext">
                     Basic
                     <br />
-                    (0.18 BNB)
+                    (50$)
                   </div>
                   <div>
                     <form
@@ -589,7 +589,7 @@ function Mint() {
                   <div className="giftext">
                     STANDARD
                     <br />
-                    (0.33 BNB)
+                    (100$)
                   </div>
                   <div>
                     <form
@@ -686,7 +686,7 @@ function Mint() {
                   <div className="giftext">
                     VIP
                     <br />
-                    (1.60 BNB)
+                    (500$)
                   </div>
                   <div>
                     <form
@@ -772,7 +772,7 @@ function Mint() {
                   <div className="giftext">
                     PREMIUM
                     <br />
-                    (3.20 BNB)
+                    (1000$)
                   </div>
                   <div>
                     <form
@@ -858,7 +858,7 @@ function Mint() {
                   <div className="giftext">
                     DIAMOND
                     <br />
-                    (16.00 BNB)
+                    (5000$)
                   </div>
 
                   <div>

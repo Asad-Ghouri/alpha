@@ -48,19 +48,16 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              {/* <Link
-                href="/whitePaper"
-                target="_blank"
-                className="elementor-item"
-                passHref
-              >
-                Whitepaper
-              </Link> */}
               <a
                 href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
                 download
               >
-                Whitepaper
+                Whitepaper English
+              </a>
+            </li>
+            <li>
+              <a href="https://itishstudios.net/assert/Italic.pdf" download>
+                Whitepaper Italic
               </a>
             </li>
           </ul>

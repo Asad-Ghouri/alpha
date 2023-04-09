@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import info from "../public/info-removebg-preview.png"
+import info from "../public/info-removebg-preview.png";
 import Image from "next/image";
 import Model from "./Model";
 
-export const Footer = () => {
-
+export const Footer = (props) => {
   const [showModal, setShowModal] = useState(false);
 
   const person = {
     name: "",
     age: "",
-    occupation: "Gianky Coin is a product created, managed, controlled and exclusively owned by the company Il Dattero based in Catania, Via Ferrante Aporti, 8 CAP 95123 Italy. P.I / VAT IT05632770870; REA: CT-418000; tel.+39 095 8998538 website: www.ildattero.cloud",
+    occupation:
+      "Gianky Coin is a product created, managed, controlled and exclusively owned by the company Il Dattero based in Catania, Via Ferrante Aporti, 8 CAP 95123 Italy. P.I / VAT IT05632770870; REA: CT-418000; tel.+39 095 8998538 website: www.ildattero.cloud",
+  };
+
+  const person_i = {
+    name: "",
+    age: "",
+    occupation:
+      "Gianky Coin è un prodotto creato , gestito , controllato e di esclusiva proprietà” dell’azienda “ Il dattero” con sede in Catania in Via Ferrante Aporti, 8 CAP 95123 Italy . P.I 05632770870 ; REA : CT-418000 : tel.+39 095 8998538 website : www.ildattero.cloud",
   };
 
   const handleClose = () => {
@@ -137,9 +144,15 @@ export const Footer = () => {
                 data-element_type="widget"
               >
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title cw">
-                    Subscribe To Us
-                  </h2>
+                  {props.changeLan ? (
+                    <h2 className="elementor-heading-title cw">
+                      Subscribe To Us
+                    </h2>
+                  ) : (
+                    <h2 className="elementor-heading-title cw">
+                      Iscriviti a noi
+                    </h2>
+                  )}
                 </div>
               </div>
               <div
@@ -147,7 +160,14 @@ export const Footer = () => {
                 data-element_type="widget"
               >
                 <div className="elementor-widget-container">
-                  <p>Join Our Newsletter For Latest Updates !</p>
+                  {props.changeLan ? (
+                    <p>Join Our Newsletter For Latest Updates !</p>
+                  ) : (
+                    <p>
+                      Iscriviti alla nostra newsletter per gli ultimi
+                      aggiornamenti!
+                    </p>
+                  )}
                 </div>
               </div>
               <div
@@ -207,15 +227,25 @@ export const Footer = () => {
           </div>
         </div>
         <div className="info">
-          <center className="cw copytext">Copyright @ 2023 Gianky Coin
-            <Image className="info-img" src={info} width={40} height={40} alt="" onClick={() => setShowModal(true)} />
+          <center className="cw copytext">
+            {props.changeLan
+              ? "Copyright @ 2023 Gianky Coin"
+              : "Copyright @ 2023 Moneta Gianky"}
+            <Image
+              className="info-img"
+              src={info}
+              width={40}
+              height={40}
+              alt=""
+              onClick={() => setShowModal(true)}
+            />
           </center>
         </div>
-        <Model
-          show={showModal}
-          handleClose={handleClose}
-          person={person}
-        />
+        {props.changeLan ? (
+          <Model show={showModal} handleClose={handleClose} person={person} />
+        ) : (
+          <Model show={showModal} handleClose={handleClose} person={person_i} />
+        )}
       </section>
     </div>
   );

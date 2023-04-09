@@ -108,7 +108,7 @@ export const Header = () => {
 
                         <li>
                           <a
-                            className="cw"
+                            className="cw nav-link"
                             href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
                             download
                           >
@@ -116,6 +116,18 @@ export const Header = () => {
                           </a>
                         </li>
 
+                        <div className="dropdown">
+                          <li>
+                            <a href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf" className="dropdown-link" download>
+                              Whitepaper English
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://itishstudios.net/assert/Italic.pdf" className="dropdown-link" download>
+                              Whitepaper Italic
+                            </a>
+                          </li>
+                        </div>
                         {/* <li>
                           {" "}
                           <Link href="/whitePaper">WHITEPAPER</Link>{" "}

@@ -18,14 +18,15 @@ import {
   useAddress,
 } from "@thirdweb-dev/react";
 
-function Mint() {
+function Mint(props) {
   const [ListingValue, setListingValue] = useState("200");
   const [selectedOption, setSelectedOption] = useState("option1");
 
+  const [changeLan, setchangeLan] = useState(props.changeLan);
+
   const [showModal, setShowModal] = useState(false);
 
-  const [changeLan, setchangeLan] = useState(true);
-
+  console.log("change is " + props.changeLan);
   const person = {
     name: "Alpha",
     age: "Owner and Founder",
@@ -47,11 +48,25 @@ function Mint() {
       "With over 100 successful crypto token creations under his belt, he has a deep understanding of the technical and practical aspects of blockchain and its related applications. One of our most experienced and knowledgeable team members, he specializes in smart contracts, a key technology that underpins blockchain and enables the creation of decentralized applications. His expertise in smart contracts has helped many clients build robust and secure systems on top of blockchain, and he is always pushing the boundaries of what’s possible in this exciting and rapidly-evolving field. With a keen eye for detail and a passion for innovation, our blockchain and cryptocurrency expert is the go-to resource for anyone looking to explore the potential of blockchain and digital currencies. Whether you’re a seasoned investor, a startup looking to launch a new crypto token, or just curious about the technology behind this rapidly-growing industry, he’s the person you want on your side.",
   };
 
+  const person1_i = {
+    name: "ONJI",
+    age: "Chief Technical Officer",
+    occupation:
+      "Uno dei membri più esperti e competenti del nostro team, si specializza nei contratti intelligenti, una tecnologia chiave che sostiene la blockchain e consente la creazione di applicazioni decentralizzate. La sua competenza in materia di contratti intelligenti ha aiutato molti clienti a creare sistemi robusti e sicuri sulla blockchain e lui è sempre alla ricerca di nuovi limiti del possibile in questo entusiasmante e rapidamente evolvente settore. Con un occhio acuto per i dettagli e una passione per l'innovazione, il nostro esperto di blockchain e criptovalute è la risorsa di riferimento per chiunque desideri esplorare il potenziale della blockchain e delle valute digitali. Che tu sia un investitore esperto, una startup che cerca di lanciare un nuovo token crittografico o semplicemente curioso della tecnologia dietro questo settore in rapida crescita, lui è la persona che vuoi al tuo fianco.",
+  };
+
   const person2 = {
     name: "VINCENZO",
     age: "Senior Ambassador",
     occupation:
       "He has led the direction and management of computer and physics laboratories. He has developed specific skills as a team principal in managing teams in motorsports competitions, formula kart, formula azzurra, and formula three, where he has achieved various successes in the Italian championships. He has also directed the organization of events in various sailing and chess clubs.",
+  };
+
+  const person2_i = {
+    name: "VINCENZO",
+    age: "Senior Ambassador",
+    occupation:
+      " Ha sviluppato competenze specifiche come team principal nella gestione di squadre in competizioni motoristiche, formula kart, formula azzurra, formula tre in cui ha ottenuto svariati successi in campo agonistico nei campionati italiani. Ha inoltre diretto l'organizzazione di eventi in vari circoli sportivi velici e scacchistici.",
   };
 
   const person3 = {
@@ -61,11 +76,25 @@ function Mint() {
       "He started his career as a financial consultant at a prestigious bank, where he developed his skills in finance, risk management, and financial planning. After a few years, he took on the role of finance director and risk manager for a publicly listed company. Later, he held high-level positions in various investment firms and financial institutions. Currently, he is the general manager of a large software development company, where he is responsible for all aspects of financial management, from planning to risk management, and he is also the owner of high-profile hotel properties. Sirtre is actively involved in the community, attending numerous charity events and providing consulting to various non-profit organizations.",
   };
 
+  const person3_i = {
+    name: "Sirtre",
+    age: "General Manager",
+    occupation:
+      "Ha iniziato la sua carriera come consulente finanziario presso una prestigiosa banca, dove ha sviluppato le proprie competenze nell'ambito della finanza, della gestione del rischio e della pianificazione finanziaria. Dopo alcuni anni, ha assunto il ruolo di direttore finanziario e responsabile della gestione del rischio per una società quotata in borsa. In seguito, ha ricoperto posizioni di alto livello in diverse società di investimento e istituti finanziari. Attualmente è il general manager di una grande società che sviluppa software , dove si occupa di tutti gli aspetti della gestione finanziaria, dalla pianificazione alla gestione dei rischi, inoltre è proprietario di strutture alberghiere di alto profilo . Sirtre è attivamente impegnato nella comunità, partecipando a numerosi eventi di beneficenza e fornendo consulenza a varie organizzazioni no profit.",
+  };
+
   const person4 = {
     name: "MASSIMO",
     age: "Team Leader",
     occupation:
       "He has served as a consultant for companies of all sizes, both in the software and hardware domains. Massimo is able to quickly identify the customer’s needs and provide swift and effective solutions. He has a great passion for technology and a solid knowledge of his area of expertise. Massimo is a dedicated team leader who is constantly committed to the goal of bringing his team to success. He loves to share his knowledge with team members and encourages their professional growth. Massimo has a strong strategic vision and a deep understanding of business issues. He is an excellent communicator and a natural motivator.",
+  };
+
+  const person4_i = {
+    name: "MASSIMO",
+    age: "Team Leader",
+    occupation:
+      "Ha prestato servizio come consulente per aziende di tutte le dimensioni, sia nel settore software che in quello hardware.  Massimo è in grado di identificare rapidamente le esigenze del cliente e fornire soluzioni rapide ed efficaci.  Ha una grande passione per la tecnologia e una solida conoscenza della sua area di competenza.  Massimo è un team leader dedicato che è costantemente impegnato nell'obiettivo di portare la sua squadra al successo.  Ama condividere le sue conoscenze con i membri del team e incoraggia la loro crescita professionale.  Massimo ha una forte visione strategica e una profonda conoscenza delle problematiche aziendali.  È un eccellente comunicatore e un motivatore naturale.",
   };
 
   const person5 = {
@@ -75,6 +104,13 @@ function Mint() {
       "He has obtained a license to conduct competitions in karting, track racing, Formula Azzurra, and Formula Three. He has participated in national and international championships, winning at regional and national levels. Sirtre is an experienced financial sector general manager with over 25 years of experience. He holds a degree in Business Economics and has a master’s degree in Finance. He started his career as a financial consultant at a prestigious bank, where he developed his skills in finance, risk management, and financial planning. After a few years, he took on the role of finance director and risk manager for a publicly listed company. Later, he held high-level positions in various investment firms and financial institutions. Currently, he is the general manager of a large software development company, where he is responsible for all aspects of financial management, from planning to risk management, and he is also the owner of high-profile hotel properties. Sirtre is actively involved in the community, attending numerous charity events and providing consulting to various non-profit organizations. Giancarlo Marketing Director Giancarlo is a seasoned professional in marketing and communication. He has spent many years in the financial technology sector, working with leading global companies.",
   };
 
+  const person5_i = {
+    name: "Eugenio",
+    age: "International Ambassador",
+    occupation:
+      "Eugenio Palmeri laureato in ingegneria meccanica lavora in una azienda svizzera che si occupa di verifiche e controlli di macchine e dei relativi componenti meccanici. Ha conseguito la licenza di conduttore nelle competizioni sportive di karting, automobilismo su pista, formula azzurra e formula tre. Ha partecipato a campionati nazionali e internazionali vincendone a livello regionale e nazionale. Eurgenio",
+  };
+
   const person6 = {
     name: "Giancarlo",
     age: "Marketing Director",
@@ -82,6 +118,12 @@ function Mint() {
       "He has always had a passion for technology and innovation, and this led him to join the Giankycoin project as the Marketing Director. With his extensive knowledge of the financial sector and innovative technologies, Giancarlo is able to develop and implement effective marketing strategies to promote Giankycoin globally. His goal is to make cryptocurrency known to an increasingly wider audience and make the world of cryptocurrencies accessible to everyone. Giancarlo is known for his communication and leadership skills, and these qualities allow him to work closely with the Giankycoin team to achieve the project’s long-term goals. Thanks to his experience and abilities, Giancarlo is a valuable asset to the Giankycoin team and a strong representative of the cryptocurrency to the public and stakeholders. We are confident that his contribution will be key to the success of Giankycoin.",
   };
 
+  const person6_i = {
+    name: "Giancarlo",
+    age: "Marketing Director",
+    occupation:
+      "Da sempre appassionato di tecnologia e innovazione, questo lo ha portato ad entrare a far parte del progetto Giankycoin come Direttore Marketing.  Con la sua vasta conoscenza del settore finanziario e delle tecnologie innovative, Giancarlo è in grado di sviluppare e implementare efficaci strategie di marketing per promuovere Giankycoin a livello globale.  Il suo obiettivo è far conoscere le criptovalute a un pubblico sempre più vasto e rendere il mondo delle criptovalute accessibile a tutti.  Giancarlo è noto per le sue capacità comunicative e di leadership, e queste qualità gli consentono di lavorare a stretto contatto con il team di Giankycoin per raggiungere gli obiettivi a lungo termine del progetto.  Grazie alla sua esperienza e capacità, Giancarlo è una risorsa preziosa per il team Giankycoin e un forte rappresentante della criptovaluta per il pubblico e le parti interessate.  Siamo fiduciosi che il suo contributo sarà la chiave del successo di Giankycoin.",
+  };
   const handleClose = () => {
     setShowModal(false);
     setReadmore(false);
@@ -197,9 +239,15 @@ function Mint() {
                                     "\n                      /*! elementor - v3.11.5 - 14-03-2023 */\n                      .elementor-heading-title{\n                        padding:0;\n                        margin:0;\n                        line-height:1}\n                      .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{\n                        color:inherit;\n                        font-size:inherit;\n                        line-height:inherit}\n                      .elementor-widget-heading .elementor-heading-title.elementor-size-small{\n                        font-size:15px}\n                      .elementor-widget-heading .elementor-heading-title.elementor-size-medium{\n                        font-size:19px}\n                      .elementor-widget-heading .elementor-heading-title.elementor-size-large{\n                        font-size:29px}\n                      .elementor-widget-heading .elementor-heading-title.elementor-size-xl{\n                        font-size:39px}\n                      .elementor-widget-heading .elementor-heading-title.elementor-size-xxl{\n                        font-size:59px}\n                    ",
                                 }}
                               />
-                              <h1 className="elementor-heading-title elementor-size-xxl">
-                                Mint Gianky
-                              </h1>
+                              {props.changeLan ? (
+                                <h1 className="elementor-heading-title elementor-size-xxl changefont">
+                                  Mint Gianky
+                                </h1>
+                              ) : (
+                                <h1 className="elementor-heading-title elementor-size-xxl changefont">
+                                  Menta Gianky
+                                </h1>
+                              )}
                             </div>
                           </div>
                           <div
@@ -207,10 +255,17 @@ function Mint() {
                             data-element_type="widget"
                           >
                             <div className="elementor-widget-container">
-                              <h2 className="elementor-heading-title">
-                                Collect this super rare NFT &amp; Digital
-                                Artwork
-                              </h2>
+                              {props.changeLan ? (
+                                <h2 className="elementor-heading-title changefont">
+                                  Collect this super rare NFT &amp; Digital
+                                  Artwork
+                                </h2>
+                              ) : (
+                                <h2 className="elementor-heading-title changefont">
+                                  Colleziona questa rarissima opera d'arte NFT e
+                                  digitale
+                                </h2>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -281,7 +336,7 @@ function Mint() {
                 <div className="giftext">
                   STARTER
                   <br />
-                  (0.065 BNB)
+                  (20$)
                 </div>
                 <div></div>
               </div>
@@ -312,7 +367,7 @@ function Mint() {
                 <div className="giftext">
                   Basic
                   <br />
-                  (0.18 BNB)
+                  (50$)
                 </div>
                 <div></div>
               </div>
@@ -342,7 +397,7 @@ function Mint() {
                 <div className="giftext">
                   STANDARD
                   <br />
-                  (0.33 BNB)
+                  (100$)
                 </div>
                 <div></div>
               </div>
@@ -383,7 +438,7 @@ function Mint() {
                 <div className="giftext">
                   VIP
                   <br />
-                  (1.60 BNB)
+                  (500$)
                 </div>
                 <div></div>
               </div>
@@ -413,7 +468,7 @@ function Mint() {
                 <div className="giftext">
                   Premium
                   <br />
-                  (3.20 BNB)
+                  (1000$)
                 </div>
                 <div></div>
               </div>
@@ -443,35 +498,13 @@ function Mint() {
                 <div className="giftext">
                   DIAMOND
                   <br />
-                  (16.00 BNB)
+                  (5000$)
                 </div>
 
                 <div></div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="setchangeLang">
-          {changeLan ? (
-            <button
-              className="changelang"
-              onClick={() => {
-                setchangeLan(false);
-              }}
-            >
-              English
-            </button>
-          ) : (
-            <button
-              className="changelang"
-              onClick={() => {
-                setchangeLan(true);
-              }}
-            >
-              Italian
-            </button>
-          )}
         </div>
 
         <div className="readmore" id="team">
@@ -528,7 +561,7 @@ function Mint() {
                               "\n                /*! elementor - v3.11.5 - 14-03-2023 */\n                .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{\n                  background-color:#818a91;\n                  color:#fff}\n                .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{\n                  color:#818a91;\n                  border:3px solid;\n                  background-color:transparent}\n                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{\n                  margin-top:8px}\n                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{\n                  width:1em;\n                  height:1em}\n                .elementor-widget-text-editor .elementor-drop-cap{\n                  float:left;\n                  text-align:center;\n                  line-height:1;\n                  font-size:50px}\n                .elementor-widget-text-editor .elementor-drop-cap-letter{\n                  display:inline-block}\n              ",
                           }}
                         />
-                        {changeLan ? (
+                        {props.changeLan ? (
                           <p className="para para1">
                             Im Enrico, also known as Alpha, founder and CEO of
                             Gianky Coin, a technological startup aiming to
@@ -564,7 +597,7 @@ function Mint() {
                                 Read more
                               </button>
 
-                              {changeLan ? (
+                              {props.changeLan ? (
                                 <Model
                                   show={showModal}
                                   handleClose={handleClose}
@@ -608,11 +641,20 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-7e3c9f3 elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para">
-                          Onji is our expert in blockchain and cryptocurrency,
-                          who has helped clients from all over the world
-                          navigate the complex world of digital currencies.
-                        </p>
+                        {props.changeLan ? (
+                          <p className="para">
+                            Onji is our expert in blockchain and cryptocurrency,
+                            who has helped clients from all over the world
+                            navigate the complex world of digital currencies.
+                          </p>
+                        ) : (
+                          <p className="para">
+                            Onji è il nostro esperto in blockchain e
+                            criptovalute, che ha aiutato clienti di tutto il
+                            mondo a orientarsi nel complesso mondo delle valute
+                            digitali
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-a69db37 elementor-widget elementor-widget-toggle">
@@ -628,11 +670,19 @@ function Mint() {
                               >
                                 Read more
                               </button>
-                              <Model
-                                show={readmore6}
-                                handleClose={handleClose}
-                                person={person1}
-                              />
+                              {props.changeLan ? (
+                                <Model
+                                  show={readmore6}
+                                  handleClose={handleClose}
+                                  person={person1}
+                                />
+                              ) : (
+                                <Model
+                                  show={readmore6}
+                                  handleClose={handleClose}
+                                  person={person1_i}
+                                />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -664,15 +714,25 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-443e706 elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para para3">
-                          Vincenzo Palmeri, who holds degrees in mathematics
-                          with qualifications in mathematics and CS,
-                          {/* <span id="style-of7yo" className="style-of7yo"> */}
-                          mathematics and physics, has taught in high schools as
-                          Vice Principal responsible for managing the teaching
-                          staff.
-                          {/* </span> */}
-                        </p>
+                        {props.changeLan ? (
+                          <p className="para para3">
+                            Vincenzo Palmeri, who holds degrees in mathematics
+                            with qualifications in mathematics and CS,
+                            mathematics and physics, has taught in high schools
+                            as Vice Principal responsible for managing the
+                            teaching staff.
+                          </p>
+                        ) : (
+                          <p className="para para3">
+                            Vincenzo Palmeri laureato in matematica con
+                            abilitazioni in matematica e informatica, matematica
+                            e fisica, ha insegnato nelle scuole secondarie
+                            superiori con incarichi di vicepreside nella
+                            gestione del personale docente, ha condotto la
+                            direzione e la gestione di laboratori di informatica
+                            e di fisica.
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-45d0bc6 elementor-widget elementor-widget-toggle">
@@ -688,11 +748,19 @@ function Mint() {
                               >
                                 Read more
                               </button>
-                              <Model
-                                show={readmore5}
-                                handleClose={handleClose}
-                                person={person2}
-                              />
+                              {props.changeLan ? (
+                                <Model
+                                  show={readmore5}
+                                  handleClose={handleClose}
+                                  person={person2}
+                                />
+                              ) : (
+                                <Model
+                                  show={readmore5}
+                                  handleClose={handleClose}
+                                  person={person2_i}
+                                />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -724,12 +792,21 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-ea378f3 elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para para4">
-                          Sirtre is an experienced financial sector general
-                          manager with over 25 years of experience. He holds a
-                          degree in Business Economics and has a master’s degree
-                          in Finance.
-                        </p>
+                        {props.changeLan ? (
+                          <p className="para para4">
+                            Sirtre is an experienced financial sector general
+                            manager with over 25 years of experience. He holds a
+                            degree in Business Economics and has a master’s
+                            degree in Finance.
+                          </p>
+                        ) : (
+                          <p className="para para4">
+                            Sirtre è un general manager con oltre 25 anni di
+                            esperienza nel settore finanziario. Si è laureato in
+                            Economia Aziendale e ha conseguito un master in
+                            Finanza
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-7b8c75f elementor-widget elementor-widget-toggle">
@@ -745,11 +822,19 @@ function Mint() {
                               >
                                 Read more
                               </button>
-                              <Model
-                                show={readmore4}
-                                handleClose={handleClose}
-                                person={person3}
-                              />
+                              {props.changeLan ? (
+                                <Model
+                                  show={readmore4}
+                                  handleClose={handleClose}
+                                  person={person3}
+                                />
+                              ) : (
+                                <Model
+                                  show={readmore4}
+                                  handleClose={handleClose}
+                                  person={person3_i}
+                                />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -783,11 +868,19 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-d11496e elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para para5">
-                          Massimo is an experienced team leader with a wealth of
-                          experience in the field of information management
-                          technologies.
-                        </p>
+                        {props.changeLan ? (
+                          <p className="para para5">
+                            Massimo is an experienced team leader with a wealth
+                            of experience in the field of information management
+                            technologies.
+                          </p>
+                        ) : (
+                          <p className="para para5">
+                            Massimo è un team leader esperto con una vasta
+                            esperienza nel campo delle tecnologie di gestione
+                            delle informazioni.
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-dae6723 elementor-widget elementor-widget-toggle">
@@ -804,11 +897,19 @@ function Mint() {
                                 Read more
                               </button>
                             </div>
-                            <Model
-                              show={readmore2}
-                              handleClose={handleClose}
-                              person={person4}
-                            />
+                            {props.changeLan ? (
+                              <Model
+                                show={readmore2}
+                                handleClose={handleClose}
+                                person={person4}
+                              />
+                            ) : (
+                              <Model
+                                show={readmore2}
+                                handleClose={handleClose}
+                                person={person4_i}
+                              />
+                            )}
                           </div>
                         </div>
                       </div>
@@ -839,11 +940,20 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-2684daa elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para para6">
-                          Eugenio Palmeri, a Mechanical Engineering graduate,
-                          works in a Swiss company that specializes in machine
-                          inspections and checks of mechanical components.
-                        </p>
+                        {props.changeLan ? (
+                          <p className="para para6">
+                            Eugenio Palmeri, a Mechanical Engineering graduate,
+                            works in a Swiss company that specializes in machine
+                            inspections and checks of mechanical components.
+                          </p>
+                        ) : (
+                          <p className="para para6">
+                            Eugenio Palmeri laureato in ingegneria meccanica
+                            lavora in una azienda svizzera che si occupa di
+                            verifiche e controlli di macchine e dei relativi
+                            componenti meccanici.
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-d183bff elementor-widget elementor-widget-toggle mt-2">
@@ -859,11 +969,19 @@ function Mint() {
                               >
                                 Read More
                               </button>
-                              <Model
-                                show={readmore1}
-                                handleClose={handleClose}
-                                person={person5}
-                              />
+                              {props.changeLan ? (
+                                <Model
+                                  show={readmore1}
+                                  handleClose={handleClose}
+                                  person={person5}
+                                />
+                              ) : (
+                                <Model
+                                  show={readmore1}
+                                  handleClose={handleClose}
+                                  person={person5_i}
+                                />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -895,12 +1013,21 @@ function Mint() {
                     </div>
                     <div className="elementor-element elementor-element-564374d elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
-                        <p className="para para7">
-                          Giancarlo is a seasoned professional in marketing and
-                          communication. He has spent many years in the
-                          financial technology sector, working with leading
-                          global companies.
-                        </p>
+                        {props.changeLan ? (
+                          <p className="para para7">
+                            Giancarlo is a seasoned professional in marketing
+                            and communication. He has spent many years in the
+                            financial technology sector, working with leading
+                            global companies.
+                          </p>
+                        ) : (
+                          <p className="para para7">
+                            Giancarlo è un esperto professionista di marketing e
+                            comunicazione. Ha trascorso molti anni nel settore
+                            della tecnologia finanziaria, lavorando con aziende
+                            leader a livello mondiale.
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-827dbfd elementor-widget elementor-widget-toggle">
@@ -916,12 +1043,19 @@ function Mint() {
                               >
                                 Read more
                               </button>
-
-                              <Model
-                                show={readmore}
-                                handleClose={handleClose}
-                                person={person6}
-                              />
+                              {props.changeLan ? (
+                                <Model
+                                  show={readmore}
+                                  handleClose={handleClose}
+                                  person={person6}
+                                />
+                              ) : (
+                                <Model
+                                  show={readmore}
+                                  handleClose={handleClose}
+                                  person={person6_i}
+                                />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -942,7 +1076,7 @@ function Mint() {
                 : "footerssb"
             }
           >
-            <Footer />
+            <Footer changeLan={changeLan} />
           </div>
         </div>
       </div>
