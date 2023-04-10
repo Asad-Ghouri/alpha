@@ -5,7 +5,7 @@ import four from "../public/assert/4.gif";
 import five from "../public/assert/5.gif";
 import six from "../public/assert/6.gif";
 import Image from "next/image";
-import { Footer } from "../components/Footer";
+import { Footer } from "./Footer";
 import { Header } from "../components/Header";
 import { SetStateAction, useState } from "react";
 import { ethers } from "ethers";
@@ -256,11 +256,11 @@ function Mint(props) {
                               />
                               {props.changeLan ? (
                                 <h1 className="elementor-heading-title elementor-size-xxl changefont">
-                                  Mint Gianky
+                                  MINT GIANKY
                                 </h1>
                               ) : (
                                 <h1 className="elementor-heading-title elementor-size-xxl changefont">
-                                  Mint Gianky
+                                  MINT GIANKY
                                 </h1>
                               )}
                             </div>
@@ -657,7 +657,7 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-7e3c9f3 elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
-                          <p className="para">
+                          <p className="para para2_">
                             Onji is our expert in blockchain and cryptocurrency,
                             who has helped clients from all over the world
                             navigate the complex world of digital currencies.
@@ -1166,7 +1166,7 @@ function Mint(props) {
                 : "footerssb"
             }
           >
-            <Footer changeLan={changeLan} />
+            <Footer />
           </div>
         </div>
       </div>
