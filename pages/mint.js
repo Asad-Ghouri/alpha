@@ -663,7 +663,9 @@ function Mint() {
             >
               <div
                 className={
-                  selectedOption === "option1" ? "flex" : "flex flexb flexc"
+                  selectedOption === "option1"
+                    ? "flex flexfortop"
+                    : "flex flexb flexc"
                 }
               >
                 <div
@@ -749,7 +751,9 @@ function Mint() {
               </div>
               <div
                 className={
-                  selectedOption === "option1" ? "flex" : "flex flexb flexc"
+                  selectedOption === "option1"
+                    ? "flex flexfortop"
+                    : "flex flexb flexc"
                 }
               >
                 <div
@@ -835,7 +839,9 @@ function Mint() {
               </div>
               <div
                 className={
-                  selectedOption === "option1" ? "flex" : "flex flexb flexc"
+                  selectedOption === "option1"
+                    ? "flex flexfortop"
+                    : "flex flexb flexc"
                 }
               >
                 <div

@@ -128,6 +128,24 @@ export const Footer = (props) => {
                           Swap
                         </a>
                       </li>
+                      <li>
+                        <a
+                          href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
+                          className="dropdown-link"
+                          download
+                        >
+                          Whitepaper English
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://itishstudios.net/assert/Italic.pdf"
+                          className="dropdown-link"
+                          download
+                        >
+                          Whitepaper Italic
+                        </a>
+                      </li>
                     </ul>
                   </nav>
                 </div>

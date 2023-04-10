@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
+
 @font-face {
   font-family: "Roboto-Black";
   src: url(../public/font/Roboto-Black.ttf);
@@ -30,7 +31,7 @@ body {
   line-height: 1.5;
   font-family: "RubikBeastly";
   font-family: "Roboto-Black";
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
   background-size: cover;
   padding: 0;
@@ -3525,6 +3526,7 @@ background-color: #000;
 
   .elementor-element.elementor-element-b3ee127 img  { 
     width: 60%;
+    border-radius: 60%;
   } 
 
   .elementor-element.elementor-element-7b8be8a .elementor-heading-title  { 
@@ -4038,6 +4040,9 @@ background-color: #000;
 }
 @media (min-width: 850px){
 
+  .elementor-togglefos{
+    margin-top: 55px;
+  }
   .sh{
     height: 100vh!important;
   }
@@ -4086,7 +4091,7 @@ background-color: #000;
   margin-top: 53px;
 }
 .elementor-toggle7{
-  margin-top: 40px;
+  margin-top: -15px;
 }
 .para3{
   margin-top: 17px;
@@ -4176,6 +4181,9 @@ margin-top: 1rem;
   .modal-main{
     width: 100%;
   }
+  .changelang{
+    top: 10%!important;
+  }
 }
 
 .loadingstake{
@@ -4216,11 +4224,12 @@ padding-right: 0!important;
 .readmore {
   margin-top: 59rem;
 }
+
 }
 
 .changelang{
   position: fixed;
-  top: 50%;
+  top: 30%;
   right: 0;
   color: red;
   background: black;
@@ -4281,3 +4290,17 @@ padding-right: 0!important;
   }
 }
 
+@media(min-width:850px){
+  .flexfortop{
+    margin-top: 14rem;
+  }
+  #transak-widget{
+    position: relative!important;
+    width: 100%!important;
+    height: 80vh!important;
+    left: 20%!important;
+  }
+  .mintfooter .footer {
+    margin-top: 67%!important;
+}
+}

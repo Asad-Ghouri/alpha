@@ -124,6 +124,21 @@ function Mint(props) {
     occupation:
       "Da sempre appassionato di tecnologia e innovazione, questo lo ha portato ad entrare a far parte del progetto Giankycoin come Direttore Marketing.  Con la sua vasta conoscenza del settore finanziario e delle tecnologie innovative, Giancarlo è in grado di sviluppare e implementare efficaci strategie di marketing per promuovere Giankycoin a livello globale.  Il suo obiettivo è far conoscere le criptovalute a un pubblico sempre più vasto e rendere il mondo delle criptovalute accessibile a tutti.  Giancarlo è noto per le sue capacità comunicative e di leadership, e queste qualità gli consentono di lavorare a stretto contatto con il team di Giankycoin per raggiungere gli obiettivi a lungo termine del progetto.  Grazie alla sua esperienza e capacità, Giancarlo è una risorsa preziosa per il team Giankycoin e un forte rappresentante della criptovaluta per il pubblico e le parti interessate.  Siamo fiduciosi che il suo contributo sarà la chiave del successo di Giankycoin.",
   };
+
+  const person7 = {
+    name: "M. Osama",
+    age: "E-commerce and Support.",
+    occupation:
+      "He have experience in e-commerce over a year. He have served multiple companies with my services . I can understand the need of customers and help in it . Usama is dedicated team worker who tries his best to provide solution. He loves to share his knowledge and a good team member.",
+  };
+
+  const person7_i = {
+    name: "M. Osama",
+    age: "E-commerce and Support.",
+    occupation:
+      "Ha esperienza nell'e-commerce da oltre un anno. Ha servito diverse aziende con i miei servizi. Posso capire la necessità dei clienti e aiutarli. Usama è un lavoratore di squadra dedicato che fa del suo meglio per fornire una soluzione. Ama condividere le sue conoscenze ed è un buon membro del team.",
+  };
+
   const handleClose = () => {
     setShowModal(false);
     setReadmore(false);
@@ -245,7 +260,7 @@ function Mint(props) {
                                 </h1>
                               ) : (
                                 <h1 className="elementor-heading-title elementor-size-xxl changefont">
-                                  Menta Gianky
+                                  Mint Gianky
                                 </h1>
                               )}
                             </div>
@@ -916,6 +931,81 @@ function Mint(props) {
                     </div>
                   </div>
                 </div>
+
+                <div className="elementor-column elementor-col-33 elementor-element elementor-element-9cd59d3">
+                  <div className="elementor-widget-wrap elementor-element-populated">
+                    <div className="elementor-element elementor-element-b3ee127 elementor-widget elementor-widget-image">
+                      <div className="elementor-widget-container">
+                        <img
+                          src="https://itishstudios.net/assert/mosama.jpeg"
+                          className="t-img"
+                        />
+                      </div>
+                    </div>
+                    <div className="elementor-element elementor-element-7b8be8a elementor-widget elementor-widget-heading">
+                      <div className="elementor-widget-container">
+                        <h2 className="elementor-heading-title">
+                          M. Usama Ubaid{" "}
+                        </h2>
+                      </div>
+                    </div>
+                    <div className="elementor-element elementor-element-0b7d8b8 elementor-widget elementor-widget-heading">
+                      <div className="elementor-widget-container">
+                        <h5 className="elementor-heading-title">
+                          E-commerce and Support.
+                        </h5>
+                      </div>
+                    </div>
+                    <div className="elementor-element elementor-element-2684daa elementor-widget elementor-widget-text-editor">
+                      <div className="elementor-widget-container">
+                        {props.changeLan ? (
+                          <p className="para para6">
+                            He have experience in e-commerce over a year. He
+                            have served multiple companies with my services .
+                          </p>
+                        ) : (
+                          <p className="para para6">
+                            Ha esperienza nell'e-commerce da oltre un anno. Ha
+                            servito diverse aziende con i miei servizi. Posso
+                            capire la necessità dei clienti e aiutarli.
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="elementor-element elementor-element-d183bff elementor-widget elementor-widget-toggle mt-2">
+                      <div className="elementor-widget-container">
+                        <div className="elementor-toggle elementor-togglefos">
+                          <div>
+                            <div className="elementor-tab-title">
+                              <button
+                                className="elementor-toggle-title"
+                                onClick={() => {
+                                  setReadmore7(true);
+                                }}
+                              >
+                                Read More
+                              </button>
+                              {props.changeLan ? (
+                                <Model
+                                  show={readmore7}
+                                  handleClose={handleClose}
+                                  person={person7}
+                                />
+                              ) : (
+                                <Model
+                                  show={readmore1}
+                                  handleClose={handleClose}
+                                  person={person7_i}
+                                />
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="elementor-column elementor-col-33 elementor-element elementor-element-9cd59d3">
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-b3ee127 elementor-widget elementor-widget-image">
@@ -1014,14 +1104,14 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-564374d elementor-widget elementor-widget-text-editor">
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
-                          <p className="para para7">
+                          <p className="para _para7">
                             Giancarlo is a seasoned professional in marketing
                             and communication. He has spent many years in the
                             financial technology sector, working with leading
                             global companies.
                           </p>
                         ) : (
-                          <p className="para para7">
+                          <p className="para _para7">
                             Giancarlo è un esperto professionista di marketing e
                             comunicazione. Ha trascorso molti anni nel settore
                             della tecnologia finanziaria, lavorando con aziende
