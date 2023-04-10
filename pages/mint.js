@@ -5,7 +5,7 @@ import four from "../public/assert/4.gif";
 import five from "../public/assert/5.gif";
 import six from "../public/assert/6.gif";
 import Image from "next/image";
-import { Footer } from "../components/Footer";
+import { Footer } from "./Footer";
 import { Header } from "../components/Header";
 import { SetStateAction, useState } from "react";
 import { ethers } from "ethers";

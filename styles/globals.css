@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 
-@font-face {
+/* @font-face {
   font-family: "Roboto-Black";
   src: url(../public/font/Roboto-Black.ttf);
 }
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "RubikBeastly-Regular";
   src: url(../public/font/RubikBeastly-Regular.ttf);
-}
+} */
 /* Box sizing rules */
 *,
 *::before,
@@ -31,7 +31,7 @@ body {
   line-height: 1.5;
   font-family: "RubikBeastly";
   font-family: "Roboto-Black";
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif!important;
   background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
   background-size: cover;
   padding: 0;
@@ -386,10 +386,10 @@ ul li{
   color: #fff;
   /* font-family: rubik beastly,Sans-serif!important; */
   font-weight: 900;
-  /* -webkit-text-stroke-width: 2px; */
-  stroke-width: 2px;
-  /* -webkit-text-stroke-color: #000; */
-  /* stroke: #000; */
+  /* -webkit-text-_stroke-width: 2px; */
+  _stroke-width: 2px;
+  /* -webkit-text-_stroke-color: #000; */
+  /* _stroke: #000; */
   margin-bottom: 2rem;
   font-size: 32px;
   line-height: 1;
@@ -1573,10 +1573,10 @@ ul li{
     color: #fff; 
     /* font-size: 70px; 
     font-weight: 600; 
-    -webkit-text-stroke-width: 0; 
-    stroke-width: 0; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;  */
+    -webkit-text-_stroke-width: 0; 
+    _stroke-width: 0; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;  */
     text-shadow: -5px 10px 0 #000;
   } 
 
@@ -1596,10 +1596,10 @@ ul li{
     /* font-weight: 600; */
     letter-spacing: 1.5px;
     /* word-spacing: 14px; */
-    /* -webkit-text-stroke-width: 0; */
-    /* stroke-width: 0; */
-    /* -webkit-text-stroke-color: #000; */
-    stroke: #000;  } 
+    /* -webkit-text-_stroke-width: 0; */
+    /* _stroke-width: 0; */
+    /* -webkit-text-_stroke-color: #000; */
+    _stroke: #000;  } 
 
   :where(img[class*="wp-image-"])  { 
     height: auto; 
@@ -1965,10 +1965,10 @@ ul li{
     color: #fff; 
     font-family: rubik beastly,Sans-serif; 
     font-weight: 100; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 
   p { 
@@ -2664,7 +2664,7 @@ background-color: #000;
   outline-offset: 2px;
   line-height: 1.2;
   font-weight: 100;
-  transition-property: background-color, border-color, color, fill, stroke,
+  transition-property: background-color, border-color, color, fill, _stroke,
     opacity, box-shadow, transform;
   transition-duration: 200ms;
   height: 3rem;
@@ -2695,7 +2695,7 @@ background-color: #000;
   outline-offset: 2px;
   line-height: 1.2;
   font-weight: 100;
-  transition-property: background-color, border-color, color, fill, stroke,
+  transition-property: background-color, border-color, color, fill, _stroke,
     opacity, box-shadow, transform;
   transition-duration: 200ms;
   height: 3rem;
@@ -2823,10 +2823,10 @@ background-color: #000;
   margin-top: 5rem;
 }
 .swap-text{
-  -webkit-text-stroke-width: 2px;
-    stroke-width: 2px;
-    -webkit-text-stroke-color: #000;
-    stroke: #000;
+  -webkit-text-_stroke-width: 2px;
+    _stroke-width: 2px;
+    -webkit-text-_stroke-color: #000;
+    _stroke: #000;
     font-size: 93px;
   color: white;
 } 
@@ -3063,10 +3063,10 @@ background-color: #000;
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     letter-spacing: 2.5px; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000; 
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000; 
     text-shadow: -6px 6px 10px rgba(0,0,0,.98);
   } 
 }     
@@ -3403,10 +3403,10 @@ background-color: #000;
     color: #000; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #fff; 
-    stroke: #fff;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #fff; 
+    _stroke: #fff;
   } 
 
   h5 { 
@@ -3423,10 +3423,10 @@ background-color: #000;
     color: #ecb100; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 
   p { 
@@ -3444,60 +3444,60 @@ background-color: #000;
     color: #000; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #fff; 
-    stroke: #fff;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #fff; 
+    _stroke: #fff;
   } 
 
   .elementor-element.elementor-element-6652259 .elementor-heading-title  { 
     color: #ecb100; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 
   .elementor-element.elementor-element-01f9fb5 .elementor-heading-title  { 
     color: #000; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #fff; 
-    stroke: #fff;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #fff; 
+    _stroke: #fff;
   } 
 
   .elementor-element.elementor-element-7328efd .elementor-heading-title  { 
     color: #ecb100; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 
   .elementor-element.elementor-element-1c16341 .elementor-heading-title  { 
     color: #000; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #fff; 
-    stroke: #fff;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #fff; 
+    _stroke: #fff;
   } 
 
   .elementor-element.elementor-element-6b393bc .elementor-heading-title  { 
     color: #ecb100; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 
   .elementor-element.elementor-element-edac993 img  { 
@@ -3508,20 +3508,20 @@ background-color: #000;
     color: #000; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #fff; 
-    stroke: #fff;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #fff; 
+    _stroke: #fff;
   } 
 
   .elementor-element.elementor-element-1106f69 .elementor-heading-title  { 
     color: #ecb100; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 
   .elementor-element.elementor-element-b3ee127 img  { 
@@ -3533,20 +3533,20 @@ background-color: #000;
     color: #000; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #fff; 
-    stroke: #fff;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #fff; 
+    _stroke: #fff;
   } 
 
   .elementor-element.elementor-element-0b7d8b8 .elementor-heading-title  { 
     color: #ecb100; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 
   .elementor-element.elementor-element-385589f img  { 
@@ -3557,20 +3557,20 @@ background-color: #000;
     color: #000; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #fff; 
-    stroke: #fff;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #fff; 
+    _stroke: #fff;
   } 
 
   .elementor-element.elementor-element-3dfd6a0 .elementor-heading-title  { 
     color: #ecb100; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
-    -webkit-text-stroke-width: 1px; 
-    stroke-width: 1px; 
-    -webkit-text-stroke-color: #000; 
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px; 
+    _stroke-width: 1px; 
+    -webkit-text-_stroke-color: #000; 
+    _stroke: #000;
   } 
 }     
 
@@ -3795,7 +3795,7 @@ background-color: #000;
 
 /* These were inline style tags. Uses id+class to override almost everything */
 #style-mSM1f.style-mSM1f {  
-   --divider-pattern-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 20 16' fill='none' stroke='black' stroke-width='3.3' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cg transform='translate(-12.000000, 0)'%3E%3Cpath d='M28,0L10,18'/%3E%3Cpath d='M18,0L0,18'/%3E%3Cpath d='M48,0L30,18'/%3E%3Cpath d='M38,0L20,18'/%3E%3C/g%3E%3C/svg%3E");  
+   --divider-pattern-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%' viewBox='0 0 20 16' fill='none' _stroke='black' _stroke-width='3.3' _stroke-linecap='square' _stroke-miterlimit='10'%3E%3Cg transform='translate(-12.000000, 0)'%3E%3Cpath d='M28,0L10,18'/%3E%3Cpath d='M18,0L0,18'/%3E%3Cpath d='M48,0L30,18'/%3E%3Cpath d='M38,0L20,18'/%3E%3C/g%3E%3C/svg%3E");  
 }  
 #style-xtMwO.style-xtMwO {  
    color: #000000;  
@@ -4048,7 +4048,7 @@ background-color: #000;
   }
   
   .para3{
-    margin-top: 17px;
+    margin-top: 39px;
 
   }
   .mintfooter .footer{
@@ -4094,10 +4094,14 @@ background-color: #000;
   margin-top: -15px;
 }
 .para3{
-  margin-top: 17px;
+  margin-top: 39px;
 }
 .para6{
+
   margin-top: 19px;
+}
+._para7{
+  margin-top: 43px;
 }
 }
 @media (max-width: 600px)
@@ -4152,10 +4156,10 @@ background-color: #000;
   color: #ecb100;
     /* font-family: rubik bubbles,Sans-serif; */
     font-weight: 600;
-    -webkit-text-stroke-width: 1px;
-    stroke-width: 1px;
-    -webkit-text-stroke-color: #000;
-    stroke: #000;
+    -webkit-text-_stroke-width: 1px;
+    _stroke-width: 1px;
+    -webkit-text-_stroke-color: #000;
+    _stroke: #000;
     /* font-family: "cursive"; */
     margin-top: 1rem!important;
     margin-bottom: 1rem!important;
@@ -4164,10 +4168,10 @@ background-color: #000;
   color: #000;
   /* font-family: rubik bubbles,Sans-serif; */
   font-weight: 600;
-  -webkit-text-stroke-width: 1px;
-  stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
-  stroke: #fff;
+  -webkit-text-_stroke-width: 1px;
+  _stroke-width: 1px;
+  -webkit-text-_stroke-color: #fff;
+  _stroke: #fff;
   font-family: "RubikBeastly";
 margin-top: 1rem;
 }
@@ -4182,7 +4186,7 @@ margin-top: 1rem;
     width: 100%;
   }
   .changelang{
-    top: 10%!important;
+    top: 3%!important;
   }
 }
 
@@ -4228,9 +4232,11 @@ padding-right: 0!important;
 }
 
 .changelang{
-  position: fixed;
-  top: 30%;
-  right: 0;
+  position: absolute;
+ 
+  right: 34%;
+  top: 4%;
+
   color: red;
   background: black;
   float: right;
@@ -4293,6 +4299,12 @@ padding-right: 0!important;
 @media(min-width:850px){
   .flexfortop{
     margin-top: 14rem;
+  }
+  .para2_{
+    margin-top: 44px;
+  }
+  .wwid{
+    width: 90%;
   }
   #transak-widget{
     position: relative!important;

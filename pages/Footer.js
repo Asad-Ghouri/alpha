@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import info from "../public/info-removebg-preview.png";
 import Image from "next/image";
-import Model from "./Model";
+import Model from "../components/Model";
 
 export const Footer = (props) => {
   const [showModal, setShowModal] = useState(false);

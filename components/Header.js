@@ -58,10 +58,10 @@ export const Header = () => {
             >
               <div className="elementor-widget-wrap elementor-element-populated">
                 <div
-                  className="elementor-element elementor-element-34e382e elementor-nav-menu__align-right elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-widget elementor-widget-nav-menu"
+                  className="elementor-element elementor-element-34e382e wwid elementor-nav-menu__align-right elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-widget elementor-widget-nav-menu"
                   data-element_type="widget"
                 >
-                  <div className="elementor-widget-container">
+                  <div className="elementor-widget-container wwid">
                     <link href="https://shopinose.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css" />
                     <nav className="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-grow">
                       <ul className="elementor-nav-menu">

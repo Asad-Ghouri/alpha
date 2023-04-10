@@ -5,7 +5,7 @@ import Head from "next/head";
 import ThirdwebGuideFooter from "../components/guide/ThirdwebGuideFooter";
 import "../styles/globals.css";
 import { Header } from "../components/Header"
-import { Footer } from "../components/Footer"
+import { Footer } from "./Footer"
 
 
 
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               setchangeLan(true);
             }}
           >
-            Italian
+            Italiano
           </button>
         )}
       </div>
