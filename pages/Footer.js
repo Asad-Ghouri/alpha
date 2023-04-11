@@ -4,7 +4,7 @@ import info from "../public/info-removebg-preview.png";
 import Image from "next/image";
 import Model from "../components/Model";
 
-export const Footer = (props) => {
+export default function Footer(props) {
   const [showModal, setShowModal] = useState(false);
 
   const person = {
@@ -267,4 +267,4 @@ export const Footer = (props) => {
       </section>
     </div>
   );
-};
+}
