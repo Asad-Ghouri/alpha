@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { Header } from "../components/Header";
 
-import { Footer } from "./Footer"
+import Footer from "./Footer"
 
 import { ToastContainer, toast } from 'react-toastify';
 

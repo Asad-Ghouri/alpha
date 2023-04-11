@@ -5,7 +5,7 @@ import Head from "next/head";
 import ThirdwebGuideFooter from "../components/guide/ThirdwebGuideFooter";
 import "../styles/globals.css";
 import { Header } from "../components/Header"
-import { Footer } from "./Footer"
+// import { Footer } from "./Footer"
 
 
 
