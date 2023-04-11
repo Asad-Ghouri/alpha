@@ -4188,6 +4188,9 @@ margin-top: 1rem;
   .changelang{
     top: 3%!important;
   }
+  .swap-text{
+    font-size: 45px;
+  }
 }
 
 .loadingstake{
@@ -4315,4 +4318,13 @@ padding-right: 0!important;
   .mintfooter .footer {
     margin-top: 67%!important;
 }
+}
+
+.elementor-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.elementor-flex-item{
+  padding-right: 15px;
 }

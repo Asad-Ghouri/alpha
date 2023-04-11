@@ -3,9 +3,12 @@ import Link from "next/link";
 import info from "../public/info-removebg-preview.png";
 import Image from "next/image";
 import Model from "../components/Model";
+import { SocialIcon } from "react-social-icons";
 
 export default function Footer(props) {
   const [showModal, setShowModal] = useState(false);
+
+  console.log("change in footer " + props.changeLan);
 
   const person = {
     name: "",
@@ -83,6 +86,24 @@ export default function Footer(props) {
                           Swap
                         </Link>
                       </li>
+                      <li>
+                        <a
+                          href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
+                          className="elementor-item"
+                          download
+                        >
+                          Whitepaper English
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://itishstudios.net/assert/Italic.pdf"
+                          className="elementor-item"
+                          download
+                        >
+                          Whitepaper Italiano
+                        </a>
+                      </li>
                       {/* <li>
                         <Link href="/swap" className="elementor-item">
                           Swap
@@ -95,6 +116,47 @@ export default function Footer(props) {
                       </li> */}
                     </ul>
                   </nav>
+
+                  <div className="elementor-grid elementor-flex">
+                    <span className="elementor-grid-item elementor-flex-item">
+                      {/* <a className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-pulse-grow elementor-repeater-item-4cb9e0e">
+                          <span className="elementor-screen-only">Twitter</span>
+                          <i className="fab fa-twitter"></i>
+                        </a> */}
+                      <a href="https://www.facebook.com/GiankyCoinOfficial">
+                        <SocialIcon
+                          network="facebook"
+                          bgColor="white"
+                          style={{ height: 40, width: 40 }}
+                        />
+                      </a>
+                    </span>
+                    <span className="elementor-grid-item elementor-flex-item">
+                      {/* <a className="elementor-icon elementor-social-icon elementor-social-icon-telegram elementor-animation-pulse-grow elementor-repeater-item-24500b6">
+                          <span className="elementor-screen-only">
+                            Telegram
+                          </span>
+                          <i className="fab fa-telegram"></i>
+                        </a> */}
+                      <a href="https://t.me/giankycoin2">
+                        <SocialIcon
+                          network="telegram"
+                          bgColor="white"
+                          style={{ height: 40, width: 40 }}
+                        />
+                      </a>
+                    </span>
+                    <span className="elementor-grid-item elementor-flex-item">
+                      <a href="https://discord.gg/CK53tNQTHX">
+                        <SocialIcon
+                          network="discord"
+                          bgColor="white"
+                          style={{ height: 40, width: 40 }}
+                        />
+                      </a>
+                    </span>
+                  </div>
+
                   <nav
                     className="elementor-nav-menu--dropdown elementor-nav-menu__container style-4vgJU"
                     id="style-4vgJU"
@@ -110,11 +172,11 @@ export default function Footer(props) {
                           TEAM
                         </a>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="#paper" className="elementor-item">
                           WHITEPAPER
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href="#nft" className="elementor-item">
                           NFTs
@@ -131,7 +193,7 @@ export default function Footer(props) {
                       <li>
                         <a
                           href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
-                          className="dropdown-link"
+                          className="elementor-item"
                           download
                         >
                           Whitepaper English
@@ -140,7 +202,7 @@ export default function Footer(props) {
                       <li>
                         <a
                           href="https://itishstudios.net/assert/Italic.pdf"
-                          className="dropdown-link"
+                          className="elementor-item"
                           download
                         >
                           Whitepaper Italic

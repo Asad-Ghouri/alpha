@@ -448,14 +448,14 @@ function Mint() {
                           Buy Now
                         </Web3Button>
 
-                        <div id="stake">
+                        {/* <div id="stake">
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_()}
                           >
                             Stake
                           </Web3Button>
-                        </div>
+                        </div> */}
                       </>
                     ) : (
                       <>
@@ -537,14 +537,14 @@ function Mint() {
                           Buy Now
                         </Web3Button>
 
-                        <div id="stake">
+                        {/* <div id="stake">
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_1()}
                           >
                             Stake
                           </Web3Button>
-                        </div>
+                        </div> */}
                       </>
                     ) : (
                       <Web3Button
@@ -623,14 +623,14 @@ function Mint() {
                           Buy Now
                         </Web3Button>
 
-                        <div id="stake">
+                        {/* <div id="stake">
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_2()}
                           >
                             Stake
                           </Web3Button>
-                        </div>
+                        </div> */}
                       </>
                     ) : (
                       <Web3Button
@@ -722,14 +722,14 @@ function Mint() {
                           Buy Now
                         </Web3Button>
 
-                        <div id="stake">
+                        {/* <div id="stake">
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_3()}
                           >
                             Stake
                           </Web3Button>
-                        </div>
+                        </div> */}
                       </>
                     ) : (
                       <Web3Button
@@ -810,14 +810,14 @@ function Mint() {
                           Buy Now
                         </Web3Button>
 
-                        <div id="stake">
+                        {/* <div id="stake">
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_4()}
                           >
                             Stake
                           </Web3Button>
-                        </div>
+                        </div> */}
                       </>
                     ) : (
                       <Web3Button
@@ -899,14 +899,14 @@ function Mint() {
                           Buy Now
                         </Web3Button>
 
-                        <div id="stake">
+                        {/* <div id="stake">
                           <Web3Button
                             contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
                             action={() => Stake_5()}
                           >
                             Stake
                           </Web3Button>
-                        </div>
+                        </div> */}
                       </>
                     ) : (
                       <Web3Button

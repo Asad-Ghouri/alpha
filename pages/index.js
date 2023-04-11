@@ -1164,7 +1164,7 @@ function Mint(props) {
                 : "footerssb"
             }
           >
-            <Footer />
+            <Footer changeLan={props.changeLan} />
           </div>
         </div>
       </div>
