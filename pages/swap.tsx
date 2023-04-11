@@ -57,11 +57,11 @@ export default function MainSwap() {
             allow="clipboard-read *; clipboard-write *; web-share *; accelerometer *; autoplay *; camera *; gyroscope *; payment *; geolocation *"
             src="https://flooz.trade/embed/trade?swapDisabled=false&swapToTokenAddress=0x834619439294Beb318e1b73Be3D20d2b581D4bFb&swapLockToToken=true&onRampDisabled=false&onRampAsDefault=false&onRampDefaultAmount=200&onRampTokenAddress=0x834619439294Beb318e1b73Be3D20d2b581D4bFb&network=bsc&lightMode=false&primaryColor=%23ff6600&roundedCorners=10&padding=20&refId=PjKSWG"
           ></iframe>
-          <center>
+          {/* <center>
             <h1 className="swap-text" style={{ marginTop: "7rem" }}>Purchase</h1>
           </center>
           <iframe height={625} title="Transak On/Off Ramp Widget" src="https://global.transak.com?apiKey=8492e352-6520-4981-8f00-9b3a75c57e94" frameBorder="no" allowFullScreen style={{ display: 'block', width: '100%', maxHeight: '625px', maxWidth: '400px', margin: 'auto', marginTop: "2rem" }}>
-          </iframe>
+          </iframe> */}
           <div className="Swapfooter">
             <Footer />
           </div>
