@@ -55,7 +55,7 @@ export default function MainSwap() {
             frameBorder="0"
             id="swap_iframe"
             allow="clipboard-read *; clipboard-write *; web-share *; accelerometer *; autoplay *; camera *; gyroscope *; payment *; geolocation *"
-            src="https://flooz.trade/embed/trade?swapDisabled=false&swapToTokenAddress=0x834619439294Beb318e1b73Be3D20d2b581D4bFb&swapLockToToken=true&onRampDisabled=false&onRampAsDefault=false&onRampDefaultAmount=200&onRampTokenAddress=0x834619439294Beb318e1b73Be3D20d2b581D4bFb&network=bsc&lightMode=false&primaryColor=%23ff6600&roundedCorners=10&padding=20&refId=PjKSWG"
+            src="https://flooz.trade/embed/trade?swapDisabled=false&swapToTokenAddress=0x62897b455B97e573f1674661406722Dc5bF01003&swapLockToToken=true&onRampDisabled=false&onRampAsDefault=false&onRampDefaultAmount=200&onRampTokenAddress=0x62897b455B97e573f1674661406722Dc5bF01003&network=bsc&lightMode=false&primaryColor=%23ff6600&roundedCorners=10&padding=20&refId=PjKSWG"
           ></iframe>
           <center>
             <h1 className="swap-text" style={{ marginTop: "7rem" }}>Purchase</h1>
