@@ -57,7 +57,7 @@ const Navbar = () => {
             </li>
             <li>
               <a href="https://itishstudios.net/assert/Italic.pdf" download>
-                Whitepaper Italic
+                Whitepaper Italiano
               </a>
             </li>
           </ul>

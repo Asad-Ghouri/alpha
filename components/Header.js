@@ -124,7 +124,7 @@ export const Header = () => {
                           </li>
                           <li>
                             <a href="https://itishstudios.net/assert/Italic.pdf" className="dropdown-link" download>
-                              Whitepaper Italic
+                              Whitepaper Italiano
                             </a>
                           </li>
                         </div>

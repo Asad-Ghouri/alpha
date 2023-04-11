@@ -944,9 +944,7 @@ function Mint(props) {
                     </div>
                     <div className="elementor-element elementor-element-7b8be8a elementor-widget elementor-widget-heading">
                       <div className="elementor-widget-container">
-                        <h2 className="elementor-heading-title">
-                          M. Usama Ubaid{" "}
-                        </h2>
+                        <h2 className="elementor-heading-title">M. Usama </h2>
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-0b7d8b8 elementor-widget elementor-widget-heading">
