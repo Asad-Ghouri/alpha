@@ -43,9 +43,9 @@ export default function MainSwap() {
           toast.success('successfully copied!')
         }>
           <h3 className="swap-contract" onClick={() =>
-            handleCopy('0x834619439294Beb318e1b73Be3D20d2b581D4bFb')
+            handleCopy('0x62897b455B97e573f1674661406722Dc5bF01003')
           }>
-            0x834619439294Beb318e1b73Be3D20d2b581D4bFb
+            0x62897b455B97e573f1674661406722Dc5bF01003
           </h3>
         </center>
         <div className="swappage">
