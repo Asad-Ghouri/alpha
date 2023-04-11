@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Footer } from "./Footer";
+import Footer from "./Footer";
 import { Header } from "../components/Header";
 import { Web3Button, useContract, useContractWrite } from "@thirdweb-dev/react";
 export default function App() {
