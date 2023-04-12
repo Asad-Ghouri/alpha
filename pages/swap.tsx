@@ -49,6 +49,7 @@ export default function MainSwap() {
           </h3>
         </center>
         <div className="swappage">
+
           <iframe
             width="400"
             height="650"
@@ -60,8 +61,51 @@ export default function MainSwap() {
           <center>
             <h1 className="swap-text" style={{ marginTop: "7rem" }}>Purchase</h1>
           </center>
+
           <iframe height={625} title="Transak On/Off Ramp Widget" src="https://global.transak.com?apiKey=69d69a4f-c43b-4077-a3b2-32f82c7a5a46" frameBorder="no" allowFullScreen style={{ display: 'block', width: '100%', maxHeight: '625px', maxWidth: '400px', margin: 'auto', marginTop: "2rem" }}>
           </iframe>
+
+          <div className="_container">
+            <div>
+              <h3 className="ant-typography title">
+                Partenered With
+              </h3>
+            </div>
+            <div className="home-page__slider">
+              <div className="swiper-container swiper-container-pointer-events swiper-container-free-mode slider-wrapper">
+                <div>
+                </div>
+                <div>
+                </div>
+                <div className="swiper-wrapper style-EKXnb" id="swiper-wrapper-ab6f89c18109e8f6e">
+                  <div className="swiper-slide style-LsYYB" id="style-LsYYB">
+                    <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935841748.png" />
+                  </div>
+                  <div className="swiper-slide style-JUIym" id="style-JUIym">
+                    <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1678296133091.png" />
+                  </div>
+                  <div className="swiper-slide style-ElR5Z" id="style-ElR5Z">
+                    <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1678293830376.png" />
+                  </div>
+                  <div className="swiper-slide style-232XY" id="style-232XY">
+                    <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935504359.png" />
+                  </div>
+                  <div className="swiper-slide style-B7a3E" id="style-B7a3E">
+                    <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935463368.png" />
+                  </div>
+                </div>
+                <span>
+                </span>
+              </div>
+              <div className="swiper-button-prev swiper-button-disabled">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1LjQxIDcuNDFMMTQgNkw4IDEyTDE0IDE4TDE1LjQxIDE2LjU5TDEwLjgzIDEyTDE1LjQxIDcuNDFaIiBmaWxsPSIjMzIzMjMyIi8+Cjwvc3ZnPgo=" />
+              </div>
+              <div className="swiper-button-next swiper-button-disabled">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTk5ODQgNkw4LjU4OTg0IDcuNDFMMTMuMTY5OCAxMkw4LjU4OTg0IDE2LjU5TDkuOTk5ODQgMThMMTUuOTk5OCAxMkw5Ljk5OTg0IDZaIiBmaWxsPSIjMzIzMjMyIi8+Cjwvc3ZnPgo=" />
+              </div>
+            </div>
+          </div>
+
           <div className="Swapfooter">
             <Footer />
           </div>
