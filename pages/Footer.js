@@ -312,7 +312,7 @@ export default function Footer(props) {
                     <div className="elementor-form-fields-wrapper">
                       <div className="elementor-field-group elementor-column elementor-col-50">
                         <input
-                          name="form_fields[email]"
+                          name="Email Address"
                           id="form-field-email"
                           className="elementor-field elementor-size-md  elementor-field-textual"
                           placeholder="Email"

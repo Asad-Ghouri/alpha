@@ -90,9 +90,9 @@ export default function MainSwap() {
                   <div className="swiper-slide style-232XY" id="style-232XY">
                     <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935504359.png" />
                   </div>
-                  <div className="swiper-slide style-B7a3E" id="style-B7a3E">
+                  {/* <div className="swiper-slide style-B7a3E" id="style-B7a3E">
                     <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935463368.png" />
-                  </div>
+                  </div> */}
                 </div>
                 <span>
                 </span>
@@ -100,9 +100,9 @@ export default function MainSwap() {
               <div className="swiper-button-prev swiper-button-disabled">
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1LjQxIDcuNDFMMTQgNkw4IDEyTDE0IDE4TDE1LjQxIDE2LjU5TDEwLjgzIDEyTDE1LjQxIDcuNDFaIiBmaWxsPSIjMzIzMjMyIi8+Cjwvc3ZnPgo=" />
               </div>
-              <div className="swiper-button-next swiper-button-disabled">
+              {/* <div className="swiper-button-next swiper-button-disabled">
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTk5ODQgNkw4LjU4OTg0IDcuNDFMMTMuMTY5OCAxMkw4LjU4OTg0IDE2LjU5TDkuOTk5ODQgMThMMTUuOTk5OCAxMkw5Ljk5OTg0IDZaIiBmaWxsPSIjMzIzMjMyIi8+Cjwvc3ZnPgo=" />
-              </div>
+              </div> */}
             </div>
           </div>
 

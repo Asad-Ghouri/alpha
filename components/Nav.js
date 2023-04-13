@@ -47,7 +47,7 @@ const Navbar = () => {
                 Team
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
                 download
@@ -59,7 +59,7 @@ const Navbar = () => {
               <a href="https://itishstudios.net/assert/Italic.pdf" download>
                 Whitepaper Italiano
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
