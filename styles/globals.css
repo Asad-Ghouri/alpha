@@ -4712,3 +4712,13 @@ h3.ant-typography{
 .backlink{
   display: none!important;
 }
+
+@media(max-width:600px){
+  #swap_iframe{
+    display: flex!important;
+    width: 90%!important;
+  }
+  #purchase_iframe{
+    width: 90%!important;
+  }
+}
