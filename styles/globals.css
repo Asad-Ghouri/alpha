@@ -4721,4 +4721,8 @@ h3.ant-typography{
   #purchase_iframe{
     width: 90%!important;
   }
+  .menu-link ul li a {
+  color: #fff!important;  
+    font-weight: 400;
+  }
 }
