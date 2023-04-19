@@ -78,7 +78,7 @@ export default function MainSwap() {
                 <div>
                 </div>
                 <div className="swiper-wrapper style-EKXnb" id="swiper-wrapper-ab6f89c18109e8f6e">
-                  <div className="swiper-slide style-LsYYB" id="style-LsYYB">
+                  {/* <div className="swiper-slide style-LsYYB" id="style-LsYYB">
                     <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935841748.png" />
                   </div>
                   <div className="swiper-slide style-JUIym" id="style-JUIym">
@@ -86,13 +86,13 @@ export default function MainSwap() {
                   </div>
                   <div className="swiper-slide style-ElR5Z" id="style-ElR5Z">
                     <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1678293830376.png" />
-                  </div>
+                  </div> */}
                   <div className="swiper-slide style-232XY" id="style-232XY">
                     <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935504359.png" />
                   </div>
-                  {/* <div className="swiper-slide style-B7a3E" id="style-B7a3E">
+                  <div className="swiper-slide style-B7a3E" id="style-B7a3E">
                     <img src="https://nftify-platform.s3.ap-southeast-1.amazonaws.com/banner/62e0383cf57a595469bf8b57-1674935463368.png" />
-                  </div> */}
+                  </div>
                 </div>
                 <span>
                 </span>

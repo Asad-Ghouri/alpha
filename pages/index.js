@@ -2,7 +2,7 @@ import ezgifcom from "../public/assert/ezgif.com-video-to-gif.gif";
 import two from "../public/assert/2.gif";
 import three from "../public/assert/3.gif";
 import four from "../public/assert/4.gif";
-import five from "../public/assert/5.gif";
+import five from "../public/assert/five.gif";
 import six from "../public/assert/6.gif";
 import Image from "next/image";
 import Footer from "./Footer";
@@ -401,7 +401,7 @@ function Mint(props) {
                 }}
               >
                 <Image
-                  src={five}
+                  src={three}
                   alt="GIF 3"
                   style={{
                     width: "100%",
@@ -472,8 +472,8 @@ function Mint(props) {
                 }}
               >
                 <Image
-                  src={three}
-                  alt="GIF 2"
+                  src={five}
+                  alt="GIF 5"
                   style={{
                     width: "100%",
                     height: "100%",
