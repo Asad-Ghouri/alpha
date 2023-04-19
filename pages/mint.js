@@ -21,12 +21,12 @@ function Mint() {
   const [ListingValue, setListingValue] = useState("200");
   const [selectedOption, setSelectedOption] = useState("option1");
 
-  const [count, setcount] = useState(2);
-  const [count1, setcount1] = useState(2);
-  const [count2, setcount2] = useState(2);
-  const [count3, setcount3] = useState(2);
-  const [count4, setcount4] = useState(2);
-  const [count5, setcount5] = useState(2);
+  const [count, setcount] = useState();
+  const [count1, setcount1] = useState();
+  const [count2, setcount2] = useState();
+  const [count3, setcount3] = useState();
+  const [count4, setcount4] = useState();
+  const [count5, setcount5] = useState();
 
   console.log("value of count is " + count);
   console.log("value of count is1 " + count1);
@@ -40,7 +40,7 @@ function Mint() {
   }
 
   const { contract } = useContract(
-    "0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+    "0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
   );
   const { mutateAsync: mintStarter_without_id, isLoading } = useContractWrite(
     contract,
@@ -177,7 +177,7 @@ function Mint() {
   // ---------stake part---------
   const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
 
-  const ContractAddress = "0x73dF55Cc3ADF02385Dab27896289c01B7797296e";
+  const ContractAddress = "0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C";
 
   const { contract: stakeContract } = useContract(
     "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
@@ -430,9 +430,17 @@ function Mint() {
                       className={selectedOption === "option1" ? "db" : "d-n"}
                     >
                       <input
-                        type="text"
+                        type="number"
+                        min={1}
+                        max={1000000}
+                        value={count}
                         onChange={(e) => {
-                          setcount(e.target.value);
+                          const inputValue = e.target.value;
+                          if (inputValue < 1 || inputValue > 1000000) {
+                            alert("Number must be between 1 and 1000000");
+                          } else {
+                            setcount(e.target.value);
+                          }
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -442,7 +450,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                          contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                           action={() => StarterCall()}
                         >
                           Buy Now
@@ -460,7 +468,7 @@ function Mint() {
                     ) : (
                       <>
                         <Web3Button
-                          contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                          contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                           action={() =>
                             mintStarter_without_id([
                               {
@@ -510,9 +518,17 @@ function Mint() {
                       className={selectedOption === "option1" ? "db" : "d-n"}
                     >
                       <input
-                        type="text"
+                        type="number"
+                        min={1}
+                        max={2000000}
+                        value={count1}
                         onChange={(e) => {
-                          setcount1(e.target.value);
+                          const inputValue = e.target.value;
+                          if (inputValue < 1 || inputValue > 2000000) {
+                            alert("Number must be between 1 and 2000000");
+                          } else {
+                            setcount1(e.target.value);
+                          }
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -531,7 +547,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                          contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                           action={() => MintBasic()}
                         >
                           Buy Now
@@ -548,7 +564,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                        contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                         action={() =>
                           mintBasic_without_id([
                             {
@@ -596,9 +612,17 @@ function Mint() {
                       className={selectedOption === "option1" ? "db" : "d-n"}
                     >
                       <input
-                        type="text"
+                        type="number"
+                        min={1}
+                        max={3000000}
+                        value={count2}
                         onChange={(e) => {
-                          setcount2(e.target.value);
+                          const inputValue = e.target.value;
+                          if (inputValue < 1 || inputValue > 3000000) {
+                            alert("Number must be between 1 and 3000000");
+                          } else {
+                            setcount2(e.target.value);
+                          }
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -617,7 +641,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                          contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                           action={() => MintStandard()}
                         >
                           Buy Now
@@ -634,7 +658,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                        contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                         action={() =>
                           mintStandard_without_id([
                             {
@@ -695,9 +719,17 @@ function Mint() {
                       className={selectedOption === "option1" ? "db" : "d-n"}
                     >
                       <input
-                        type="text"
+                        type="number"
+                        min={1}
+                        max={4000000}
+                        value={count3}
                         onChange={(e) => {
-                          setcount3(e.target.value);
+                          const inputValue = e.target.value;
+                          if (inputValue < 1 || inputValue > 4000000) {
+                            alert("Number must be between 1 and 4000000");
+                          } else {
+                            setcount3(e.target.value);
+                          }
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -716,7 +748,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                          contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                           action={() => MintVIP()}
                         >
                           Buy Now
@@ -733,7 +765,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                        contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                         action={() =>
                           mintVIP_without_id([
                             {
@@ -783,9 +815,17 @@ function Mint() {
                       className={selectedOption === "option1" ? "db" : "d-n"}
                     >
                       <input
-                        type="text"
+                        type="number"
+                        min={1}
+                        max={5000000}
+                        value={count4}
                         onChange={(e) => {
-                          setcount4(e.target.value);
+                          const inputValue = e.target.value;
+                          if (inputValue < 1 || inputValue > 5000000) {
+                            alert("Number must be between 1 and 5000000");
+                          } else {
+                            setcount4(e.target.value);
+                          }
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -804,7 +844,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                          contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                           action={() => MintPremium()}
                         >
                           Buy Now
@@ -821,7 +861,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                        contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                         action={() =>
                           mintPremium_without_id([
                             {
@@ -872,9 +912,17 @@ function Mint() {
                       className={selectedOption === "option1" ? "db" : "d-n"}
                     >
                       <input
-                        type="text"
+                        type="number"
+                        min={1}
+                        max={6000000}
+                        value={count5}
                         onChange={(e) => {
-                          setcount5(e.target.value);
+                          const inputValue = e.target.value;
+                          if (inputValue < 1 || inputValue > 6000000) {
+                            alert("Number must be between 1 and 6000000");
+                          } else {
+                            setcount5(e.target.value);
+                          }
                         }}
                         className="listingInput"
                         placeholder="Enter Referral ID"
@@ -893,7 +941,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                          contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                           action={() => MintDiamond()}
                         >
                           Buy Now
@@ -910,7 +958,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x73dF55Cc3ADF02385Dab27896289c01B7797296e"
+                        contractAddress="0x4Bfe9fa51fccFa0935030E6B7E049d6F12C8c29C"
                         action={() =>
                           mintDiamond_without_id([
                             {
