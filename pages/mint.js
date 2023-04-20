@@ -15,6 +15,7 @@ import {
   useContractWrite,
   Web3Button,
   useAddress,
+  useContractRead,
 } from "@thirdweb-dev/react";
 
 function Mint() {
@@ -40,7 +41,7 @@ function Mint() {
   }
 
   const { contract } = useContract(
-    "0x519637EA7fe7BD7219608C4643D8179695542d3E"
+    "0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
   );
   const { mutateAsync: mintStarter_without_id, isLoading } = useContractWrite(
     contract,
@@ -84,100 +85,175 @@ function Mint() {
     "mintVIP"
   );
 
+  const { data: StarterData, isLoading: StarterisLoading } = useContractRead(
+    contract,
+    "ownerOf",
+    count
+  );
+  const { data: BacicData, isLoading: BacicisLoading } = useContractRead(
+    contract,
+    "ownerOf",
+    count1
+  );
+  const { data: StandardData, isLoading: StandardisLoading } = useContractRead(
+    contract,
+    "ownerOf",
+    count2
+  );
+  const { data: VipData, isLoading: VipLoading } = useContractRead(
+    contract,
+    "ownerOf",
+    count3
+  );
+  const { data: PremiumData, isLoading: PremiumisLoading } = useContractRead(
+    contract,
+    "ownerOf",
+    count4
+  );
+  const { data: DiamondData, isLoading: DiamondisLoading } = useContractRead(
+    contract,
+    "ownerOf",
+    count5
+  );
+
   const StarterCall = async () => {
-    try {
-      const data = await mintStarter([
-        count,
-        {
-          gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.01"), // send 0.1 ether with the contract call
-        },
-      ]);
-      console.info("contract call successs", data);
-    } catch (err) {
-      console.error("contract call failure", err);
+    if (!StarterData) {
+      alert("Referral id does not exist");
+    } else {
+      try {
+        const data = await mintStarter([
+          count,
+          {
+            gasLimit: 1000000, // override default gas limit
+            value: ethers.utils.parseEther("0.01"), // send 0.1 ether with the contract call
+          },
+        ]);
+        console.info("contract call successs", data);
+      } catch (err) {
+        console.error("contract call failure", err);
+      }
     }
   };
 
   const MintBasic = async () => {
-    try {
-      const data = await mintBasic([
-        count1,
-        {
-          gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.02"), // send 0.1 ether with the contract call
-        },
-      ]);
-      console.info("contract call successs", data);
-    } catch (err) {
-      console.error("contract call failure", err);
+    if (!BacicData) {
+      alert("Referral id does not exist");
+    } else {
+      if (count1 < 1000001 || count1 > 6000000) {
+        alert("Number must be between 1000001 and 6000000");
+      } else {
+        try {
+          const data = await mintBasic([
+            count1,
+            {
+              gasLimit: 1000000, // override default gas limit
+              value: ethers.utils.parseEther("0.02"), // send 0.1 ether with the contract call
+            },
+          ]);
+          console.info("contract call successs", data);
+        } catch (err) {
+          console.error("contract call failure", err);
+        }
+      }
     }
   };
 
   const MintStandard = async () => {
-    try {
-      const data = await mintStandard([
-        count2,
-        {
-          gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.03"), // send 0.1 ether with the contract call
-        },
-      ]);
-      console.info("contract call successs", data);
-    } catch (err) {
-      console.error("contract call failure", err);
+    if (!StandardData) {
+      alert("Referral id does not exist");
+    } else {
+      if (count2 < 2000001 || count2 > 6000000) {
+        alert("Number must be between 2000001 and 6000000");
+      } else {
+        try {
+          const data = await mintStandard([
+            count2,
+            {
+              gasLimit: 1000000, // override default gas limit
+              value: ethers.utils.parseEther("0.03"), // send 0.1 ether with the contract call
+            },
+          ]);
+          console.info("contract call successs", data);
+        } catch (err) {
+          console.error("contract call failure", err);
+        }
+      }
     }
   };
 
   const MintVIP = async () => {
-    try {
-      const data = await mintVIP([
-        count3,
-        {
-          gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.04"), // send 0.1 ether with the contract call
-        },
-      ]);
-      console.info("contract call successs", data);
-    } catch (err) {
-      console.error("contract call failure", err);
+    if (!VipData) {
+      alert("Referral id does not exist");
+    } else {
+      if (count3 < 3000001 || count3 > 6000000) {
+        alert("Number must be between 3000001 and 6000000");
+      } else {
+        try {
+          const data = await mintVIP([
+            count3,
+            {
+              gasLimit: 1000000, // override default gas limit
+              value: ethers.utils.parseEther("0.04"), // send 0.1 ether with the contract call
+            },
+          ]);
+          console.info("contract call successs", data);
+        } catch (err) {
+          console.error("contract call failure", err);
+        }
+      }
     }
   };
 
   const MintPremium = async () => {
-    try {
-      const data = await mintPremium([
-        count4,
-        {
-          gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.05"), // send 0.1 ether with the contract call
-        },
-      ]);
-      console.info("contract call successs", data);
-    } catch (err) {
-      console.error("contract call failure", err);
+    if (!PremiumData) {
+      alert("Referral id does not exist");
+    } else {
+      if (count4 < 4000001 || count4 > 6000000) {
+        alert("Number must be between 4000001 and 6000000");
+      } else {
+        try {
+          const data = await mintPremium([
+            count4,
+            {
+              gasLimit: 1000000, // override default gas limit
+              value: ethers.utils.parseEther("0.05"), // send 0.1 ether with the contract call
+            },
+          ]);
+          console.info("contract call successs", data);
+        } catch (err) {
+          console.error("contract call failure", err);
+        }
+      }
     }
   };
 
   const MintDiamond = async () => {
-    try {
-      const data = await mintDiamond([
-        count5,
-        {
-          gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.06"), // send 0.1 ether with the contract call
-        },
-      ]);
-      console.info("contract call successs", data);
-    } catch (err) {
-      console.error("contract call failure", err);
+    if (!DiamondData) {
+      alert("Referral id does not exist");
+    } else {
+      if (count5 < 5000001 || count5 > 6000000) {
+        alert("Number must be between 5000001 and 6000000");
+      } else {
+        try {
+          const data = await mintDiamond([
+            count5,
+            {
+              gasLimit: 1000000, // override default gas limit
+              value: ethers.utils.parseEther("0.06"), // send 0.1 ether with the contract call
+            },
+          ]);
+          console.info("contract call successs", data);
+        } catch (err) {
+          console.error("contract call failure", err);
+        }
+      }
     }
   };
 
   // ---------stake part---------
   const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
 
-  const ContractAddress = "0x519637EA7fe7BD7219608C4643D8179695542d3E";
+  const ContractAddress = "0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90";
 
   const { contract: stakeContract } = useContract(
     "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
@@ -423,7 +499,7 @@ function Mint() {
                   <div className="giftext">
                     STARTER
                     <br />
-                    (20$)
+                    (20Matic)
                   </div>
                   <div>
                     <form
@@ -432,12 +508,12 @@ function Mint() {
                       <input
                         type="number"
                         min={1}
-                        max={1000000}
+                        max={6000000}
                         value={count}
                         onChange={(e) => {
                           const inputValue = e.target.value;
-                          if (inputValue < 1 || inputValue > 1000000) {
-                            alert("Number must be between 1 and 1000000");
+                          if (inputValue > 6000000) {
+                            alert("Number must be between 1000001 and 1000000");
                           } else {
                             setcount(e.target.value);
                           }
@@ -450,7 +526,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                           action={() => StarterCall()}
                         >
                           Buy Now
@@ -468,7 +544,7 @@ function Mint() {
                     ) : (
                       <>
                         <Web3Button
-                          contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                           action={() =>
                             mintStarter_without_id([
                               {
@@ -511,7 +587,7 @@ function Mint() {
                   <div className="giftext">
                     Basic
                     <br />
-                    (50$)
+                    (50Matic)
                   </div>
                   <div>
                     <form
@@ -519,13 +595,13 @@ function Mint() {
                     >
                       <input
                         type="number"
-                        min={1}
-                        max={2000000}
+                        min={1000001}
+                        max={6000000}
                         value={count1}
                         onChange={(e) => {
                           const inputValue = e.target.value;
-                          if (inputValue < 1 || inputValue > 2000000) {
-                            alert("Number must be between 1 and 2000000");
+                          if (inputValue > 6000000) {
+                            alert("Number must be between 1000001 and 6000000");
                           } else {
                             setcount1(e.target.value);
                           }
@@ -547,7 +623,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                           action={() => MintBasic()}
                         >
                           Buy Now
@@ -564,7 +640,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                         action={() =>
                           mintBasic_without_id([
                             {
@@ -605,7 +681,7 @@ function Mint() {
                   <div className="giftext">
                     STANDARD
                     <br />
-                    (100$)
+                    (100Matic)
                   </div>
                   <div>
                     <form
@@ -613,13 +689,13 @@ function Mint() {
                     >
                       <input
                         type="number"
-                        min={1}
-                        max={3000000}
+                        min={2000001}
+                        max={6000000}
                         value={count2}
                         onChange={(e) => {
                           const inputValue = e.target.value;
-                          if (inputValue < 1 || inputValue > 3000000) {
-                            alert("Number must be between 1 and 3000000");
+                          if (inputValue > 6000000) {
+                            alert("Number must be between 2000001 and 6000000");
                           } else {
                             setcount2(e.target.value);
                           }
@@ -641,7 +717,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                           action={() => MintStandard()}
                         >
                           Buy Now
@@ -658,7 +734,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                         action={() =>
                           mintStandard_without_id([
                             {
@@ -712,7 +788,7 @@ function Mint() {
                   <div className="giftext">
                     VIP
                     <br />
-                    (500$)
+                    (500Matic)
                   </div>
                   <div>
                     <form
@@ -720,13 +796,13 @@ function Mint() {
                     >
                       <input
                         type="number"
-                        min={1}
-                        max={4000000}
+                        min={2000001}
+                        max={6000000}
                         value={count3}
                         onChange={(e) => {
                           const inputValue = e.target.value;
-                          if (inputValue < 1 || inputValue > 4000000) {
-                            alert("Number must be between 1 and 4000000");
+                          if (inputValue > 6000000) {
+                            alert("Number must be between 2000001 and 6000000");
                           } else {
                             setcount3(e.target.value);
                           }
@@ -748,7 +824,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                           action={() => MintVIP()}
                         >
                           Buy Now
@@ -765,7 +841,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                         action={() =>
                           mintVIP_without_id([
                             {
@@ -808,7 +884,7 @@ function Mint() {
                   <div className="giftext">
                     PREMIUM
                     <br />
-                    (1000$)
+                    (1000Matic)
                   </div>
                   <div>
                     <form
@@ -816,13 +892,13 @@ function Mint() {
                     >
                       <input
                         type="number"
-                        min={1}
-                        max={5000000}
+                        min={4000001}
+                        max={6000000}
                         value={count4}
                         onChange={(e) => {
                           const inputValue = e.target.value;
-                          if (inputValue < 1 || inputValue > 5000000) {
-                            alert("Number must be between 1 and 5000000");
+                          if (inputValue > 6000000) {
+                            alert("Number must be between 4000001 and 6000000");
                           } else {
                             setcount4(e.target.value);
                           }
@@ -844,7 +920,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                           action={() => MintPremium()}
                         >
                           Buy Now
@@ -861,7 +937,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                         action={() =>
                           mintPremium_without_id([
                             {
@@ -904,7 +980,7 @@ function Mint() {
                   <div className="giftext">
                     DIAMOND
                     <br />
-                    (5000$)
+                    (5000Matic)
                   </div>
 
                   <div>
@@ -913,13 +989,13 @@ function Mint() {
                     >
                       <input
                         type="number"
-                        min={1}
+                        min={5000001}
                         max={6000000}
                         value={count5}
                         onChange={(e) => {
                           const inputValue = e.target.value;
-                          if (inputValue < 1 || inputValue > 6000000) {
-                            alert("Number must be between 1 and 6000000");
+                          if (inputValue > 6000000) {
+                            alert("Number must be between 5000001 and 6000000");
                           } else {
                             setcount5(e.target.value);
                           }
@@ -941,7 +1017,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                           action={() => MintDiamond()}
                         >
                           Buy Now
@@ -958,7 +1034,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0x519637EA7fe7BD7219608C4643D8179695542d3E"
+                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
                         action={() =>
                           mintDiamond_without_id([
                             {
