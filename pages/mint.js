@@ -513,7 +513,7 @@ function Mint() {
                         onChange={(e) => {
                           const inputValue = e.target.value;
                           if (inputValue > 6000000) {
-                            alert("Number must be between 1000001 and 1000000");
+                            alert("Number must be between 1 and 1000000");
                           } else {
                             setcount(e.target.value);
                           }
