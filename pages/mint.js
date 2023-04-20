@@ -41,7 +41,7 @@ function Mint() {
   }
 
   const { contract } = useContract(
-    "0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+    "0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
   );
   const { mutateAsync: mintStarter_without_id, isLoading } = useContractWrite(
     contract,
@@ -253,7 +253,7 @@ function Mint() {
   // ---------stake part---------
   const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
 
-  const ContractAddress = "0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90";
+  const ContractAddress = "0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D";
 
   const { contract: stakeContract } = useContract(
     "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
@@ -526,7 +526,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                          contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                           action={() => StarterCall()}
                         >
                           Buy Now
@@ -544,7 +544,7 @@ function Mint() {
                     ) : (
                       <>
                         <Web3Button
-                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                          contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                           action={() =>
                             mintStarter_without_id([
                               {
@@ -623,7 +623,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                          contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                           action={() => MintBasic()}
                         >
                           Buy Now
@@ -640,7 +640,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                        contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                         action={() =>
                           mintBasic_without_id([
                             {
@@ -717,7 +717,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                          contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                           action={() => MintStandard()}
                         >
                           Buy Now
@@ -734,7 +734,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                        contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                         action={() =>
                           mintStandard_without_id([
                             {
@@ -824,7 +824,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                          contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                           action={() => MintVIP()}
                         >
                           Buy Now
@@ -841,7 +841,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                        contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                         action={() =>
                           mintVIP_without_id([
                             {
@@ -920,7 +920,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                          contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                           action={() => MintPremium()}
                         >
                           Buy Now
@@ -937,7 +937,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                        contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                         action={() =>
                           mintPremium_without_id([
                             {
@@ -1017,7 +1017,7 @@ function Mint() {
                     {selectedOption === "option1" ? (
                       <>
                         <Web3Button
-                          contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                          contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                           action={() => MintDiamond()}
                         >
                           Buy Now
@@ -1034,7 +1034,7 @@ function Mint() {
                       </>
                     ) : (
                       <Web3Button
-                        contractAddress="0xC3770E7af5D4A347926Eabb3Dae66BC8e1922a90"
+                        contractAddress="0x13bD4d0A0E185B4276ff8348Bf4Cd6BA4A8c328D"
                         action={() =>
                           mintDiamond_without_id([
                             {

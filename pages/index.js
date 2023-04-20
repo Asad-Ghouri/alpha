@@ -351,7 +351,7 @@ function Mint(props) {
                 <div className="giftext">
                   STARTER
                   <br />
-                  (20$)
+                  (20Matic)
                 </div>
                 <div></div>
               </div>
@@ -382,7 +382,7 @@ function Mint(props) {
                 <div className="giftext">
                   Basic
                   <br />
-                  (50$)
+                  (50Matic)
                 </div>
                 <div></div>
               </div>
@@ -412,7 +412,7 @@ function Mint(props) {
                 <div className="giftext">
                   STANDARD
                   <br />
-                  (100$)
+                  (100Matic)
                 </div>
                 <div></div>
               </div>
@@ -453,7 +453,7 @@ function Mint(props) {
                 <div className="giftext">
                   VIP
                   <br />
-                  (500$)
+                  (500Matic)
                 </div>
                 <div></div>
               </div>
@@ -483,7 +483,7 @@ function Mint(props) {
                 <div className="giftext">
                   Premium
                   <br />
-                  (1000$)
+                  (1000Matic)
                 </div>
                 <div></div>
               </div>
@@ -513,7 +513,7 @@ function Mint(props) {
                 <div className="giftext">
                   DIAMOND
                   <br />
-                  (5000$)
+                  (5000Matic)
                 </div>
 
                 <div></div>
