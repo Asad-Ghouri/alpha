@@ -111,11 +111,11 @@ export default function Footer(props) {
                           Mint
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/stake" className="elementor-item">
                           Stake
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/swap" className="elementor-item">
                           Swap

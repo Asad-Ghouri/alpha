@@ -66,10 +66,7 @@ export const Header = () => {
                     <nav className="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-grow">
                       <ul className="elementor-nav-menu">
                         <li>
-                          <Link
-                            href="/"
-                            className="elementor-item"
-                          >
+                          <Link href="/" className="elementor-item">
                             HOME
                           </Link>
                         </li>
@@ -88,11 +85,11 @@ export const Header = () => {
                             NFTs
                           </a>
                         </li> */}
-                        <li>
+                        {/* <li>
                           <Link href="/stake" className="elementor-item">
                             Stake
                           </Link>
-                        </li>
+                        </li> */}
 
                         <li>
                           <Link href="/swap" className="elementor-item">
@@ -118,12 +115,20 @@ export const Header = () => {
 
                         <div className="dropdown">
                           <li>
-                            <a href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf" className="dropdown-link" download>
+                            <a
+                              href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"
+                              className="dropdown-link"
+                              download
+                            >
                               Whitepaper English
                             </a>
                           </li>
                           <li>
-                            <a href="https://itishstudios.net/assert/Italic.pdf" className="dropdown-link" download>
+                            <a
+                              href="https://itishstudios.net/assert/Italic.pdf"
+                              className="dropdown-link"
+                              download
+                            >
                               Whitepaper Italiano
                             </a>
                           </li>
