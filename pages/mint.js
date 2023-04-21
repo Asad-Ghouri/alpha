@@ -125,7 +125,7 @@ function Mint() {
           count,
           {
             gasLimit: 1000000, // override default gas limit
-            value: ethers.utils.parseEther("0.01"), // send 0.1 ether with the contract call
+            value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
           },
         ]);
         console.info("contract call successs", data);
@@ -549,7 +549,7 @@ function Mint() {
                             mintStarter_without_id([
                               {
                                 gasLimit: 1000000, // override default gas limit
-                                value: ethers.utils.parseEther("0.01"), // send 0.1 ether with the contract call
+                                value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
                               },
                             ])
                           }
