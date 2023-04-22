@@ -487,8 +487,8 @@ function Mint() {
                     height: "290px",
                   }}
                 >
-                  <Image
-                    src={ezgifcom}
+                  <img
+                    src="https://itishstudios.net/assert/ezgif.com-video-to-gif.gif"
                     alt="GIF 1"
                     style={{
                       width: "100%",
@@ -574,8 +574,8 @@ function Mint() {
                     height: "290px",
                   }}
                 >
-                  <Image
-                    src={two}
+                  <img
+                    src="https://itishstudios.net/assert/2.gif"
                     alt="GIF 2"
                     style={{
                       width: "100%",
@@ -669,8 +669,8 @@ function Mint() {
                     height: "290px",
                   }}
                 >
-                  <Image
-                    src={five}
+                  <img
+                    src="https://itishstudios.net/assert/3.gif"
                     alt="GIF 3"
                     style={{
                       width: "100%",
@@ -776,8 +776,8 @@ function Mint() {
                     height: "290px",
                   }}
                 >
-                  <Image
-                    src={four}
+                  <img
+                    src="https://itishstudios.net/assert/4.gif"
                     alt="GIF 1"
                     style={{
                       width: "100%",
@@ -872,8 +872,8 @@ function Mint() {
                     height: "290px",
                   }}
                 >
-                  <Image
-                    src={three}
+                  <img
+                    src="https://itishstudios.net/assert/five.gif"
                     alt="GIF 2"
                     style={{
                       width: "100%",
@@ -968,8 +968,8 @@ function Mint() {
                     height: "290px",
                   }}
                 >
-                  <Image
-                    src={six}
+                  <img
+                    src="https://itishstudios.net/assert/6.gif"
                     alt="GIF 3"
                     style={{
                       width: "100%",
