@@ -23,8 +23,13 @@ const Navbar = () => {
         >
           <ul>
             <li>
+              <a href="https://shop.giankycoin.com/" className="elementor-item">
+                MarketPlace
+              </a>
+            </li>
+            <li>
               <Link href="/" className="elementor-item elementor-item-active">
-                HOME
+                Home
               </Link>
             </li>
             <li>
