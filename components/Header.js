@@ -243,9 +243,9 @@ export const Header = () => {
                           </span>
                           <i className="fab fa-telegram"></i>
                         </a> */}
-                        <a href="https://t.me/giankycoin2">
+                        <a href="https://twitter.com/giankynft">
                           <SocialIcon
-                            network="telegram"
+                            network="twitter"
                             bgColor="black"
                             style={{ height: 40, width: 40 }}
                           />
@@ -255,6 +255,25 @@ export const Header = () => {
                         <a href="https://discord.gg/CK53tNQTHX">
                           <SocialIcon
                             network="discord"
+                            bgColor="black"
+                            style={{ height: 40, width: 40 }}
+                          />
+                        </a>
+                      </span>
+                      <span className="elementor-grid-item">
+                        <a href="https://www.instagram.com/gianky_nft">
+                          <SocialIcon
+                            network="instagram"
+                            bgColor="black"
+                            style={{ height: 40, width: 40 }}
+                          />
+                        </a>
+                      </span>
+
+                      <span className="elementor-grid-item">
+                        <a href="https://www.tiktok.com/@giankycoin">
+                          <SocialIcon
+                            network="tiktok"
                             bgColor="black"
                             style={{ height: 40, width: 40 }}
                           />

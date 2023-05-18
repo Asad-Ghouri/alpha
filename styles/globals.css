@@ -511,11 +511,13 @@ ul li{
   } 
 
   .elementor-element.elementor-element-07e6ea8  { 
-    width: 51.087%;
+    
+    width: 59.087%;
+    margin-left: -6rem;
   } 
 
   .elementor-element.elementor-element-4c030d0  { 
-    width: 16.002%;
+    width: 21.002%;
   } 
 
   .elementor-element.elementor-element-911ef74  { 
@@ -4240,8 +4242,8 @@ padding-right: 0!important;
 .changelang{
   position: absolute;
  
-  right: 34%;
-  top: 4%;
+  right: 36.5%;
+  top: 4.5%;
 
   color: red;
   background: black;
