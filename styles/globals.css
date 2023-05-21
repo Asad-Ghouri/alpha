@@ -4733,3 +4733,41 @@ h3.ant-typography{
 .elementor-element.elementor-element-34e382e .elementor-nav-menu--main .elementor-item, .elementor-element.elementor-element-1959444 .elementor-nav-menu .elementor-item:hover{
   color: white;
 }
+
+.image-grid {
+  display: flex;
+  /* /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-gap: 10px; 
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  flex-wrap: wrap;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: auto;
+  /* border: 1px solid #ccc; */
+  height: 200px; /* Set a fixed height for consistent spacing */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Adjust the styles of the individual components */
+/* .component > * {
+  max-width: 100%;
+  height: auto;
+} */
+.insidedata{
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.d-n{
+  display: none;
+}
+
+.nft-img{
+width: 230px;
+}
