@@ -33,6 +33,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Roboto-Black"!important;
+  /* overflow: hidden!important; */
   font-family: "Roboto-Black"!important;
   /* font-family:Verdana, Geneva, Tahoma, sans-serif!important; */
   background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
@@ -4770,4 +4771,15 @@ h3.ant-typography{
 
 .nft-img{
 width: 230px;
+}
+
+.iframe-container {
+  width: 100%; /* Adjust the width as needed */
+  height: 900px; /* Adjust the height as needed */
+  overflow: hidden; /* Hide any content that overflows the container */
+  overflow: hidden!important; /* Hide any content that overflows the iframe */
+}
+.iframe-container iframe {
+  width: 100%; /* Adjust the width as needed */
+  height: 100%; /* Adjust the height as needed */
 }
