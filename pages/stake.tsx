@@ -202,8 +202,8 @@ const Stake: NextPage = () => {
 
                     {!address ? (
 
-                        // <div className="connect"> <ConnectWallet accentColor="#f213a4" colorMode="dark" /> </div>
-                        undefined
+                        <div className="connect"> <ConnectWallet accentColor="#f213a4" colorMode="dark" /> </div>
+                        // undefined
                     ) : (
                         <div>
                             <h2 className={styles.walletbalance}>WALLET BALANCE</h2>
