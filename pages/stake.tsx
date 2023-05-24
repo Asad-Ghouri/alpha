@@ -24,11 +24,15 @@ import Standard from "./standard";
 import { useOwnedNFTs } from "@thirdweb-dev/react";
 import { useNFTs, useNFT, useContractRead } from "@thirdweb-dev/react";
 import { NFT } from "@thirdweb-dev/sdk";
+import LoggedIn from "../components/loggedIn";
+
 
 const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
 
 const ContractAddress = "0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD";
 const contractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
+
+
 
 const Stake: NextPage = () => {
 
@@ -244,8 +248,9 @@ const Stake: NextPage = () => {
                                 <h2 className="uc">Your UnStaked NFTs</h2>
                             </div>
 
+                            <LoggedIn />
 
-                            <div className="iframe-container">
+                            {/* <div className="iframe-container">
                                 <iframe
                                     width="100%"
                                     // height="100vh"
@@ -256,7 +261,7 @@ const Stake: NextPage = () => {
                                     src="https://sweet-medovik-e5ac21.netlify.app/"
                                     scrolling="no"
                                 ></iframe>
-                            </div>
+                            </div> */}
                             {/* <div className={styles.nftBoxGrid}>
                                 {data?.map((nft) => (
                                     <div className={styles.nftBox} key={nft.metadata.id.toString()}>
