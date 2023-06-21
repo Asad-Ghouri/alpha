@@ -50,12 +50,12 @@ const Stake: NextPage = () => {
         ContractAddress,
         "nft-drop"
     );
-    const [stakedNfts, setStakedNfts] = useState<any>([]);
 
     const { contract: nftDropContract } = useContract(
         ContractAddress,
         "nft-drop"
     );
+    const [stakedNfts, setStakedNfts] = useState<any>([]);
 
 
     useEffect(() => {
@@ -367,7 +367,7 @@ const Stake: NextPage = () => {
                                                     className={styles.nftBox}
                                                     key={nft.metadata.id.toString()}
                                                 >
-                                                    {console.log("token id is " + nft.metadata.id)}
+
 
                                                     <h3>{nft.metadata.name}</h3>
                                                     <ThirdwebNftMedia
@@ -394,6 +394,8 @@ const Stake: NextPage = () => {
                                     ))}
                                 </div>
                             </div>
+
+
 
                             <div className="image-grid">
                                 <div>
