@@ -105,9 +105,14 @@ export const Header = () => {
                           </Link>
                         </li>
 
-                        <li>
+                        {/* <li>
                           <Link className="cw" href="/#team">
                             Team
+                          </Link>
+                        </li> */}
+                        <li>
+                          <Link className="cw" href="/stake">
+                            Stake
                           </Link>
                         </li>
 

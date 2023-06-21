@@ -79,10 +79,10 @@ export default function Footer(props) {
                 className="elementor-element elementor-element-6392d7d elementor-widget elementor-widget-image"
                 data-element_type="widget"
               >
-                <div className="elementor-widget-container">
+                <div className="elementor-widget-container foter-img-logo">
                   <img
-                    width={100}
-                    height={100}
+                    width={40}
+                    height={40}
                     src="https://itishstudios.net/assert/78b4ba1d-c647-4d6f-aab6-a2eff6d6957e-removebg-preview-e1680104061890.png"
                   />
                 </div>

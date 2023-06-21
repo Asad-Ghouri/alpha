@@ -552,7 +552,7 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         <img
                           src="https://itishstudios.net/assert/fotor_2023-3-27_3_40_26.png"
-                          className="t-img"
+                          className="t-img alphaimg"
                         />
                       </div>
                     </div>
@@ -867,7 +867,7 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         <img
                           src="https://itishstudios.net/assert/fotor_2023-3-27_9_37_20.png"
-                          className="t-img"
+                          className="t-img alphaimg"
                         />
                       </div>
                     </div>
@@ -1010,7 +1010,7 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         <img
                           src="https://itishstudios.net/assert/fotor_2023-3-29_19_25_40.png"
-                          className="t-img"
+                          className="t-img alphaimg"
                         />
                       </div>
                     </div>

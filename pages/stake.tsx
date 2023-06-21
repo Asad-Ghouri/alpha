@@ -2,6 +2,9 @@ import {
     ThirdwebNftMedia,
     useAddress,
     useContract,
+    useContractWrite,
+    useTokenBalance,
+    Web3Button,
 } from "@thirdweb-dev/react";
 import { BigNumber, ethers } from "ethers";
 import type { NextPage } from "next";
@@ -27,10 +30,11 @@ import { NFT } from "@thirdweb-dev/sdk";
 import LoggedIn from "../components/loggedIn";
 
 
-const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
+const stakingContractAddress = "0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF";
 
-const ContractAddress = "0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD";
-const contractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
+// const ContractAddress = "0xCecfA9E346C67d2fc89Af771FaA97c9f18c295bD";
+const ContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
+// const contractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
 
 
 
@@ -46,11 +50,52 @@ const Stake: NextPage = () => {
         ContractAddress,
         "nft-drop"
     );
+    const [stakedNfts, setStakedNfts] = useState<any>([]);
+
+    const { contract: nftDropContract } = useContract(
+        ContractAddress,
+        "nft-drop"
+    );
+
+
+    useEffect(() => {
+        if (!contract) return;
+
+
+
+        async function loadStakedNfts() {
+            const stakedTokens = await contract?.call("get_stakedTokens", address);
+
+            // For each staked token, fetch it from the sdk
+            // setbg(new BigNumber(0));
+            const stakedNfts = await Promise.all(
+                stakedTokens?.map(
+                    async (stakedToken: { staker: string; tokenId: BigNumber }) => {
+                        const as = stakedToken.tokenId.toNumber();
+                        if (as != 0) {
+                            const nft = await nftDropContract?.get(stakedToken.tokenId);
+                            return nft;
+                        }
+                    }
+                )
+            );
+
+            setStakedNfts(stakedNfts);
+            console.log("setStakedNfts", stakedNfts);
+        }
+
+        if (address) {
+            loadStakedNfts();
+        }
+    }, [address]);
 
     // const { contract, isLoading } = useContract(stakingContractAddress);
-    const [stakedCatNfts, setStakedCatNfts] = useState<any>([]);
+    // const [stakedCatNfts, setStakedCatNfts] = useState<any>([]);
 
-    const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
+    // const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
+
+
+
 
     // ------- un stakednft --------
 
@@ -63,7 +108,9 @@ const Stake: NextPage = () => {
 
     // const address = useAddress();
     const contractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
-    const { contract } = useContract(contractAddress, abi);
+    const { contract } = useContract(
+        "0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF"
+    );
 
     // const { data, isLoading: ownIsLoading, error: ownIserror } = useOwnedNFTs(contract, address,);
 
@@ -169,8 +216,18 @@ const Stake: NextPage = () => {
     // }, [address, contract]);
 
 
-    async function withdraw(id: BigNumber) {
-        const withdraw = await contract?.call("withdraw", id, selectval);
+
+    const { contract: stakecontract } = useContract("0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF");
+    const { mutateAsync: withdraw, isLoading } = useContractWrite(stakecontract, "withdraw")
+
+    const Widhraw = async (id) => {
+        try {
+            console.log("widraw id is " + id)
+            const data = await withdraw([id]);
+            console.info("contract call successs", data);
+        } catch (err) {
+            console.error("contract call failure", err);
+        }
     }
 
     async function claimRewards() {
@@ -187,8 +244,27 @@ const Stake: NextPage = () => {
     //         </div>
     //     )
     // }
+    const tokenContractAddress = "0x370806781689E670f85311700445449aC7C3Ff7a";
 
+    const { contract: tokenContract } = useContract(
+        tokenContractAddress,
+        "token"
+    );
+    const { data: tokenBalance } = useTokenBalance(tokenContract, address);
 
+    const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
+    useEffect(() => {
+        if (!contract || !address) return;
+
+        async function loadClaimableRewards() {
+            var cr = await contract?.call("availableRewards", address);
+            // cr = cr * 100;
+            // cr = cr.toString();
+            console.log("Loaded claimable rewards", cr);
+            setClaimableRewards(cr);
+        }
+        loadClaimableRewards();
+    }, [address]);
     return (
         <>
 
@@ -216,19 +292,24 @@ const Stake: NextPage = () => {
                                 <div className={styles.tokenItem}>
                                     <h3 className={styles.tokenLabel}>Claimable Rewards</h3>
                                     <p className={styles.tokenValue}>
-                                        {/* <b>
+                                        <b>
                                             {!claimableRewards
                                                 ? "Loading..."
                                                 : ethers.utils.formatUnits(claimableRewards, 9)}
-                                        </b> */}
+                                            {/* : ethers.utils.formatUnits(claimableRewards, 11)} */}
+                                            {/* :
+                       ethers.utils.mul} */}
+                                            {/* } */}
+                                        </b>{" "}
+
                                     </p>
                                 </div>
                                 <div className={styles.tokenItem}>
                                     <h3 className={styles.tokenLabel}>Your Gianky Balance</h3>
                                     <p className={styles.tokenValue}>
-                                        {/* <b>
-                                            <StakeBalance />
-                                        </b> */}
+                                        <b>
+                                            <b>{tokenBalance?.displayValue.substring(0, 4)}</b>
+                                        </b>
                                     </p>
                                 </div>
                             </div>
@@ -274,6 +355,45 @@ const Stake: NextPage = () => {
                                     </div>
                                 ))}
                             </div> */}
+
+                            <div className={styles.buttonContainer}>   <h2 className="uc">Your Staked NFTs</h2> </div>
+
+                            <div>
+                                <div className={styles.nftBoxGrid + " " + styles.imgcenter}>
+                                    {stakedNfts?.map((nft: any) => (
+                                        <div className="console log" key="12">
+                                            {nft ? (
+                                                <div
+                                                    className={styles.nftBox}
+                                                    key={nft.metadata.id.toString()}
+                                                >
+                                                    {console.log("token id is " + nft.metadata.id)}
+
+                                                    <h3>{nft.metadata.name}</h3>
+                                                    <ThirdwebNftMedia
+                                                        metadata={nft.metadata}
+                                                        className={styles.nftMedia}
+                                                    />
+
+
+                                                    <Web3Button
+                                                        contractAddress="0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF"
+                                                        action={() => {
+                                                            Widhraw(nft.metadata.id)
+                                                        }}
+                                                    >
+                                                        withdraw
+                                                    </Web3Button>
+                                                    <div key="1"></div>
+
+                                                </div>
+                                            ) : (
+                                                <div key="1"></div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
 
                             <div className="image-grid">
                                 <div>
