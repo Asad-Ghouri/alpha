@@ -58,37 +58,6 @@ const Stake: NextPage = () => {
     const [stakedNfts, setStakedNfts] = useState<any>([]);
 
 
-    useEffect(() => {
-        if (!contract) return;
-
-
-
-        async function loadStakedNfts() {
-            const stakedTokens = await contract?.call("get_stakedTokens", address);
-
-            // For each staked token, fetch it from the sdk
-            // setbg(new BigNumber(0));
-            const stakedNfts = await Promise.all(
-                stakedTokens?.map(
-                    async (stakedToken: { staker: string; tokenId: BigNumber }) => {
-                        const as = stakedToken.tokenId.toNumber();
-                        if (as != 0) {
-                            const nft = await nftDropContract?.get(stakedToken.tokenId);
-                            return nft;
-                        }
-                    }
-                )
-            );
-
-            setStakedNfts(stakedNfts);
-            console.log("setStakedNfts", stakedNfts);
-        }
-
-        if (address) {
-            loadStakedNfts();
-        }
-    }, [address]);
-
     // const { contract, isLoading } = useContract(stakingContractAddress);
     // const [stakedCatNfts, setStakedCatNfts] = useState<any>([]);
 
@@ -152,24 +121,7 @@ const Stake: NextPage = () => {
     //     }
     // }
     //   ---------
-    useEffect(() => {
-        if (!address)
-            return
 
-        // async function loadStartee() {
-        //     for (let i = 1; i < 500; i++) {
-        //         setcount((prevCount) => prevCount + 1);
-        //     }
-        // }
-
-        // loadStartee();
-
-
-
-        // return () => {
-        //     clearTimeout(timer); // Clear the timeout on component unmount
-        // };
-    }, []);
 
 
     //   ---------
@@ -264,7 +216,40 @@ const Stake: NextPage = () => {
             setClaimableRewards(cr);
         }
         loadClaimableRewards();
-    }, [address]);
+    }, [address, contract, nftDropContract]);
+
+
+    useEffect(() => {
+        if (!address) return;
+
+
+
+        async function loadStakedNfts() {
+            const stakedTokens = await contract?.call("get_stakedTokens", address);
+
+            // For each staked token, fetch it from the sdk
+            // setbg(new BigNumber(0));
+            const stakedNfts = await Promise.all(
+                stakedTokens?.map(
+                    async (stakedToken: { staker: string; tokenId: BigNumber }) => {
+                        // const as = stakedToken.tokenId.toNumber();
+                        // if (as != 0) {
+                        const nft = await nftDropContract?.get(stakedToken.tokenId);
+                        return nft;
+                        // }
+                    }
+                )
+            );
+
+            setStakedNfts(stakedNfts);
+            console.log("setStakedNfts", stakedNfts);
+        }
+
+        // if (address) {
+        loadStakedNfts();
+        // }
+    }, [address, contract, nftCatDropContract]);
+
     return (
         <>
 
@@ -308,7 +293,7 @@ const Stake: NextPage = () => {
                                     <h3 className={styles.tokenLabel}>Your Gianky Balance</h3>
                                     <p className={styles.tokenValue}>
                                         <b>
-                                            <b>{tokenBalance?.displayValue.substring(0, 4)}</b>
+                                            <b>{!tokenBalance ? "Loading..." : tokenBalance?.displayValue.substring(0, 4)}</b>
                                         </b>
                                     </p>
                                 </div>
@@ -357,43 +342,46 @@ const Stake: NextPage = () => {
                             </div> */}
 
                             <div className={styles.buttonContainer}>   <h2 className="uc">Your Staked NFTs</h2> </div>
-
-                            <div>
-                                <div className={styles.nftBoxGrid + " " + styles.imgcenter}>
-                                    {stakedNfts?.map((nft: any) => (
-                                        <div className="console log" key="12">
-                                            {nft ? (
-                                                <div
-                                                    className={styles.nftBox}
-                                                    key={nft.metadata.id.toString()}
-                                                >
-
-
-                                                    <h3>{nft.metadata.name}</h3>
-                                                    <ThirdwebNftMedia
-                                                        metadata={nft.metadata}
-                                                        className={styles.nftMedia}
-                                                    />
+                            {
+                                !tokenBalance ? <p className="load"> Loading... </p>
+                                    :
+                                    <div>
+                                        <div className={styles.nftBoxGrid + " " + styles.imgcenter}>
+                                            {stakedNfts?.map((nft: any) => (
+                                                <div className="console log" key="12">
+                                                    {nft ? (
+                                                        <div
+                                                            className={styles.nftBox}
+                                                            key={nft.metadata.id.toString()}
+                                                        >
 
 
-                                                    <Web3Button
-                                                        contractAddress="0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF"
-                                                        action={() => {
-                                                            Widhraw(nft.metadata.id)
-                                                        }}
-                                                    >
-                                                        withdraw
-                                                    </Web3Button>
-                                                    <div key="1"></div>
+                                                            <h3>{nft.metadata.name}</h3>
+                                                            <ThirdwebNftMedia
+                                                                metadata={nft.metadata}
+                                                                className={styles.nftMedia}
+                                                            />
 
+
+                                                            <Web3Button
+                                                                contractAddress="0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF"
+                                                                action={() => {
+                                                                    Widhraw(nft.metadata.id)
+                                                                }}
+                                                            >
+                                                                withdraw
+                                                            </Web3Button>
+                                                            <div key="1"></div>
+
+                                                        </div>
+                                                    ) : (
+                                                        <div key="1"></div>
+                                                    )}
                                                 </div>
-                                            ) : (
-                                                <div key="1"></div>
-                                            )}
+                                            ))}
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
+                                    </div>
+                            }
 
 
 
