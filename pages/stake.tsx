@@ -99,7 +99,7 @@ const Stake: NextPage = () => {
             setClaimableRewards(cr);
         }
         loadClaimableRewards();
-    }, [address]);
+    }, [address, contract, nftCatDropContract]);
 
 
     useEffect(() => {
