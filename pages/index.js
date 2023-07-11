@@ -551,7 +551,7 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-e9f5ee7 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://itishstudios.net/assert/fotor_2023-3-27_3_40_26.png"
+                          src="https://itishstudios.net/assert/fotor_2023-3-27_3_40_261.png"
                           className="t-img alphaimg"
                         />
                       </div>

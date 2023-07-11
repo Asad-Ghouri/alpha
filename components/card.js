@@ -1122,8 +1122,8 @@ export default function Card(props) {
   const address = useAddress();
 
   // const nftDropContract = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
-  const stakingContractAddress = "0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF";
-  // const contract = "0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF";
+  const stakingContractAddress = "0xff67A6A0144d149dF00E4b2bE41b16a48C97e495";
+  // const contract = "0xff67A6A0144d149dF00E4b2bE41b16a48C97e495";
 
   // const { contract: nftDropContract } = useContract(
   //   nftDropContractAddress,
@@ -1154,7 +1154,7 @@ export default function Card(props) {
   //   // var isApproved = await nftDropContract?.getApproved(id);
 
   //   // console.log("return address is " + isApproved + " ");
-  //   // if (isApproved == "0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF") {
+  //   // if (isApproved == "0xff67A6A0144d149dF00E4b2bE41b16a48C97e495") {
   //   // const stake = await contract?.call("stake", id, dropdown);
   //   // console.log("in if condition");
   //   // const stake = await contract?.stake(id, dropdown);
@@ -1211,7 +1211,7 @@ export default function Card(props) {
   };
 
   const { contract: stakeContract } = useContract(
-    "0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF"
+    "0xff67A6A0144d149dF00E4b2bE41b16a48C97e495"
   );
   const { mutateAsync: stake, stakeisLoading } = useContractWrite(
     stakeContract,
@@ -1220,7 +1220,10 @@ export default function Card(props) {
 
   const Stake_ = async () => {
     try {
-      const data = await stake([props.id, dropdown]);
+      const data = await stake([
+        props.id,
+        "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898",
+      ]);
       console.info("contract call successs", data);
     } catch (err) {
       console.error("contract call failure", err);
@@ -1237,11 +1240,11 @@ export default function Card(props) {
         <p>No id can be shown.</p>
       )}
       <ToastContainer />
-      <select value={dropdown} onChange={handleOptionChange}>
+      {/* <select value={dropdown} onChange={handleOptionChange}>
         <option value="1">Stake for 3 months</option>
         <option value="2">Stake for 6 months</option>
         <option value="3">Stake for 12 months</option>
-      </select>
+      </select> */}
 
       <br />
 
@@ -1269,7 +1272,7 @@ export default function Card(props) {
 
       <br />
       <Web3Button
-        contractAddress="0xF2fE314bA778b1455b5393af9b69C9a85B80E6BF"
+        contractAddress="0xff67A6A0144d149dF00E4b2bE41b16a48C97e495"
         action={() => {
           Stake_();
         }}

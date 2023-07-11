@@ -4817,7 +4817,8 @@ h3{
 
 .alphaimg{
   height: 171px;
-  width: 64%;
+  /* width: 64%; */
+  height: 171px;
 }
 
 .foter-img-logo img{
