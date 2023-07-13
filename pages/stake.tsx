@@ -81,25 +81,19 @@ const Stake: NextPage = () => {
     const { data: tokenBalance } = useTokenBalance(tokenContract, address);
 
 
+    async function loadClaimableRewards() {
+        console.log("before call");
+        var cr = await contract?.call("availableRewards", address);
+        console.log("Loaded claimable rewards", cr);
+        setClaimableRewards(cr);
+    }
 
-    useEffect(() => {
-        if (!address) return;
+    // useEffect(() => {
+    //     if (!address) return;
 
-        async function loadClaimableRewards() {
-            console.log("before call");
-            var cr = await contract?.call("availableRewards", address);
-            // const data = await contract.call(
-            //     "availableRewards", // Name of your function as it is on the smart contract
-            //     [
-            //         address
-            //     ],
-            // );
 
-            console.log("Loaded claimable rewards", cr);
-            setClaimableRewards(cr);
-        }
-        loadClaimableRewards();
-    }, [address, contract, nftCatDropContract]);
+    //     loadClaimableRewards();
+    // }, [address, contract, nftCatDropContract]);
 
 
     useEffect(() => {
@@ -184,6 +178,15 @@ const Stake: NextPage = () => {
                                     onClick={() => claimRewards()}
                                 >
                                     Claim Rewards
+                                </button>
+                            </div>
+
+                            <div className={styles.buttonContainer}>
+                                <button
+                                    className={`${styles.mainButton} ${styles.spacerTop}`}
+                                    onClick={() => loadClaimableRewards()}
+                                >
+                                    Show Rewards
                                 </button>
                             </div>
 
