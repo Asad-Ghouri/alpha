@@ -237,7 +237,7 @@ body {
 
   .mobile-menu-link {
     background-color: #0b0b0b;
-    height: 20rem;
+    height: 26rem;
     display: grid;
     grid-column: 1/8;
     align-items: center;
@@ -249,7 +249,7 @@ body {
   }
 
   .mobile-menu-link ul {
-    height: 20rem;
+    height: 24rem;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -4833,4 +4833,15 @@ text-align: center;
   .alphaimg{
     width: 50%!important;
   }
+}
+
+.stakedropdown{
+  margin-right: 5rem;
+  margin-top: -1rem;
+}
+
+.pdropdown{
+  margin-right: -4rem;
+  margin-top: -1rem;
+
 }

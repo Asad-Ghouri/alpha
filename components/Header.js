@@ -105,16 +105,48 @@ export const Header = () => {
                           </Link>
                         </li>
 
-                        {/* <li>
-                          <Link className="cw" href="/#team">
-                            Team
-                          </Link>
-                        </li> */}
+
                         <li>
-                          <Link className="cw" href="/stake">
-                            Stake
-                          </Link>
+                          <Link href="#" className="cw">Stake</Link>
                         </li>
+
+                        <div className="dropdown stakedropdown">
+
+                          <li>
+                            <Link
+                              href="/StarterStake"
+                              className="dropdown-link"
+                            >
+                              Starter Stake
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/BasicStake" className="dropdown-link">
+                              Basic Stake
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/StandardStake"
+                              className="dropdown-link"
+                            >
+                              Standard Stake
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="/VipStake" className="dropdown-link">
+                              Vip Stake
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/PremiumStake"
+                              className="dropdown-link"
+                            >
+                              Premium Stake
+                            </Link>
+                          </li>
+                        </div>
 
                         <li>
                           <a
@@ -126,7 +158,7 @@ export const Header = () => {
                           </a>
                         </li>
 
-                        <div className="dropdown">
+                        <div className="dropdown pdropdown">
                           <li>
                             <a
                               href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"

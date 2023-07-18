@@ -53,8 +53,28 @@ const Navbar = () => {
               </Link>
             </li> */}
             <li>
-              <Link className="cw" href="/stake">
-                Stake
+              <Link href="/StarterStake" className="elementor-item">
+                Starter Stake
+              </Link>
+            </li>
+            <li>
+              <Link href="/BasicStake" className="elementor-item">
+                Basic Stake
+              </Link>
+            </li>
+            <li>
+              <Link href="/StandardStake" className="elementor-item">
+                Standard Stake
+              </Link>
+            </li>
+            <li>
+              <Link href="/VipStake" className="elementor-item">
+                Vip Stake
+              </Link>
+            </li>
+            <li>
+              <Link href="/PremiumStake" className="elementor-item">
+                Premium Stake
               </Link>
             </li>
             {/* <li>

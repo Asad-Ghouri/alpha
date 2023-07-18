@@ -5,7 +5,15 @@ import styles from "../styles/Home.module.css";
 import Card from "./card.js";
 import { useAddress } from "@thirdweb-dev/react";
 
-export default function getNfts() {
+export default function getNfts(props) {
+  console.log(
+    "in getnfts in " +
+      props.stakingContractAddres +
+      " " +
+      props.minvalue +
+      " " +
+      props.maxvalue
+  );
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [nfts, setNfts] = useState([]);
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -26,8 +34,6 @@ export default function getNfts() {
         .then((response) => {
           setNfts(response.data.result);
           console.log("ids are ");
-          // console.log(response.data.result[0].token_id);
-          // console.log(response);
         });
     }
     getData();
@@ -39,8 +45,15 @@ export default function getNfts() {
         <section className={styles.dataContainer}>
           {nfts.map((nft) => {
             return (
-              nft.metadata && (
-                <Card uri={nft} id={nft.token_id} key={nft.token_uri} />
+              nft.metadata &&
+              nft.token_id > props.minvalue - 1 &&
+              nft.token_id < props.maxvalue && (
+                <Card
+                  uri={nft}
+                  id={nft.token_id}
+                  key={nft.token_uri}
+                  stakingContractAddres={props.stakingContractAddres}
+                />
               )
             );
           })}
