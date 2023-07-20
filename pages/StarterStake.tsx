@@ -34,11 +34,10 @@ const Stake: NextPage = () => {
     );
     const { contract, isLoading } = useContract(stakingContractAddress);
     const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
-    const { data: tokenBalance } = useTokenBalance(tokenContract, address);
+    const { data: tokenBalance, isLoading: tisLoading } = useTokenBalance(tokenContract, address);
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
-    const { data: stakedTokens } = useContractRead(contract, "getStakeInfo", [
-        [address]
-    ]);
+    const { data: stakedTokens, isLoading: stisLoading } = useContractRead(contract, "getStakeInfo", address
+    );
 
     useEffect(() => {
         if (!contract || !address) return;
@@ -98,7 +97,7 @@ const Stake: NextPage = () => {
                                         <div className={styles.tokenItem}>
                                             <h3 className={styles.tokenLabel}>Current Balance</h3>
                                             <p className={styles.tokenValue}>
-                                                <b>{tokenBalance?.displayValue}</b> {tokenBalance?.symbol}
+                                                <b>{tisLoading ? "Loading..." : tokenBalance?.displayValue}</b> {tokenBalance?.symbol}
                                             </p>
                                         </div>
                                     </div>
@@ -116,16 +115,23 @@ const Stake: NextPage = () => {
 
                                     <hr className={`${styles.divider} ${styles.spacerTop}`} />
                                     <h2>Your Staked NFTs</h2>
-                                    <div className={styles.nftBoxGrid}>
-                                        {stakedTokens &&
-                                            stakedTokens[0]?.map((stakedToken: BigNumber) => (
-                                                <NFTCard
-                                                    tokenId={stakedToken.toNumber()}
-                                                    stakingContractAddresss={stakingContractAddress}
-                                                    key={stakedToken.toString()}
-                                                />
-                                            ))}
-                                    </div>
+                                    {
+                                        stisLoading ?
+                                            "Loading..." :
+                                            tisLoading ?
+                                                "Loading..."
+                                                :
+                                                <div className={styles.nftBoxGrid}>
+                                                    {stakedTokens &&
+                                                        stakedTokens[0]?.map((stakedToken: BigNumber) => (
+                                                            <NFTCard
+                                                                tokenId={stakedToken.toNumber()}
+                                                                stakingContractAddresss={stakingContractAddress}
+                                                                key={stakedToken.toString()}
+                                                            />
+                                                        ))}
+                                                </div>
+                                    }
                                 </>
                             )}
                         </div>
