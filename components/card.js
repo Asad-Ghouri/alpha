@@ -10,7 +10,16 @@ import { useContract, useAddress } from "@thirdweb-dev/react";
 export default function Card(props) {
   const address = useAddress();
 
-  console.log("in cards in " + props.stakingContractAddres);
+  console.log(
+    "in cards in type of staking address is " +
+      typeof props.stakingContractAddres +
+      " " +
+      props.stakingContractAddres +
+      "id type is " +
+      typeof props.id +
+      "id is " +
+      props.id
+  );
 
   const stakingContractAddress = props.stakingContractAddres;
 
@@ -32,7 +41,7 @@ export default function Card(props) {
   };
 
   const nftDropContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
-  const { contract, isLoading } = useContract(stakingContractAddress);
+  const { contract, isLoading } = useContract(props.stakingContractAddres);
   const { contract: nftDropContract } = useContract(
     nftDropContractAddress,
     "nft-drop"
@@ -47,7 +56,7 @@ export default function Card(props) {
     if (!isApproved) {
       await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
     }
-    await contract?.call("stake", props.id);
+    await contract?.call("stake", [props.id]);
   }
   return (
     <section className={styles.cardContainer}>
