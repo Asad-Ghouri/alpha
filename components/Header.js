@@ -65,14 +65,14 @@ export const Header = () => {
                     <link href="https://shopinose.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css" />
                     <nav className="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-grow">
                       <ul className="elementor-nav-menu">
-                        <li>
+                        {/* <li>
                           <a
                             href="https://shop.giankycoin.com/"
                             className="elementor-item"
                           >
                             MarketPlace
                           </a>
-                        </li>
+                        </li> */}
                         <li>
                           <Link href="/" className="elementor-item">
                             Home
@@ -105,13 +105,13 @@ export const Header = () => {
                           </Link>
                         </li>
 
-
                         <li>
-                          <Link href="#" className="cw">Stake</Link>
+                          <Link href="#" className="cw">
+                            Stake
+                          </Link>
                         </li>
 
                         <div className="dropdown stakedropdown">
-
                           <li>
                             <Link
                               href="/StarterStake"
@@ -144,6 +144,15 @@ export const Header = () => {
                               className="dropdown-link"
                             >
                               Premium Stake
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="/DiamondStake"
+                              className="dropdown-link"
+                            >
+                              Diamond Stake
                             </Link>
                           </li>
                         </div>

@@ -40,7 +40,7 @@ body {
   background-size: cover;
   padding: 0;
   margin: 0;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   /* --hello: -100%; */
   /* padding-bottom: 250px; */
   overflow-x: hidden;
@@ -237,7 +237,7 @@ body {
 
   .mobile-menu-link {
     background-color: #0b0b0b;
-    height: 26rem;
+    height: 25rem;
     display: grid;
     grid-column: 1/8;
     align-items: center;

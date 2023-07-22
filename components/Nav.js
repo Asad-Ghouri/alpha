@@ -22,11 +22,11 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li>
+            {/* <li>
               <a href="https://shop.giankycoin.com/" className="elementor-item">
                 MarketPlace
               </a>
-            </li>
+            </li> */}
             <li>
               <Link href="/" className="elementor-item elementor-item-active">
                 Home
@@ -75,6 +75,11 @@ const Navbar = () => {
             <li>
               <Link href="/PremiumStake" className="elementor-item">
                 Premium Stake
+              </Link>
+            </li>
+            <li>
+              <Link href="/DiamondStake" className="elementor-item">
+                Diamond Stake
               </Link>
             </li>
             {/* <li>
