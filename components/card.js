@@ -56,7 +56,8 @@ export default function Card(props) {
     if (!isApproved) {
       await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
     }
-    await contract?.call("stake", [props.id]);
+    await contract?.call("stake", [[props.id]]);
+    window.location.reload();
   }
   return (
     <section className={styles.cardContainer}>

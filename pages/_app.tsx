@@ -10,14 +10,14 @@ import { Header } from "../components/Header"
 
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Polygon;
+// const activeChainId = ChainId.Polygon;
 
 function MyApp({ Component, pageProps }: AppProps) {
 
   const [changeLan, setchangeLan] = useState(true);
 
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}>
+    <ThirdwebProvider activeChain="polygon">
       <div className="setchangeLang">
         {changeLan ? (
           <button

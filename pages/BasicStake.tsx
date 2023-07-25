@@ -37,14 +37,14 @@ const Stake: NextPage = () => {
     const { data: tokenBalance, isLoading: tisLoading } = useTokenBalance(tokenContract, address);
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
     const { data: stakedTokens, isLoading: stisLoading } = useContractRead(contract, "getStakeInfo",
-        address
+        [address]
     );
 
     useEffect(() => {
         if (!contract || !address) return;
 
         async function loadClaimableRewards() {
-            const stakeInfo = await contract?.call("getStakeInfo", address);
+            const stakeInfo = await contract?.call("getStakeInfo", [address]);
             console.log("rewards are " + stakeInfo)
             setClaimableRewards(stakeInfo[1]);
         }
@@ -72,7 +72,7 @@ const Stake: NextPage = () => {
 
                     {!address ? (
 
-                        <div className="connect"> <ConnectWallet accentColor="#f213a4" colorMode="dark" /> </div>
+                        <div className="connect"> <ConnectWallet /> </div>
                         // undefined
                     ) : (
                         <div className={styles.container}>
