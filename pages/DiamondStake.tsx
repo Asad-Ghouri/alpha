@@ -49,7 +49,7 @@ const Stake: NextPage = () => {
         }
 
         loadClaimableRewards();
-    }, [address, contract]);
+    }, [address, contract, claimableRewards, setClaimableRewards]);
 
 
 
