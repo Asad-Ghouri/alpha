@@ -50,7 +50,7 @@ const Stake: NextPage = () => {
         }
 
         loadClaimableRewards();
-    }, [address, contract]);
+    }, [address, contract, claimableRewards, setClaimableRewards]);
 
 
 
@@ -105,8 +105,8 @@ const Stake: NextPage = () => {
                                     </div>
 
                                     <Web3Button
-                                        action={(contract) => contract.call("claimRewards")}
                                         contractAddress={stakingContractAddress}
+                                        action={(contract) => contract.call("claimRewards")}
                                     >
                                         Claim Rewards
                                     </Web3Button>
