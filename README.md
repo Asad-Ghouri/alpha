@@ -1,3 +1,7 @@
+![Capture3](https://github.com/Asad-Ghouri/alpha/assets/84624564/7c894888-12cb-475c-9f9f-74576bd08060)
+![Capture2](https://github.com/Asad-Ghouri/alpha/assets/84624564/e57c7acf-d4fe-4bf9-a9b1-a464034369a6)
+![Capture](https://github.com/Asad-Ghouri/alpha/assets/84624564/773d4c03-88b2-4d3b-a03f-08b6b24946f9)
+![Capture1](https://github.com/Asad-Ghouri/alpha/assets/84624564/d309da5c-d781-4218-b9d9-4f3da3ba1d3a)
 # Signature Based Minting with Next.JS
 
 ## Introduction
