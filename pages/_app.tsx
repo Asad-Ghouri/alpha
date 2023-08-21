@@ -8,7 +8,9 @@ import "../styles/globals.css";
 import { Header } from "../components/Header"
 // import { Footer } from "./Footer"
 import { ethers } from "ethers";
-
+import {
+  useAddress
+} from "@thirdweb-dev/react";
 
 // This is the chainId your dApp will work on.
 // const activeChainId = ChainId.Polygon;
@@ -16,6 +18,7 @@ import { ethers } from "ethers";
 function MyApp({ Component, pageProps }: AppProps) {
 
   const [changeLan, setchangeLan] = useState(true);
+   const address = useAddress();
 
   return (
     
@@ -24,7 +27,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebSDKProvider
     activeChain={"polygon"}
     // Example: Use ethers to get the signer from the window.ethereum object
-    signer={new ethers.providers.Web3Provider(window.ethereum).getSigner()}
     clientId="c63fd3dcf8c9eec46c253e543b0ff569"
   >
       <div className="setchangeLang">
