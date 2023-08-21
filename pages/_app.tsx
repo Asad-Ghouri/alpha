@@ -17,7 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [changeLan, setchangeLan] = useState(true);
 
   return (
-    <ThirdwebProvider activeChain="polygon">
+    <ThirdwebProvider activeChain="polygon"
+    clientId="c63fd3dcf8c9eec46c253e543b0ff569" >
       <div className="setchangeLang">
         {changeLan ? (
           <button

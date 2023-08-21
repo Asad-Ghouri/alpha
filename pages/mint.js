@@ -8,7 +8,7 @@ import Image from "next/image";
 import Footer from "./Footer";
 import { Header } from "../components/Header";
 import { SetStateAction, useState } from "react";
-import { ethers } from "ethers";
+import { BigNumber, ethers } from "ethers";
 
 import {
   useContract,
@@ -124,13 +124,7 @@ function Mint() {
       alert("Referral id does not exist");
     } else {
       try {
-        const data = await mintStarter([
-          [count],
-          {
-            gasLimit: 1000000, // override default gas limit
-            value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
-          },
-        ]);
+        const data = await mintStarter({ args: [count] });
         console.info("contract call successs", data);
       } catch (err) {
         console.error("contract call failure", err);
@@ -146,13 +140,7 @@ function Mint() {
         alert("Number must be between 1000001 and 6000000");
       } else {
         try {
-          const data = await mintBasic([
-            [count1],
-            {
-              gasLimit: 1000000, // override default gas limit
-              value: ethers.utils.parseEther("50"), // send 0.1 ether with the contract call
-            },
-          ]);
+          const data = await mintBasic({ args: [count1] });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -169,13 +157,7 @@ function Mint() {
         alert("Number must be between 2000001 and 6000000");
       } else {
         try {
-          const data = await mintStandard([
-            [count2],
-            {
-              gasLimit: 1000000, // override default gas limit
-              value: ethers.utils.parseEther("100"), // send 0.1 ether with the contract call
-            },
-          ]);
+          const data = await mintStandard({ args: [count2] });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -192,13 +174,7 @@ function Mint() {
         alert("Number must be between 3000001 and 6000000");
       } else {
         try {
-          const data = await mintVIP([
-            [count3],
-            {
-              gasLimit: 1000000, // override default gas limit
-              value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
-            },
-          ]);
+          const data = await mintVIP({ args: [count3] });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -215,13 +191,7 @@ function Mint() {
         alert("Number must be between 4000001 and 6000000");
       } else {
         try {
-          const data = await mintPremium([
-            [count4],
-            {
-              gasLimit: 1000000, // override default gas limit
-              value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
-            },
-          ]);
+          const data = await mintPremium({ args: [count4] });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -238,13 +208,7 @@ function Mint() {
         alert("Number must be between 5000001 and 6000000");
       } else {
         try {
-          const data = await mintDiamond([
-            [count5],
-            {
-              gasLimit: 1000000, // override default gas limit
-              value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
-            },
-          ]);
+          const data = await mintDiamond({ args: [count5] });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -254,184 +218,24 @@ function Mint() {
   };
 
   // ---------stake part---------
-  const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
+  // const stakingContractAddress = "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7";
 
   const ContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
 
-  const { contract: stakeContract } = useContract(
-    "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
-  );
-  const { mutateAsync: stake, isLoading: stake_isLoading } = useContractWrite(
-    stakeContract,
-    "stake"
-  );
+  // const { contract: stakeContract } = useContract(
+  //   "0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
+  // );
+  // const { mutateAsync: stake, isLoading: stake_isLoading } = useContractWrite(
+  //   stakeContract,
+  //   "stake"
+  // );
 
   const { contract: nftCatDropContract } = useContract(
     ContractAddress,
     "nft-drop"
   );
 
-  const Stake_ = async () => {
-    if (!address) return;
-
-    try {
-      const isApproved = await nftCatDropContract?.isApproved(
-        address,
-        stakingContractAddress
-      );
-
-      if (!isApproved) {
-        await nftCatDropContract?.setApprovalForAll(
-          stakingContractAddress,
-          true
-        );
-      }
-
-      const stake = await stakeContract?.call("stake", count);
-
-      // const data = await stake(count);
-      console.info("contract call successs", stake);
-      alert(stake);
-    } catch (err) {
-      console.error("contract call failure", err);
-      alert(err);
-    }
-  };
-
-  const Stake_1 = async () => {
-    if (!address) return;
-
-    try {
-      const isApproved = await nftCatDropContract?.isApproved(
-        address,
-        stakingContractAddress
-      );
-
-      if (!isApproved) {
-        await nftCatDropContract?.setApprovalForAll(
-          stakingContractAddress,
-          true
-        );
-      }
-
-      const stake = await stakeContract?.call("stake", count1);
-
-      // const data = await stake(count);
-      console.info("contract call successs", stake);
-      alert(stake);
-    } catch (err) {
-      console.error("contract call failure", err);
-      alert(err);
-    }
-  };
-
-  const Stake_2 = async () => {
-    if (!address) return;
-
-    try {
-      const isApproved = await nftCatDropContract?.isApproved(
-        address,
-        stakingContractAddress
-      );
-
-      if (!isApproved) {
-        await nftCatDropContract?.setApprovalForAll(
-          stakingContractAddress,
-          true
-        );
-      }
-
-      const stake = await stakeContract?.call("stake", count2);
-
-      // const data = await stake(count);
-      console.info("contract call successs", stake);
-      alert(stake);
-    } catch (err) {
-      console.error("contract call failure", err);
-      alert(err);
-    }
-  };
-
-  const Stake_3 = async () => {
-    if (!address) return;
-
-    try {
-      const isApproved = await nftCatDropContract?.isApproved(
-        address,
-        stakingContractAddress
-      );
-
-      if (!isApproved) {
-        await nftCatDropContract?.setApprovalForAll(
-          stakingContractAddress,
-          true
-        );
-      }
-
-      const stake = await stakeContract?.call("stake", count3);
-
-      // const data = await stake(count);
-      console.info("contract call successs", stake);
-      alert(stake);
-    } catch (err) {
-      console.error("contract call failure", err);
-      alert(err);
-    }
-  };
-
-  const Stake_4 = async () => {
-    if (!address) return;
-
-    try {
-      const isApproved = await nftCatDropContract?.isApproved(
-        address,
-        stakingContractAddress
-      );
-
-      if (!isApproved) {
-        await nftCatDropContract?.setApprovalForAll(
-          stakingContractAddress,
-          true
-        );
-      }
-
-      const stake = await stakeContract?.call("stake", count4);
-
-      // const data = await stake(count);
-      console.info("contract call successs", stake);
-      alert(stake);
-    } catch (err) {
-      console.error("contract call failure", err);
-      alert(err);
-    }
-  };
-
-  const Stake_5 = async () => {
-    if (!address) return;
-
-    try {
-      const isApproved = await nftCatDropContract?.isApproved(
-        address,
-        stakingContractAddress
-      );
-
-      if (!isApproved) {
-        await nftCatDropContract?.setApprovalForAll(
-          stakingContractAddress,
-          true
-        );
-      }
-
-      const stake = await stakeContract?.call("stake", count5);
-
-      // const data = await stake(count);
-      console.info("contract call successs", stake);
-      alert(stake);
-    } catch (err) {
-      console.error("contract call failure", err);
-      alert(err);
-    }
-  };
+  
   // --------stake end--------
   return (
     <>
