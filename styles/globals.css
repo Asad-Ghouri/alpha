@@ -2866,7 +2866,7 @@ background-color: #000;
 
 @media (max-width:600px){
   .flexd{
-    padding-top: 5rem;
+    margin-top: 5rem;
   }
   #Homeiframe{
     height: 8000px;

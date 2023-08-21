@@ -125,7 +125,7 @@ function Mint() {
     } else {
       try {
         const data = await mintStarter([
-          count,
+          [count],
           {
             gasLimit: 1000000, // override default gas limit
             value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
@@ -147,7 +147,7 @@ function Mint() {
       } else {
         try {
           const data = await mintBasic([
-            count1,
+            [count1],
             {
               gasLimit: 1000000, // override default gas limit
               value: ethers.utils.parseEther("50"), // send 0.1 ether with the contract call
@@ -170,7 +170,7 @@ function Mint() {
       } else {
         try {
           const data = await mintStandard([
-            count2,
+            [count2],
             {
               gasLimit: 1000000, // override default gas limit
               value: ethers.utils.parseEther("100"), // send 0.1 ether with the contract call
@@ -193,7 +193,7 @@ function Mint() {
       } else {
         try {
           const data = await mintVIP([
-            count3,
+            [count3],
             {
               gasLimit: 1000000, // override default gas limit
               value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
@@ -216,7 +216,7 @@ function Mint() {
       } else {
         try {
           const data = await mintPremium([
-            count4,
+            [count4],
             {
               gasLimit: 1000000, // override default gas limit
               value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
@@ -239,7 +239,7 @@ function Mint() {
       } else {
         try {
           const data = await mintDiamond([
-            count5,
+            [count5],
             {
               gasLimit: 1000000, // override default gas limit
               value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
