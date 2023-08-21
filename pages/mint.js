@@ -88,32 +88,35 @@ function Mint() {
   const { data: StarterData, isLoading: StarterisLoading } = useContractRead(
     contract,
     "ownerOf",
-    count
+    [count]
   );
+
+  console.log("value of StarterData owner is " + StarterData);
+
   const { data: BacicData, isLoading: BacicisLoading } = useContractRead(
     contract,
     "ownerOf",
-    count1
+    [count1]
   );
   const { data: StandardData, isLoading: StandardisLoading } = useContractRead(
     contract,
     "ownerOf",
-    count2
+    [count2]
   );
   const { data: VipData, isLoading: VipLoading } = useContractRead(
     contract,
     "ownerOf",
-    count3
+    [count3]
   );
   const { data: PremiumData, isLoading: PremiumisLoading } = useContractRead(
     contract,
     "ownerOf",
-    count4
+    [count4]
   );
   const { data: DiamondData, isLoading: DiamondisLoading } = useContractRead(
     contract,
     "ownerOf",
-    count5
+    [count5]
   );
 
   const StarterCall = async () => {
