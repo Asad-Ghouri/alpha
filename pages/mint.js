@@ -126,7 +126,7 @@ function Mint() {
       try {
         const data = await mintStarter({ args: [count],
           gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.1"), // send 0.1 ether with the contract call
+          value: ethers.utils.parseEther("0.12"), // send 0.1 ether with the contract call
         
         });
         console.info("contract call successs", data);
