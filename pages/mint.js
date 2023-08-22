@@ -124,7 +124,11 @@ function Mint() {
       alert("Referral id does not exist");
     } else {
       try {
-        const data = await mintStarter({ args: [count] });
+        const data = await mintStarter({ args: [count],
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
+        
+        });
         console.info("contract call successs", data);
       } catch (err) {
         console.error("contract call failure", err);
@@ -140,7 +144,10 @@ function Mint() {
         alert("Number must be between 1000001 and 6000000");
       } else {
         try {
-          const data = await mintBasic({ args: [count1] });
+          const data = await mintBasic({ args: [count1],
+            gasLimit: 1000000, // override default gas limit
+            value: ethers.utils.parseEther("50"), // send 0.1 ether with the contract call
+          });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -157,7 +164,10 @@ function Mint() {
         alert("Number must be between 2000001 and 6000000");
       } else {
         try {
-          const data = await mintStandard({ args: [count2] });
+          const data = await mintStandard({ args: [count2],
+            gasLimit: 1000000, // override default gas limit
+            value: ethers.utils.parseEther("100"), // send 0.1 ether with the contract call
+          });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -174,7 +184,10 @@ function Mint() {
         alert("Number must be between 3000001 and 6000000");
       } else {
         try {
-          const data = await mintVIP({ args: [count3] });
+          const data = await mintVIP({ args: [count3],
+            gasLimit: 1000000, // override default gas limit
+              value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
+          });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -191,7 +204,10 @@ function Mint() {
         alert("Number must be between 4000001 and 6000000");
       } else {
         try {
-          const data = await mintPremium({ args: [count4] });
+          const data = await mintPremium({ args: [count4],
+            gasLimit: 1000000, // override default gas limit
+            value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
+          });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -208,7 +224,10 @@ function Mint() {
         alert("Number must be between 5000001 and 6000000");
       } else {
         try {
-          const data = await mintDiamond({ args: [count5] });
+          const data = await mintDiamond({ args: [count5],
+            gasLimit: 1000000, // override default gas limit
+            value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
+          });
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
