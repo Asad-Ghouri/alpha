@@ -124,10 +124,7 @@ function Mint() {
       alert("Referral id does not exist");
     } else {
       try {
-        const data = await mintStarter({ args: [count],
-          gasLimit: 1000000, // override default gas limit
-          value: ethers.utils.parseEther("0.12"), // send 0.1 ether with the contract call
-        
+        const data = await mintStarter({ args: [count]
         });
         console.info("contract call successs", data);
       } catch (err) {
@@ -354,6 +351,13 @@ function Mint() {
                         <Web3Button
                           contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
                           action={() => StarterCall()}
+                        overrides={ {
+
+                          gasLimit: 1000000, // override default gas limit
+                        value: ethers.utils.parseEther("0.1"), // send 0.1 ether with the contract call
+
+                        } 
+                           }
                         >
                           Buy Now
                         </Web3Button>
