@@ -200,7 +200,7 @@ function Mint() {
       alert("connect you wallet first")
       return;
     }
-    if (!StarterData) {
+    if (!StarterData && !StarterisLoading) {
       alert("Referral id does not exist");
     } else {
       try {
