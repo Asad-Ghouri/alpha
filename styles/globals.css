@@ -4845,3 +4845,18 @@ text-align: center;
   margin-top: -1rem;
 
 }
+
+.u_info{
+  text-align: center;
+  margin-top: 20%;
+  color: white;
+}
+
+@media (max-width:600px){
+  .u_info {
+    margin-top: 68%;
+    font-size: 33px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+}

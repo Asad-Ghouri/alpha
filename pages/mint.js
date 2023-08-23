@@ -124,8 +124,11 @@ function Mint() {
       alert("Referral id does not exist");
     } else {
       try {
-        const data = await mintStarter({ args: [count]
-        });
+        const data = await mintStarter(
+          { args: [count] },
+        
+        );
+        // await contract.call("mintStarter", [count])
         console.info("contract call successs", data);
       } catch (err) {
         console.error("contract call failure", err);
@@ -351,13 +354,21 @@ function Mint() {
                         <Web3Button
                           contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
                           action={() => StarterCall()}
-                        overrides={ {
-
-                          gasLimit: 1000000, // override default gas limit
-                        value: ethers.utils.parseEther("0.1"), // send 0.1 ether with the contract call
-
-                        } 
-                           }
+                          overrides={{
+                            accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
+                            blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
+                            ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
+                            customData: {}, // The transaction data.
+                            from: "0x47201D64dEFee083EC0f7D4e67205593c6Aeb2D0", // The address this transaction is from.
+                            gasLimit: 100000, // The maximum amount of gas this transaction is permitted to use.
+                            gasPrice: 100000, // The price (in wei) per unit of gas this transaction will pay.
+                            maxFeePerGas: 100000, // The maximum price (in wei) per unit of gas this transaction will pay
+                            maxPriorityFeePerGas: 0, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
+                            nonce: 0, // The nonce used as part of the proof-of-work to mine this block.
+                            type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
+                            value: ethers.utils.parseEther("0.3"), // send 0.1 ether with the contract call
+                          }}
+                      
                         >
                           Buy Now
                         </Web3Button>
@@ -378,8 +389,18 @@ function Mint() {
                           action={() =>
                             mintStarter_without_id([
                               {
-                                gasLimit: 1000000, // override default gas limit
-                                value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
+                                accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
+                                blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
+                                ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
+                                customData: {}, // The transaction data.
+                                from: "0x47201D64dEFee083EC0f7D4e67205593c6Aeb2D0", // The address this transaction is from.
+                                gasLimit: 100000, // The maximum amount of gas this transaction is permitted to use.
+                                gasPrice: 100000, // The price (in wei) per unit of gas this transaction will pay.
+                                maxFeePerGas: 100000, // The maximum price (in wei) per unit of gas this transaction will pay
+                                maxPriorityFeePerGas: 0, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
+                                nonce: 0, // The nonce used as part of the proof-of-work to mine this block.
+                                type: 0,
+                                value: ethers.utils.parseEther("0.1"), // send 0.1 ether with the contract call
                               },
                             ])
                           }
