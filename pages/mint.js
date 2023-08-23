@@ -19,6 +19,9 @@ import {
 } from "@thirdweb-dev/react";
 
 function Mint() {
+
+  const address = useAddress();
+
   const [ListingValue, setListingValue] = useState("200");
   const [selectedOption, setSelectedOption] = useState("option1");
 
@@ -43,22 +46,95 @@ function Mint() {
   const { contract } = useContract(
     "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
   );
-  const { mutateAsync: mintStarter_without_id, isLoading } = useContractWrite(
-    contract,
-    "mintStarter_without_id"
-  );
+  
+  
+  const mintStarter_without_id = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
+    const data = await contract.call("mintStarter_without_id",
+    [],
+    {
+      gasLimit: 1000000, // override default gas limit
+      value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
+    },
+    );
+  }
+  
 
-  const { mutateAsync: mintBasic_without_id, isLoading: bisloading } =
-    useContractWrite(contract, "mintBasic_without_id");
-  const { mutateAsync: mintDiamond_without_id, isLoading: dloading } =
-    useContractWrite(contract, "mintDiamond_without_id");
-  const { mutateAsync: mintStandard_without_id, isLoading: sisLoading } =
-    useContractWrite(contract, "mintStandard_without_id");
-  const { mutateAsync: mintVIP_without_id, isLoading: wisLoading } =
-    useContractWrite(contract, "mintVIP_without_id");
-  const { mutateAsync: mintPremium_without_id, isLoading: misloading } =
-    useContractWrite(contract, "mintPremium_without_id");
-  const address = useAddress();
+  const mintBasic_without_id = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
+    const data = await contract.call("mintBasic_without_id",
+    [],
+    {
+      gasLimit: 1000000, // override default gas limit
+      value: ethers.utils.parseEther("50"), // send 0.1 ether with the contract call
+    },
+    );
+  }
+  
+  const mintDiamond_without_id = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
+    const data = await contract.call("mintDiamond_without_id",
+    [],
+    {
+      gasLimit: 1000000, // override default gas limit
+      value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
+    },
+    );
+  }
+ 
+ 
+  const mintStandard_without_id = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
+    const data = await contract.call("mintStandard_without_id",
+    [],
+    {
+      gasLimit: 1000000, // override default gas limit
+      value: ethers.utils.parseEther("100"), // send 0.1 ether with the contract call
+    },
+    );
+  }
+
+
+  const mintVIP_without_id = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
+    const data = await contract.call("mintVIP_without_id",
+    [],
+    {
+      gasLimit: 1000000, // override default gas limit
+      value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
+    },
+    );
+  }
+ 
+  
+  const mintPremium_without_id = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
+    const data = await contract.call("mintPremium_without_id",
+    [],
+    {
+      gasLimit: 1000000, // override default gas limit
+      value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
+    },
+    );
+  }
 
   const { mutateAsync: mintBasic, isLoading: msisLoading } = useContractWrite(
     contract,
@@ -120,23 +196,36 @@ function Mint() {
   );
 
   const StarterCall = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
     if (!StarterData) {
       alert("Referral id does not exist");
     } else {
       try {
-        const data = await mintStarter(
-          { args: [count] },
-        
+        // const data = await mintStarter( [count] );
+        const data = await contract.call("mintStarter",
+        [count],
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("20"), // send 0.1 ether with the contract call
+        },
         );
-        // await contract.call("mintStarter", [count])
         console.info("contract call successs", data);
+        
       } catch (err) {
         console.error("contract call failure", err);
+        
       }
     }
   };
 
   const MintBasic = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
     if (!BacicData) {
       alert("Referral id does not exist");
     } else {
@@ -144,10 +233,13 @@ function Mint() {
         alert("Number must be between 1000001 and 6000000");
       } else {
         try {
-          const data = await mintBasic({ args: [count1],
-            gasLimit: 1000000, // override default gas limit
-            value: ethers.utils.parseEther("50"), // send 0.1 ether with the contract call
-          });
+        const data = await contract.call("mintBasic",
+        [count1],
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("50"), // send 0.1 ether with the contract call
+        },
+        );
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -157,6 +249,10 @@ function Mint() {
   };
 
   const MintStandard = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
     if (!StandardData) {
       alert("Referral id does not exist");
     } else {
@@ -164,10 +260,13 @@ function Mint() {
         alert("Number must be between 2000001 and 6000000");
       } else {
         try {
-          const data = await mintStandard({ args: [count2],
-            gasLimit: 1000000, // override default gas limit
-            value: ethers.utils.parseEther("100"), // send 0.1 ether with the contract call
-          });
+        const data = await contract.call("mintStandard",
+        [count2],
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("100"), // send 0.1 ether with the contract call
+        },
+        );
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -177,6 +276,10 @@ function Mint() {
   };
 
   const MintVIP = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
     if (!VipData) {
       alert("Referral id does not exist");
     } else {
@@ -184,10 +287,18 @@ function Mint() {
         alert("Number must be between 3000001 and 6000000");
       } else {
         try {
-          const data = await mintVIP({ args: [count3],
-            gasLimit: 1000000, // override default gas limit
-              value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
-          });
+          // const data = await mintVIP({
+          //   args: [count3],
+          //   gasLimit: 1000000, // override default gas limit
+          //   value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
+          // });
+          const data = await contract.call("mintVIP",
+        [count3],
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
+        },
+        );
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -197,6 +308,10 @@ function Mint() {
   };
 
   const MintPremium = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
     if (!PremiumData) {
       alert("Referral id does not exist");
     } else {
@@ -204,10 +319,18 @@ function Mint() {
         alert("Number must be between 4000001 and 6000000");
       } else {
         try {
-          const data = await mintPremium({ args: [count4],
-            gasLimit: 1000000, // override default gas limit
-            value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
-          });
+          // const data = await mintPremium({
+          //   args: [count4],
+          //   gasLimit: 1000000, // override default gas limit
+          //   value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
+          // });
+          const data = await contract.call("mintPremium",
+        [count4],
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
+        },
+        );
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -217,6 +340,10 @@ function Mint() {
   };
 
   const MintDiamond = async () => {
+    if(!address){
+      alert("connect you wallet first")
+      return;
+    }
     if (!DiamondData) {
       alert("Referral id does not exist");
     } else {
@@ -224,10 +351,18 @@ function Mint() {
         alert("Number must be between 5000001 and 6000000");
       } else {
         try {
-          const data = await mintDiamond({ args: [count5],
-            gasLimit: 1000000, // override default gas limit
-            value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
-          });
+          // const data = await mintDiamond({
+          //   args: [count5],
+          //   gasLimit: 1000000, // override default gas limit
+          //   value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
+          // });
+        const data = await contract.call("mintDiamond",
+        [count5],
+        {
+          gasLimit: 1000000, // override default gas limit
+          value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
+        },
+        );
           console.info("contract call successs", data);
         } catch (err) {
           console.error("contract call failure", err);
@@ -254,7 +389,6 @@ function Mint() {
     "nft-drop"
   );
 
-  
   // --------stake end--------
   return (
     <>
@@ -351,27 +485,12 @@ function Mint() {
 
                     {selectedOption === "option1" ? (
                       <>
-                        <Web3Button
-                          contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                          action={() => StarterCall()}
-                          overrides={{
-                            accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                            blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                            ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                            customData: {}, // The transaction data.
-                            from: "0x47201D64dEFee083EC0f7D4e67205593c6Aeb2D0", // The address this transaction is from.
-                            gasLimit: 100000, // The maximum amount of gas this transaction is permitted to use.
-                            gasPrice: 100000, // The price (in wei) per unit of gas this transaction will pay.
-                            maxFeePerGas: 100000, // The maximum price (in wei) per unit of gas this transaction will pay
-                            maxPriorityFeePerGas: 0, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                            nonce: 0, // The nonce used as part of the proof-of-work to mine this block.
-                            type: 0, // The EIP-2718 type of this transaction envelope, or undefined for to use the network default
-                            value: ethers.utils.parseEther("0.3"), // send 0.1 ether with the contract call
-                          }}
-                      
+                        <button
+                          onClick={() => StarterCall()}
+                          
                         >
                           Buy Now
-                        </Web3Button>
+                        </button>
 
                         {/* <div id="stake">
                           <Web3Button
@@ -384,29 +503,11 @@ function Mint() {
                       </>
                     ) : (
                       <>
-                        <Web3Button
-                          contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                          action={() =>
-                            mintStarter_without_id([
-                              {
-                                accessList: [], // The AccessList to include; only available for EIP-2930 and EIP-1559 transactions.
-                                blockTag: "latest", // A BlockTag specifies a specific block location in the Blockchain.
-                                ccipReadEnabled: false, // https://eips.ethereum.org/EIPS/eip-3668#use-of-ccip-read-for-transactions
-                                customData: {}, // The transaction data.
-                                from: "0x47201D64dEFee083EC0f7D4e67205593c6Aeb2D0", // The address this transaction is from.
-                                gasLimit: 100000, // The maximum amount of gas this transaction is permitted to use.
-                                gasPrice: 100000, // The price (in wei) per unit of gas this transaction will pay.
-                                maxFeePerGas: 100000, // The maximum price (in wei) per unit of gas this transaction will pay
-                                maxPriorityFeePerGas: 0, // The price (in wei) per unit of gas this transaction will allow in addition to the block's base fee
-                                nonce: 0, // The nonce used as part of the proof-of-work to mine this block.
-                                type: 0,
-                                value: ethers.utils.parseEther("0.1"), // send 0.1 ether with the contract call
-                              },
-                            ])
-                          }
+                        <button
+                          onClick={() => mintStarter_without_id()}
                         >
                           Buy Now
-                        </Web3Button>
+                        </button>
                       </>
                     )}
                   </div>
@@ -473,12 +574,11 @@ function Mint() {
                     </button> */}
                     {selectedOption === "option1" ? (
                       <>
-                        <Web3Button
-                          contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                          action={() => MintBasic()}
+                        <button
+                          onClick={() => MintBasic()}
                         >
                           Buy Now
-                        </Web3Button>
+                        </button>
 
                         {/* <div id="stake">
                           <Web3Button
@@ -490,19 +590,13 @@ function Mint() {
                         </div> */}
                       </>
                     ) : (
-                      <Web3Button
-                        contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                        action={() =>
-                          mintBasic_without_id([
-                            {
-                              gasLimit: 1000000, // override default gas limit
-                              value: ethers.utils.parseEther("50"), // send 0.1 ether with the contract call
-                            },
-                          ])
+                      <button
+                        onClick={() =>
+                          mintBasic_without_id()
                         }
                       >
                         Buy Now
-                      </Web3Button>
+                      </button>
                     )}
                   </div>
                 </div>
@@ -567,12 +661,11 @@ function Mint() {
                     </button> */}
                     {selectedOption === "option1" ? (
                       <>
-                        <Web3Button
-                          contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                          action={() => MintStandard()}
+                        <button
+                          onClick={() => MintStandard()}
                         >
                           Buy Now
-                        </Web3Button>
+                        </button>
 
                         {/* <div id="stake">
                           <Web3Button
@@ -584,19 +677,13 @@ function Mint() {
                         </div> */}
                       </>
                     ) : (
-                      <Web3Button
-                        contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                        action={() =>
-                          mintStandard_without_id([
-                            {
-                              gasLimit: 1000000, // override default gas limit
-                              value: ethers.utils.parseEther("100"), // send 0.1 ether with the contract call
-                            },
-                          ])
+                      <button
+                        onClick={() =>
+                          mintStandard_without_id()
                         }
                       >
                         Buy Now
-                      </Web3Button>
+                      </button>
                     )}
                   </div>
                 </div>
@@ -674,12 +761,11 @@ function Mint() {
                     </button> */}
                     {selectedOption === "option1" ? (
                       <>
-                        <Web3Button
-                          contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                          action={() => MintVIP()}
+                        <button
+                         onClick={() => MintVIP()}
                         >
                           Buy Now
-                        </Web3Button>
+                        </button>
 
                         {/* <div id="stake">
                           <Web3Button
@@ -691,19 +777,13 @@ function Mint() {
                         </div> */}
                       </>
                     ) : (
-                      <Web3Button
-                        contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                        action={() =>
-                          mintVIP_without_id([
-                            {
-                              gasLimit: 1000000, // override default gas limit
-                              value: ethers.utils.parseEther("500"), // send 0.1 ether with the contract call
-                            },
-                          ])
+                      <button
+                        onClick={() =>
+                          mintVIP_without_id()
                         }
                       >
                         Buy Now
-                      </Web3Button>
+                      </button>
                     )}
                   </div>
                 </div>
@@ -770,12 +850,11 @@ function Mint() {
                     </button> */}
                     {selectedOption === "option1" ? (
                       <>
-                        <Web3Button
-                          contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                          action={() => MintPremium()}
+                        <button
+                          onClick={() => MintPremium()}
                         >
                           Buy Now
-                        </Web3Button>
+                        </button>
 
                         {/* <div id="stake">
                           <Web3Button
@@ -787,19 +866,13 @@ function Mint() {
                         </div> */}
                       </>
                     ) : (
-                      <Web3Button
-                        contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                        action={() =>
-                          mintPremium_without_id([
-                            {
-                              gasLimit: 1000000, // override default gas limit
-                              value: ethers.utils.parseEther("1000"), // send 0.1 ether with the contract call
-                            },
-                          ])
+                      <button
+                        onClick={() =>
+                          mintPremium_without_id()
                         }
                       >
                         Buy Now
-                      </Web3Button>
+                      </button>
                     )}
                   </div>
                 </div>
@@ -867,12 +940,11 @@ function Mint() {
                     </button> */}
                     {selectedOption === "option1" ? (
                       <>
-                        <Web3Button
-                          contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                          action={() => MintDiamond()}
+                        <button
+                          onClick={() => MintDiamond()}
                         >
                           Buy Now
-                        </Web3Button>
+                        </button>
 
                         {/* <div id="stake">
                           <Web3Button
@@ -884,19 +956,13 @@ function Mint() {
                         </div> */}
                       </>
                     ) : (
-                      <Web3Button
-                        contractAddress="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-                        action={() =>
-                          mintDiamond_without_id([
-                            {
-                              gasLimit: 1000000, // override default gas limit
-                              value: ethers.utils.parseEther("5000"), // send 0.1 ether with the contract call
-                            },
-                          ])
+                      <button
+                        onClick={() =>
+                          mintDiamond_without_id()
                         }
                       >
                         Buy Now
-                      </Web3Button>
+                      </button>
                     )}
                   </div>
                 </div>

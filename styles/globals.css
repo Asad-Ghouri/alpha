@@ -2401,14 +2401,14 @@ ul li{
     width:  auto; 
     -webkit-appearance:  button;
     font-weight: 400; 
-    color: #c36; 
+    color:white; 
     text-align: center; 
     white-space: nowrap; 
     -webkit-user-select: none; 
     -moz-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
-    background-color: transparent; 
+    background-color:  #c36; 
     border: 1px solid #c36; 
     padding: .5rem 1rem; 
     font-size: 1rem; 
@@ -4859,4 +4859,8 @@ text-align: center;
     margin-left: 10px;
     margin-right: 10px;
 }
+}
+
+.elementor-button_c{
+  background-color: unset!important;
 }
