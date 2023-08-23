@@ -200,29 +200,10 @@ function Mint() {
       alert("connect you wallet first")
       return;
     }
-    if(StarterisLoading){
-      
-      setTimeout(() => {
-        // After 2 seconds, check the isLoading status again
-        if (StarterisLoading) {
-          // Render loading state or other content when isLoading is still true
-          console.log("loading");
-          StarterCall()
-        } else {
-          // Render content for when isLoading becomes false
-          console.log("Not loading anymore");
-          StarterCall()
-
-        }
-      }, 2000); // Delay of 2000 milliseconds (2 seconds)
-    }
-    else if (!StarterData && !StarterisLoading) {
+    if (!StarterData) {
       alert("Referral id does not exist");
     } else {
       try {
-        if(!StarterData){
-      StarterCall()
-        }
         // const data = await mintStarter( [count] );
         const data = await contract.call("mintStarter",
         [count],
