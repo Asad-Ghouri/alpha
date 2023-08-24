@@ -4852,6 +4852,11 @@ text-align: center;
   color: white;
 }
 
+@media (min-width:600px){
+.connectbtn{
+  display: none;
+}
+}
 @media (max-width:600px){
   .u_info {
     margin-top: 68%;
@@ -4859,8 +4864,13 @@ text-align: center;
     margin-left: 10px;
     margin-right: 10px;
 }
+.connectbtn{
+  display: flex;
+  justify-content: center;
+}
 }
 
 .elementor-button_c{
   background-color: unset!important;
 }
+

@@ -18,6 +18,7 @@ import {
   useContractRead,
 } from "@thirdweb-dev/react";
 
+import { ConnectWallet } from "@thirdweb-dev/react";
 
 
 function Mint() {
@@ -407,7 +408,8 @@ function Mint() {
     <>
       <div className="mint">
         <Header />
-
+             
+       <div className="connectbtn"> <ConnectWallet /></div>
         <div className="mint-text">
           <h1 className="elementor-heading-title elementor-size-xxl">
             Mint Gianky
