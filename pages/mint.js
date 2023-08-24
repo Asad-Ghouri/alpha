@@ -18,8 +18,14 @@ import {
   useContractRead,
 } from "@thirdweb-dev/react";
 
+
+
 function Mint() {
 
+  const { contract } = useContract(
+    "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
+  );
+  
   const address = useAddress();
 
   const [ListingValue, setListingValue] = useState("200");
@@ -32,6 +38,14 @@ function Mint() {
   const [count4, setcount4] = useState();
   const [count5, setcount5] = useState();
 
+  
+  const [loadingForStarter, setloadingForStarter] = useState(false);
+  const [loadingForBasic, setloadingForBasic] = useState(false);
+  const [loadingForStandard, setloadingForStandard] = useState(false);
+  const [loadingForPremium, setloadingForPremium] = useState(false);
+  const [loadingForVip, setloadingForVip] = useState(false);
+  const [loadingForDimaond, setloadingForDimaond] = useState(false);
+
   console.log("value of count is " + count);
   console.log("value of count is1 " + count1);
   console.log("value of count is2 " + count2);
@@ -43,9 +57,6 @@ function Mint() {
     setSelectedOption(event.target.value);
   }
 
-  const { contract } = useContract(
-    "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"
-  );
   
   
   const mintStarter_without_id = async () => {
@@ -195,15 +206,17 @@ function Mint() {
     [count5]
   );
 
+  // if (!StarterData) {
+  //   alert("Referral id does not exist");
+  // } else {
   const StarterCall = async () => {
     if(!address){
       alert("connect you wallet first")
       return;
     }
-    if (!StarterData) {
-      alert("Referral id does not exist");
-    } else {
+    setloadingForStarter(true)
       try {
+    console.log("finish1")
         // const data = await mintStarter( [count] );
         const data = await contract.call("mintStarter",
         [count],
@@ -213,12 +226,15 @@ function Mint() {
         },
         );
         console.info("contract call successs", data);
+    setloadingForStarter(false)
+
         
       } catch (err) {
         console.error("contract call failure", err);
-        
+        alert(err)  
+    setloadingForStarter(false)
       }
-    }
+  
   };
 
   const MintBasic = async () => {
@@ -226,9 +242,8 @@ function Mint() {
       alert("connect you wallet first")
       return;
     }
-    if (!BacicData) {
-      alert("Referral id does not exist");
-    } else {
+    setloadingForBasic(true)
+    
       if (count1 < 1000001 || count1 > 6000000) {
         alert("Number must be between 1000001 and 6000000");
       } else {
@@ -241,10 +256,11 @@ function Mint() {
         },
         );
           console.info("contract call successs", data);
+        setloadingForBasic(false)
         } catch (err) {
           console.error("contract call failure", err);
+          setloadingForBasic(false)
         }
-      }
     }
   };
 
@@ -253,9 +269,7 @@ function Mint() {
       alert("connect you wallet first")
       return;
     }
-    if (!StandardData) {
-      alert("Referral id does not exist");
-    } else {
+    setloadingForStandard(true)
       if (count2 < 2000001 || count2 > 6000000) {
         alert("Number must be between 2000001 and 6000000");
       } else {
@@ -268,11 +282,13 @@ function Mint() {
         },
         );
           console.info("contract call successs", data);
+         setloadingForStandard(false)
         } catch (err) {
-          console.error("contract call failure", err);
+        console.error("contract call failure", err);
+        setloadingForStandard(false)
         }
       }
-    }
+    
   };
 
   const MintVIP = async () => {
@@ -280,9 +296,7 @@ function Mint() {
       alert("connect you wallet first")
       return;
     }
-    if (!VipData) {
-      alert("Referral id does not exist");
-    } else {
+    setloadingForVip(true)
       if (count3 < 3000001 || count3 > 6000000) {
         alert("Number must be between 3000001 and 6000000");
       } else {
@@ -300,10 +314,11 @@ function Mint() {
         },
         );
           console.info("contract call successs", data);
+          setloadingForVip(false)
         } catch (err) {
           console.error("contract call failure", err);
+          setloadingForVip(false)
         }
-      }
     }
   };
 
@@ -312,9 +327,7 @@ function Mint() {
       alert("connect you wallet first")
       return;
     }
-    if (!PremiumData) {
-      alert("Referral id does not exist");
-    } else {
+    setloadingForPremium(true)
       if (count4 < 4000001 || count4 > 6000000) {
         alert("Number must be between 4000001 and 6000000");
       } else {
@@ -332,10 +345,11 @@ function Mint() {
         },
         );
           console.info("contract call successs", data);
+          setloadingForPremium(false)
         } catch (err) {
           console.error("contract call failure", err);
+          setloadingForPremium(false)
         }
-      }
     }
   };
 
@@ -344,9 +358,7 @@ function Mint() {
       alert("connect you wallet first")
       return;
     }
-    if (!DiamondData) {
-      alert("Referral id does not exist");
-    } else {
+    setloadingForDimaond(true)
       if (count5 < 5000001 || count5 > 6000000) {
         alert("Number must be between 5000001 and 6000000");
       } else {
@@ -364,11 +376,12 @@ function Mint() {
         },
         );
           console.info("contract call successs", data);
+          setloadingForDimaond(false)
         } catch (err) {
           console.error("contract call failure", err);
+          setloadingForDimaond(false)
         }
       }
-    }
   };
 
   // ---------stake part---------
@@ -489,7 +502,7 @@ function Mint() {
                           onClick={() => StarterCall()}
                           
                         >
-                          Buy Now
+                         {loadingForStarter?"loading..." : "Buy Now"}
                         </button>
 
                         {/* <div id="stake">
@@ -577,7 +590,7 @@ function Mint() {
                         <button
                           onClick={() => MintBasic()}
                         >
-                          Buy Now
+                        {loadingForBasic?"Loading..." :  "Buy Now"} 
                         </button>
 
                         {/* <div id="stake">
@@ -664,7 +677,7 @@ function Mint() {
                         <button
                           onClick={() => MintStandard()}
                         >
-                          Buy Now
+                        {loadingForStandard?"Loading...":"Buy Now"}  
                         </button>
 
                         {/* <div id="stake">
@@ -764,7 +777,7 @@ function Mint() {
                         <button
                          onClick={() => MintVIP()}
                         >
-                          Buy Now
+                         {loadingForVip?"Loading...":"Buy Now"} 
                         </button>
 
                         {/* <div id="stake">
@@ -853,7 +866,7 @@ function Mint() {
                         <button
                           onClick={() => MintPremium()}
                         >
-                          Buy Now
+                         {loadingForPremium?"Loading...":" Buy Now"}
                         </button>
 
                         {/* <div id="stake">
@@ -943,7 +956,7 @@ function Mint() {
                         <button
                           onClick={() => MintDiamond()}
                         >
-                          Buy Now
+                        {loadingForDimaond?"Loading...":"Buy Now"}  
                         </button>
 
                         {/* <div id="stake">
