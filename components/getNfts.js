@@ -44,18 +44,23 @@ export default function getNfts(props) {
       {nfts.length > 0 ? (
         <section className={styles.dataContainer}>
           {nfts.map((nft) => {
-            return (
-              nft.metadata &&
+            console.log("Processing NFT:", nft);
+            if(nft.metadata &&
               nft.token_id > props.minvalue - 1 &&
-              nft.token_id < props.maxvalue && (
-                <Card
-                  uri={nft}
-                  id={nft.token_id}
-                  key={nft.token_uri}
-                  stakingContractAddres={props.stakingContractAddres}
-                />
-              )
-            );
+              nft.token_id < props.maxvalue){
+                return (
+                  <>
+                    <Card
+                      uri={nft}
+                      id={nft.token_id}
+                      key={nft.token_uri}
+                      stakingContractAddres={props.stakingContractAddres}
+                    />
+                  </>
+                  
+                );
+
+              }
           })}
         </section>
       ) : (
