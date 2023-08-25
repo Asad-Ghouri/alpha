@@ -50,14 +50,20 @@ export default function getNfts(props) {
       {nfts.length > 0 ? (
         <section className={styles.dataContainer}>
           {nfts.map((nft) => {
+          console.log("token address are ");
+          console.log(nft.token_address);
+          console.log(typeof(nft.token_address));
             // setgetToken(false)
           //  if (nft.token_address=== "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"){
             // setgetToken(true)
           //  }
+
+          
             return (
               nft.metadata &&
-              nft.token_id > props.minvalue - 1 &&
-              nft.token_id < props.maxvalue  && (
+              nft.token_id  > props.minvalue - 1 &&
+              nft.token_id < props.maxvalue  && nft.token_address ==="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898" &&
+             (
                 <Card
                   uri={nft}
                   id={nft.token_id}
