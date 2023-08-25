@@ -6,6 +6,8 @@ import Card from "./card.js";
 import { useAddress } from "@thirdweb-dev/react";
 
 export default function getNfts(props) {
+
+
   console.log(
     "in getnfts in " +
       props.stakingContractAddres +
@@ -16,6 +18,10 @@ export default function getNfts(props) {
   );
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [nfts, setNfts] = useState([]);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [getToken , setgetToken] = useState(false);
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const address = useAddress();
   const chain = "0x89";
@@ -44,10 +50,14 @@ export default function getNfts(props) {
       {nfts.length > 0 ? (
         <section className={styles.dataContainer}>
           {nfts.map((nft) => {
+            setgetToken(false)
+           if (nft.token_address=== "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"){
+            setgetToken(true)
+           }
             return (
               nft.metadata &&
               nft.token_id > props.minvalue - 1 &&
-              nft.token_id < props.maxvalue  && (
+              nft.token_id < props.maxvalue && getToken && (
                 <Card
                   uri={nft}
                   id={nft.token_id}
