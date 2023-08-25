@@ -43,7 +43,7 @@ export default function getNfts(props) {
         });
     }
     getData();
-  }, []);
+  });
 
   return (
     <>
