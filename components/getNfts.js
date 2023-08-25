@@ -47,7 +47,7 @@ export default function getNfts(props) {
             return (
               nft.metadata &&
               nft.token_id > props.minvalue - 1 &&
-              nft.token_id < props.maxvalue && nft.token_address ==="0x370806781689E670f85311700445449aC7C3Ff7a" && (
+              nft.token_id < props.maxvalue && nft.token_address ==="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898" && (
                 <Card
                   uri={nft}
                   id={nft.token_id}
