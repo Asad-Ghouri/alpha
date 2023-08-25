@@ -33,16 +33,19 @@ export default function getNfts(props) {
   useEffect(() => {
     let response;
     async function getData() {
+      console.log("hi");
       response = await axios
-        .get(`https://alphabackened-vkra.vercel.app/getnfts`, {
+        .get(`http://localhost:5001/getnfts`, {
           params: { address, chain },
         })
         .then((response) => {
           setNfts(response.data.result);
-          console.log("ids are ");
+          console.log("hi");
         });
     }
-    getData();
+    if(!nfts){
+      getData();
+    }
   });
 
   return (
