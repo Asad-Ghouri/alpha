@@ -6,8 +6,6 @@ import Card from "./card.js";
 import { useAddress } from "@thirdweb-dev/react";
 
 export default function getNfts(props) {
-
-
   console.log(
     "in getnfts in " +
       props.stakingContractAddres +
@@ -18,10 +16,6 @@ export default function getNfts(props) {
   );
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [nfts, setNfts] = useState([]);
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [getToken , setgetToken] = useState(false);
-
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const address = useAddress();
   const chain = "0x89";
@@ -33,40 +27,27 @@ export default function getNfts(props) {
   useEffect(() => {
     let response;
     async function getData() {
-      console.log("hi");
       response = await axios
-        .get(`http://localhost:5001/getnfts`, {
+        .get(`alphabackened.vercel.app/getnfts`, {
           params: { address, chain },
         })
         .then((response) => {
           setNfts(response.data.result);
-          console.log("hi");
+          console.log("ids are ");
         });
     }
-    if(!nfts){
-      getData();
-    }
-  });
+    getData();
+  }, []);
 
   return (
     <>
       {nfts.length > 0 ? (
         <section className={styles.dataContainer}>
           {nfts.map((nft) => {
-          console.log("token address are ");
-          console.log(nft.token_address);
-          console.log(typeof(nft.token_address));
-            // setgetToken(false)
-          //  if (nft.token_address=== "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"){
-            // setgetToken(true)
-          //  }
-
-          
             return (
               nft.metadata &&
-              nft.token_id  > props.minvalue - 1 &&
-              nft.token_id < props.maxvalue  && nft.token_address ==="0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898" &&
-             (
+              nft.token_id > props.minvalue - 1 &&
+              nft.token_id < props.maxvalue && (
                 <Card
                   uri={nft}
                   id={nft.token_id}

@@ -33,7 +33,6 @@ const Stake: NextPage = () => {
         "token"
     );
     const { contract, isLoading } = useContract(stakingContractAddress);
-    const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
     const { data: tokenBalance, isLoading: tisLoading } = useTokenBalance(tokenContract, address);
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
     const { data: stakedTokens, isLoading: stisLoading } = useContractRead(contract, "getStakeInfo", [address]
@@ -52,8 +51,27 @@ const Stake: NextPage = () => {
     }, [address, contract, claimableRewards, setClaimableRewards]);
 
 
+    async function stakeNft(id: string) {
+        if (!address) return;
+    
+        const isApproved = await nftDropContract?.isApproved(
+          address,
+          stakingContractAddress
+        );
+        if (!isApproved) {
+          await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
+        }
+        await contract?.call("stake", [[id]]);
+      }
+
+      const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
+
+      console.log("owned nfts are")
+      console.log(ownedNfts)
+
 
     const maxval = 1000000;
+    const minval = 1;
     return (
         <>
             <div className={address ? "stake loadingstake" : "stake loadingstake"}>
@@ -109,9 +127,7 @@ const Stake: NextPage = () => {
                                         Claim Rewards
                                     </Web3Button>
 
-                                    <hr className={`${styles.divider} ${styles.spacerTop}`} />
-                                    <h2>Your Unstaked NFTs</h2>
-                                    <LoggedIn stakingContractAddres={stakingContractAddress} minvalue="1" maxvalue={maxval} />
+                                    {/* <LoggedIn stakingContractAddres={stakingContractAddress} minvalue={minval} maxvalue={maxval} /> */}
 
                                     <hr className={`${styles.divider} ${styles.spacerTop}`} />
                                     <h2>Your Staked NFTs</h2>
@@ -136,7 +152,31 @@ const Stake: NextPage = () => {
                             )}
                         </div>
                     )}
+
+<hr className={`${styles.divider} ${styles.spacerTop}`} />
+                                    <h2>Your Unstaked NFTs</h2>
+                      
+
+                <div className={styles.nftBoxGrid}>
+            {ownedNfts?.map((nft) => (
+              <div className={styles.nftBox} key={nft.metadata.id.toString()}>
+                <ThirdwebNftMedia
+                  metadata={nft.metadata}
+                  className={styles.nftMedia}
+                />
+                <h3>{nft.metadata.name}</h3>
+                <Web3Button
+                  contractAddress={stakingContractAddress}
+                  action={() => stakeNft(nft.metadata.id)}
+                >
+                  Stake
+                </Web3Button>
+              </div>
+            ))}
+          </div>
                 </div>
+
+               
             </div>
 
         </>
