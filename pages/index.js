@@ -578,18 +578,18 @@ function Mint(props) {
                         />
                         {props.changeLan ? (
                           <p className="para para1">
-                            Im Enrico, also known as Alpha, founder and CEO of
+                            {/* Im Enrico, also known as Alpha, founder and CEO of
                             Gianky Coin, a technological startup aiming to
                             create innovative products for the financial,
                             blockchain and internet service provision sectors in
-                            general
+                            general */}
                           </p>
                         ) : (
                           <p className="para para1">
-                            Sono Enrico alias Alpha , fondatore e CEO di Gianky
+                            {/* Sono Enrico alias Alpha , fondatore e CEO di Gianky
                             Coin, una startup tecnologica che mira a creare
                             prodotti innovativi per il settore finanziario ,
-                            blockchain e fornitura servizi internet in generale.
+                            blockchain e fornitura servizi internet in generale. */}
                           </p>
                         )}
                       </div>
@@ -658,16 +658,16 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
                           <p className="para para2_">
-                            Onji is our expert in blockchain and cryptocurrency,
+                            {/* Onji is our expert in blockchain and cryptocurrency,
                             who has helped clients from all over the world
-                            navigate the complex world of digital currencies.
+                            navigate the complex world of digital currencies. */}
                           </p>
                         ) : (
                           <p className="para">
-                            Onji è il nostro esperto in blockchain e
+                            {/* Onji è il nostro esperto in blockchain e
                             criptovalute, che ha aiutato clienti di tutto il
                             mondo a orientarsi nel complesso mondo delle valute
-                            digitali
+                            digitali */}
                           </p>
                         )}
                       </div>
@@ -678,7 +678,7 @@ function Mint(props) {
                           <div>
                             <div className="elementor-tab-title">
                               <button
-                                className="elementor-toggle-title mt-2"
+                                className="elementor-toggle-title mt-2 mtt"
                                 onClick={() => {
                                   setReadmore6(true);
                                 }}
@@ -731,11 +731,11 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
                           <p className="para para3">
-                            Vincenzo Palmeri, who holds degrees in mathematics
+                            {/* Vincenzo Palmeri, who holds degrees in mathematics
                             with qualifications in mathematics and CS,
                             mathematics and physics, has taught in high schools
                             as Vice Principal responsible for managing the
-                            teaching staff.
+                            teaching staff. */}
                           </p>
                         ) : (
                           <p className="para para3">
@@ -809,17 +809,17 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
                           <p className="para para4">
-                            Sirtre is an experienced financial sector general
+                            {/* Sirtre is an experienced financial sector general
                             manager with over 25 years of experience. He holds a
                             degree in Business Economics and has a master’s
-                            degree in Finance.
+                            degree in Finance. */}
                           </p>
                         ) : (
                           <p className="para para4">
-                            Sirtre è un general manager con oltre 25 anni di
+                            {/* Sirtre è un general manager con oltre 25 anni di
                             esperienza nel settore finanziario. Si è laureato in
                             Economia Aziendale e ha conseguito un master in
-                            Finanza
+                            Finanza */}
                           </p>
                         )}
                       </div>
@@ -828,7 +828,7 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         <div className="elementor-toggle elementor-toggle4">
                           <div>
-                            <div className="elementor-tab-title">
+                            <div className="elementor-tab-title mttt">
                               <button
                                 className="elementor-toggle-title"
                                 onClick={() => {
@@ -885,15 +885,15 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
                           <p className="para para5">
-                            Massimo is an experienced team leader with a wealth
+                            {/* Massimo is an experienced team leader with a wealth
                             of experience in the field of information management
-                            technologies.
+                            technologies. */}
                           </p>
                         ) : (
                           <p className="para para5">
-                            Massimo è un team leader esperto con una vasta
+                            {/* Massimo è un team leader esperto con una vasta
                             esperienza nel campo delle tecnologie di gestione
-                            delle informazioni.
+                            delle informazioni. */}
                           </p>
                         )}
                       </div>
@@ -958,14 +958,14 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
                           <p className="para para6">
-                            He have experience in e-commerce over a year. He
-                            have served multiple companies with my services .
+                            {/* He have experience in e-commerce over a year. He
+                            have served multiple companies with my services . */}
                           </p>
                         ) : (
                           <p className="para para6">
-                            Ha esperienza nell'e-commerce da oltre un anno. Ha
+                            {/* Ha esperienza nell'e-commerce da oltre un anno. Ha
                             servito diverse aziende con i miei servizi. Posso
-                            capire la necessità dei clienti e aiutarli.
+                            capire la necessità dei clienti e aiutarli. */}
                           </p>
                         )}
                       </div>
@@ -974,7 +974,7 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         <div className="elementor-toggle elementor-togglefos">
                           <div>
-                            <div className="elementor-tab-title">
+                            <div className="elementor-tab-title mtttt">
                               <button
                                 className="elementor-toggle-title"
                                 onClick={() => {
@@ -1030,16 +1030,16 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
                           <p className="para para6">
-                            Eugenio Palmeri, a Mechanical Engineering graduate,
+                            {/* Eugenio Palmeri, a Mechanical Engineering graduate,
                             works in a Swiss company that specializes in machine
-                            inspections and checks of mechanical components.
+                            inspections and checks of mechanical components. */}
                           </p>
                         ) : (
                           <p className="para para6">
-                            Eugenio Palmeri laureato in ingegneria meccanica
+                            {/* Eugenio Palmeri laureato in ingegneria meccanica
                             lavora in una azienda svizzera che si occupa di
                             verifiche e controlli di macchine e dei relativi
-                            componenti meccanici.
+                            componenti meccanici. */}
                           </p>
                         )}
                       </div>
@@ -1050,7 +1050,7 @@ function Mint(props) {
                           <div>
                             <div className="elementor-tab-title">
                               <button
-                                className="elementor-toggle-title"
+                                className="elementor-toggle-title mt5"
                                 onClick={() => {
                                   setReadmore1(true);
                                 }}
@@ -1103,17 +1103,17 @@ function Mint(props) {
                       <div className="elementor-widget-container">
                         {props.changeLan ? (
                           <p className="para _para7">
-                            Giancarlo is a seasoned professional in marketing
+                            {/* Giancarlo is a seasoned professional in marketing
                             and communication. He has spent many years in the
                             financial technology sector, working with leading
-                            global companies.
+                            global companies. */}
                           </p>
                         ) : (
                           <p className="para _para7">
-                            Giancarlo è un esperto professionista di marketing e
+                            {/* Giancarlo è un esperto professionista di marketing e
                             comunicazione. Ha trascorso molti anni nel settore
                             della tecnologia finanziaria, lavorando con aziende
-                            leader a livello mondiale.
+                            leader a livello mondiale. */}
                           </p>
                         )}
                       </div>

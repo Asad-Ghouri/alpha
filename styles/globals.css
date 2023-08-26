@@ -36,7 +36,7 @@ body {
   /* overflow: hidden!important; */
   font-family: "Roboto-Black"!important;
   /* font-family:Verdana, Geneva, Tahoma, sans-serif!important; */
-  background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
+  background-image: url(../public/assert/IMG_00736.jpg);
   background-size: cover;
   padding: 0;
   margin: 0;
@@ -51,8 +51,9 @@ body {
 .mint,.take{
   
   /* background-color: #000000; */
-  background-color: red;
-    background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
+  /* background-color: red; */
+    /* background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png); */
+    background-image: url(../public/assert/IMG_00736.jpg);
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -1594,6 +1595,7 @@ ul li{
     line-height:  1.2; 
     color:  inherit;
     font-size: 2rem;
+    /* color: white!important; */
   } 
 
   .elementor-element.elementor-element-8eea6b0 .elementor-heading-title  { 
@@ -2759,6 +2761,10 @@ background-color: #000;
   display: none;
 }
 
+.mint-text h2{
+  color: white;
+}
+
 .cw{
   color: white!important;
 }
@@ -2950,9 +2956,9 @@ background-color: #000;
   } 
 
   body.elementor-page-6:not(.elementor-motion-effects-element-type-background) { 
-    background-color: #84092e; 
-    background-image: url(https://shopinose.com/wp-content/uploads/2023/04/FINAL-VERSION-DESKTOP-1.png); 
-    background-size: cover;
+    /* background-color: #84092e;  */
+    /* background-image: url(https://shopinose.com/wp-content/uploads/2023/04/FINAL-VERSION-DESKTOP-1.png);  */
+    /* background-size: cover; */
   } 
 
    
@@ -3406,7 +3412,7 @@ background-color: #000;
   } 
 
   .elementor-element.elementor-element-bc11f43 .elementor-heading-title  { 
-    color: #000; 
+    color: white; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     -webkit-text-_stroke-width: 1px; 
@@ -3447,7 +3453,7 @@ background-color: #000;
 
 @media all{ 
   .elementor-element.elementor-element-8631a6e .elementor-heading-title  { 
-    color: #000; 
+    color: white; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     -webkit-text-_stroke-width: 1px; 
@@ -3467,7 +3473,7 @@ background-color: #000;
   } 
 
   .elementor-element.elementor-element-01f9fb5 .elementor-heading-title  { 
-    color: #000; 
+    color: white; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     -webkit-text-_stroke-width: 1px; 
@@ -3487,7 +3493,7 @@ background-color: #000;
   } 
 
   .elementor-element.elementor-element-1c16341 .elementor-heading-title  { 
-    color: #000; 
+    color: white; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     -webkit-text-_stroke-width: 1px; 
@@ -3511,7 +3517,7 @@ background-color: #000;
   } 
 
   .elementor-element.elementor-element-b761440 .elementor-heading-title  { 
-    color: #000; 
+    color: white; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     -webkit-text-_stroke-width: 1px; 
@@ -3536,7 +3542,7 @@ background-color: #000;
   } 
 
   .elementor-element.elementor-element-7b8be8a .elementor-heading-title  { 
-    color: #000; 
+    color: white; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     -webkit-text-_stroke-width: 1px; 
@@ -3560,7 +3566,7 @@ background-color: #000;
   } 
 
   .elementor-element.elementor-element-02241fd .elementor-heading-title  { 
-    color: #000; 
+    color: white; 
     /* font-family: rubik bubbles,Sans-serif;  */
     font-weight: 600; 
     -webkit-text-_stroke-width: 1px; 
@@ -4137,7 +4143,9 @@ background-color: #000;
 .modal-main {
   position: fixed;
   background-color: #fff;
-  background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png);
+  /* background-image: url(https://sheikmetaapps.com/wp-content/uploads/2022/10/FINAL-VERSION-DESKTOP-1.png); */
+  background-image: url(../public/assert/IMG_00736.jpg);
+
     background-size: cover;
   width: auto;
   height: auto;
@@ -4171,7 +4179,7 @@ background-color: #000;
     margin-bottom: 1rem!important;
 }
 ._title{
-  color: #000;
+  color: white;
   /* font-family: rubik bubbles,Sans-serif; */
   font-weight: 600;
   -webkit-text-_stroke-width: 1px;
@@ -4874,3 +4882,33 @@ text-align: center;
   background-color: unset!important;
 }
 
+.social-container svg{
+  background: white!important;
+}
+
+.ssicon svg{
+  background: unset!important;
+}
+
+.mtt{
+  margin-top: -1rem;
+}
+.mttt{
+  margin-top: -2rem!important;
+}
+
+.mtttt{
+  margin-top: -2rem!important;
+}
+.mt5{
+  margin-top: -1rem;
+}
+
+/* @media (max-width:600px){ */
+  .elementor-tab-title{
+    display: flex;
+    justify-content: center;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+  }
+/* } */

@@ -160,7 +160,7 @@ export default function Footer(props) {
                     </ul>
                   </nav>
 
-                  <div className="elementor-grid elementor-flex">
+                  <div className="elementor-grid elementor-flex ssicon">
                     <span className="elementor-grid-item elementor-flex-item">
                       {/* <a className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-pulse-grow elementor-repeater-item-4cb9e0e">
                           <span className="elementor-screen-only">Twitter</span>
