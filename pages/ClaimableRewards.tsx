@@ -18,7 +18,7 @@ export default function ClaimableRewards(props:any) {
 
     
     const nftDropContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
-    const stakingContractAddress = props.stakingAddress;
+    const stakingContractAddress = "0x02C0Ffa3e268AEc4044a13cAA9aD9FEB6b65DbB2";
     const tokenContractAddress = "0x370806781689E670f85311700445449aC7C3Ff7a";
 
     const address = useAddress();
@@ -40,7 +40,7 @@ export default function ClaimableRewards(props:any) {
         }
 
         loadClaimableRewards();
-    }, [address, contract]);
+    }, [address, contract,claimableRewards, setClaimableRewards]);
 
   return (
     <>
