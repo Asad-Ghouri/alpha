@@ -48,17 +48,13 @@ export default function getNfts(props) {
               nft.metadata &&
               nft.token_id > props.minvalue  &&
               nft.token_id < props.maxvalue &&
-                (
-                    nft.token_address === "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898"?
-                    <Card
-                      uri={nft}
-                      id={nft.token_id}
-                      key={nft.token_uri}
-                      stakingContractAddres={props.stakingContractAddres}
-                    />
-                    :
-                    undefined
-               
+               nft.symbol === "GK" && (
+                <Card
+                  uri={nft}
+                  id={nft.token_id}
+                  key={nft.token_uri}
+                  stakingContractAddres={props.stakingContractAddres}
+                />
               )
             );
           })}
