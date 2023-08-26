@@ -47,7 +47,7 @@ export default function getNfts(props) {
       {nfts.reduce((uniqueNFTs, nft) => {
         if (
           nft.metadata &&
-          nft.token_id > props.minvalue - 1 &&
+          nft.token_id+2 > props.minvalue - 1 &&
           nft.token_id < props.maxvalue &&
           !uniqueNFTs[nft.token_id]
         ) {
