@@ -28,7 +28,7 @@ export default function getNfts(props) {
     let response;
     async function getData() {
       response = await axios
-        .get(`alphabackened.vercel.app/getnfts`, {
+        .get(`http://localhost:5001/getnfts`, {
           params: { address, chain },
         })
         .then((response) => {
