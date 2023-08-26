@@ -56,7 +56,7 @@ const Stake: NextPage = () => {
 
 
     const maxval = 1000000;
-    const minval = 1;
+    const minval = 0;
     return (
         <>
             <div className={address ? "stake loadingstake" : "stake loadingstake"}>

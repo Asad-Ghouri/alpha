@@ -46,8 +46,8 @@ export default function getNfts(props) {
           {nfts.map((nft) => {
             return (
               nft.metadata &&
-              nft.token_id > props.minvalue - 1 &&
-              nft.token_id < props.maxvalue && (
+              nft.token_id > props.minvalue  &&
+              nft.token_id < props.maxvalue && nft.token_address === "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898" && (
                 <Card
                   uri={nft}
                   id={nft.token_id}
