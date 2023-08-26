@@ -12,14 +12,21 @@ import {
 import { BigNumber, ethers } from "ethers";
 
 
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
+interface NFTCardProps {
+    tokenId: number;
+    stakingAddress: string;
+}
 
-export default function ClaimableRewards(props:any) {
 
-    
+const ClaimableRewards: FC<NFTCardProps> = ({ tokenId, stakingAddress }) => {
+
     const nftDropContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
-    const stakingContractAddress = "0x02C0Ffa3e268AEc4044a13cAA9aD9FEB6b65DbB2";
+    const stakingContractAddress = stakingAddress;
     const tokenContractAddress = "0x370806781689E670f85311700445449aC7C3Ff7a";
+
+    console.log("staking address is")
+    console.log(stakingContractAddress)
 
     const address = useAddress();
     const { contract: nftDropContract } = useContract(
@@ -45,10 +52,11 @@ export default function ClaimableRewards(props:any) {
   return (
     <>
      <b>
-                                                    {!claimableRewards
-                                                        ? "Loading..."
-                                                        : ethers.utils.formatUnits(claimableRewards, 18)}
-                                                </b>{" "}
+       {!claimableRewards
+       ? "Loading..."
+       : ethers.utils.formatUnits(claimableRewards, 18)}
+       </b>{" "}
     </>
   );
-}
+};
+export default ClaimableRewards;

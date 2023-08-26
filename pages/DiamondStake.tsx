@@ -18,6 +18,8 @@ import { Header } from "../components/Header";
 import LoggedIn from "../components/loggedIn";
 import React from "react";
 
+import ClaimableRewards from "../components/ClaimableRewards" 
+
 const Stake: NextPage = () => {
 
     const nftDropContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
@@ -39,17 +41,17 @@ const Stake: NextPage = () => {
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
     const { data: stakedTokens, isLoading: stisLoading } = useContractRead(contract, "getStakeInfo", [address]);
 
-    useEffect(() => {
-        if (!contract || !address) return;
+    // useEffect(() => {
+    //     if (!contract || !address) return;
 
-        async function loadClaimableRewards() {
-            const stakeInfo = await contract?.call("getStakeInfo", [address]);
-            console.log("rewards are " + stakeInfo)
-            setClaimableRewards(stakeInfo[1]);
-        }
+    //     async function loadClaimableRewards() {
+    //         const stakeInfo = await contract?.call("getStakeInfo", [address]);
+    //         console.log("rewards are " + stakeInfo)
+    //         setClaimableRewards(stakeInfo[1]);
+    //     }
 
-        loadClaimableRewards();
-    }, [address, contract, claimableRewards, setClaimableRewards]);
+    //     loadClaimableRewards();
+    // }, [address, contract, claimableRewards, setClaimableRewards]);
 
 
 
@@ -88,9 +90,7 @@ const Stake: NextPage = () => {
                                             <h3 className={styles.tokenLabel}>Claimable Rewards</h3>
                                             <p className={styles.tokenValue}>
                                                 <b>
-                                                    {!claimableRewards
-                                                        ? "Loading..."
-                                                        : ethers.utils.formatUnits(claimableRewards, 18)}
+                                                <ClaimableRewards stakingAddress={stakingContractAddress} tokenId={0}/>
                                                 </b>{" "}
                                                 {tokenBalance?.symbol}
                                             </p>

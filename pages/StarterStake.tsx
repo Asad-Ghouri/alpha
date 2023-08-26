@@ -18,7 +18,7 @@ import { Header } from "../components/Header";
 import LoggedIn from "../components/loggedIn";
 
 
-import ClaimableRewards from "./ClaimableRewards" 
+import ClaimableRewards from "../components/ClaimableRewards" 
 const Stake: NextPage = () => {
 
     const nftDropContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
@@ -89,7 +89,7 @@ const Stake: NextPage = () => {
                                         <div className={styles.tokenItem}>
                                             <h3 className={styles.tokenLabel}>Claimable Rewards</h3>
                                             <p className={styles.tokenValue}>
-                                               <ClaimableRewards stakingAddress={stakingContractAddress}/>
+                                               <ClaimableRewards stakingAddress={stakingContractAddress} tokenId={0}/>
                                                 {/* {tokenBalance?.symbol} */}
                                             </p>
                                         </div>
