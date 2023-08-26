@@ -41,36 +41,26 @@ export default function getNfts(props) {
 
   return (
     <>
-   {
-  nfts.length > 0 ? (
-    <section className={styles.dataContainer}>
-      {nfts.reduce((uniqueNFTs, nft) => {
-        if (
-          nft.metadata &&
-          nft.token_id+2 > props.minvalue - 1 &&
-          nft.token_id < props.maxvalue &&
-          !uniqueNFTs[nft.token_id]
-        ) {
-          uniqueNFTs[nft.token_id] = true;
-          return [
-            ...uniqueNFTs,
-            <Card
-              uri={nft}
-              id={nft.token_id}
-              key={nft.token_uri}
-              stakingContractAddres={props.stakingContractAddres}
-            />
-          ];
-        }
-        return uniqueNFTs;
-      }, [])}
-    </section>
-  ) : (
-    <h3>You do not have any nft</h3>
-  )
-}
-
-
+      {nfts.length > 0 ? (
+        <section className={styles.dataContainer}>
+          {nfts.map((nft) => {
+            return (
+              nft.metadata &&
+              nft.token_id > props.minvalue - 1 &&
+              nft.token_id < props.maxvalue && (
+                <Card
+                  uri={nft}
+                  id={nft.token_id}
+                  key={nft.token_uri}
+                  stakingContractAddres={props.stakingContractAddres}
+                />
+              )
+            );
+          })}
+        </section>
+      ) : (
+        <h3>You do not have any nft</h3>
+      )}
     </>
   );
 }
