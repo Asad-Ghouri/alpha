@@ -238,7 +238,7 @@ body {
 
   .mobile-menu-link {
     background-color: #0b0b0b;
-    height: 27rem;
+    height: 28.5rem;
     display: grid;
     grid-column: 1/8;
     align-items: center;
@@ -2418,6 +2418,9 @@ ul li{
     -webkit-transition: all .3s; 
     -o-transition: all .3s; 
     transition: all .3s;
+    background-color: black;
+    color: white!important;
+    border: 1px solid black;
   } 
 
   .elementor-button { 
@@ -4071,9 +4074,9 @@ background-color: #000;
     margin-top: 10%;
     background-color: #000;
 }
-.readmore{
+/* .readmore{
   margin-top: 20rem;
-}
+} */
 .indexfooter .footer {
   margin-top: 10%;
 }
@@ -4126,7 +4129,8 @@ background-color: #000;
    
   }
   .readmore{
-    margin-top: 112rem;
+    /* 112 */
+    margin-top: 5rem;
   }
 }
 
@@ -4912,3 +4916,6 @@ text-align: center;
     margin-bottom: 3rem;
   }
 /* } */
+#team{
+  margin-top: 6rem;
+}

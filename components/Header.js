@@ -79,6 +79,11 @@ export const Header = () => {
                           </Link>
                         </li>
                         <li>
+                          <Link href="/giankyAi" className="elementor-item">
+                          Gianky AI
+                          </Link>
+                        </li>
+                          <li>
                           <Link href="/mint" className="elementor-item">
                             Mint
                           </Link>

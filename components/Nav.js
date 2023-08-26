@@ -32,6 +32,12 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+
+            <li>
+              <Link href="/giankyAi" className="elementor-item elementor-item-active">
+              Gianky AI
+              </Link>
+            </li>
             <li>
               <Link href="/mint" className="elementor-item">
                 Mint

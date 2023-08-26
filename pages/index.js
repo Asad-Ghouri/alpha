@@ -10,6 +10,11 @@ import { Header } from "../components/Header";
 import { SetStateAction, useState } from "react";
 import { ethers } from "ethers";
 import Model from "../components/Model";
+import NFTCard from "../components/NFTCards";
+import NFTCard1 from "../components/NFTCard1";
+
+import Link from "next/link";
+
 
 import {
   useContract,
@@ -282,6 +287,18 @@ function Mint(props) {
                                 </h2>
                               )}
                             </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <Link href="/giankyAi">
+                            <button
+                                className="elementor-toggle-title"
+                                
+                              >
+                               Gianky AI
+                              </button>
+                            
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -312,11 +329,13 @@ function Mint(props) {
           </section>
         </div>
 
-        <div className="mint-text">
+        {/* <div className="mint-text">
           <h2>Gianky NFTs</h2>
-        </div>
+        </div> */}
 
-        <div className="App">
+          <NFTCard />
+          <NFTCard1 />
+        {/* <div className="App">
           <div
             className="flex-container"
             style={{
@@ -520,7 +539,7 @@ function Mint(props) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="readmore" id="team">
           <div className="elementor-widget-wrap elementor-element-populated">

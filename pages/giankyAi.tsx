@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
+import { Header } from "../components/Header";
 
 const giankyAi: NextPage = () => {
 
     return (
     <>
+    <Header />
 <iframe
-      src="https://chat.cogniflow.ai/chat?idModel=6c14857e-6e12-4144-9059-330b793b1686"
+      src="https://custom-bot-one.vercel.app/"
       title="CogniFlow Chat"
       width="100%"
-      height="500px"
+      height="700px"
       frameBorder="0"
       allowFullScreen
     ></iframe>
