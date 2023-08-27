@@ -2736,6 +2736,7 @@ background-color: #000;
   display: inline-flex; /* change to inline-flex */
   align-items: center;
   cursor: pointer;
+  color: white;
 }
 
 .radio input[type="radio"] {
@@ -2743,8 +2744,9 @@ background-color: #000;
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  border: 2px solid #333;
+  border: 2px solid white;
   margin-right: 10px;
+  color: white;
 }
 
 .radio input[type="radio"]:checked:before {
@@ -2753,7 +2755,7 @@ background-color: #000;
   width: 10px;
   height: 10px;
   margin: 2px;
-  background-color: #333;
+  background-color: white;
   border-radius: 50%;
 }
 .mint-text{
@@ -4226,7 +4228,7 @@ margin-top: 1rem;
   /* position: absolute; */
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 15rem;
 }
 
 @media(max-width:1321px) and (min-width:850px){
@@ -4918,4 +4920,7 @@ text-align: center;
 /* } */
 #team{
   margin-top: 6rem;
+}
+.tw-connect-wallet,.tw-web3button{
+  background-color: #c36!important;
 }
