@@ -102,14 +102,6 @@ export default function Footer(props) {
                   <nav className="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline">
                     <ul className="elementor-nav-menu">
                       <li>
-                        <a
-                          href="https://shop.giankycoin.com/"
-                          className="elementor-item"
-                        >
-                          MarketPlace
-                        </a>
-                      </li>
-                      <li>
                         <Link href="/" className="elementor-item">
                           Home
                         </Link>
@@ -119,16 +111,22 @@ export default function Footer(props) {
                           Mint
                         </Link>
                       </li>
-                      {/* <li>
-                        <Link href="/stake" className="elementor-item">
-                          Stake
-                        </Link>
-                      </li> */}
                       <li>
                         <Link href="/swap" className="elementor-item">
                           Swap
                         </Link>
                       </li>
+                      <li>
+                        <Link href="/TermAndCondition" className="elementor-item">
+                          Term & Condition
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/PrivacyPolicy" className="elementor-item">
+                        Privacy Policy
+                        </Link>
+                      </li>
+                      
                       <li>
                         <a
                           href="https://itishstudios.net/assert/GIANKYNFTSWhitePaper.pdf"

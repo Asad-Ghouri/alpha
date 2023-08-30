@@ -49,7 +49,7 @@ const NFTCard1 = () => {
           />
           <CardBody>
             <CardTitle>Diamond</CardTitle>
-            <CardDescription>Stake to get 15% of 20 Matic</CardDescription>
+            <CardDescription>Stake to get 15% of 5000 Matic</CardDescription>
             <CardPrice>5000 Matic</CardPrice>
           </CardBody>
         </Card>

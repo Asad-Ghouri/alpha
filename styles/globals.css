@@ -4924,3 +4924,8 @@ text-align: center;
 .tw-connect-wallet,.tw-web3button{
   background-color: #c36!important;
 }
+@media (min-width:600px){
+  .foottert{
+  margin-top: -30%;
+  }
+}
