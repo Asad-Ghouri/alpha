@@ -6,6 +6,7 @@ import five from "../public/assert/five.gif";
 import six from "../public/assert/6.gif";
 import Image from "next/image";
 import Footer from "./Footer";
+import alphaImg from "../public/assert/alpha.jpeg"
 import { Header } from "../components/Header";
 import { SetStateAction, useState } from "react";
 import { ethers } from "ethers";
@@ -570,7 +571,7 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-e9f5ee7 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://itishstudios.net/assert/fotor_2023-3-27_3_40_261.png"
+                          src="https://assets.codepen.io/1067579/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1&width=512"
                           className="t-img alphaimg"
                         />
                       </div>
