@@ -886,7 +886,7 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-edac993 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://itishstudios.net/assert/fotor_2023-3-27_9_37_20.png"
+                          src="https://itishstudios.net/assert/WhatsApp_Image_2023-03-29_at_7.52.46_PM-removebg-preview.png"
                           className="t-img alphaimg"
                         />
                       </div>
@@ -957,7 +957,7 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-b3ee127 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://itishstudios.net/assert/mosama.jpeg"
+                          src="https://itishstudios.net/assert/WhatsApp_Image_2023-03-29_at_7.52.46_PM-removebg-preview.png"
                           className="t-img"
                         />
                       </div>
@@ -1029,7 +1029,7 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-b3ee127 elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://itishstudios.net/assert/fotor_2023-3-29_19_25_40.png"
+                          src="https://itishstudios.net/assert/WhatsApp_Image_2023-03-29_at_7.52.46_PM-removebg-preview.png"
                           className="t-img alphaimg"
                         />
                       </div>
@@ -1102,7 +1102,7 @@ function Mint(props) {
                     <div className="elementor-element elementor-element-385589f elementor-widget elementor-widget-image">
                       <div className="elementor-widget-container">
                         <img
-                          src="https://itishstudios.net/assert/fotor_2023-3-27_3_40_3.png"
+                          src="https://itishstudios.net/assert/WhatsApp_Image_2023-03-29_at_7.52.46_PM-removebg-preview.png"
                           className="t-img"
                         />
                       </div>
