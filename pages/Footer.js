@@ -352,14 +352,14 @@ export default function Footer(props) {
             {props.changeLan
               ? "Copyright @ 2023 Gianky Coin"
               : "Copyright @ 2023 Moneta Gianky"}
-            <Image
+            {/* <Image
               className="info-img"
               src={info}
               width={40}
               height={40}
               alt=""
               onClick={() => setShowModal(true)}
-            />
+            /> */}
           </center>
         </div>
         {props.changeLan ? (
