@@ -108,7 +108,7 @@ export default function MainSwap() {
           </div>
 
           <div className="Swapfooter">
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
         <div>

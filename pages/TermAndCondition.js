@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const TermsAndConditions = () => {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div className={styles.containert}>
       <h1 className={styles.titlet}>Terms & Conditions</h1>
       <div className={styles.contentt}>

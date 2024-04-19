@@ -61,7 +61,7 @@ const Stake: NextPage = () => {
         <>
             <div className={address ? "stake loadingstake" : "stake loadingstake"}>
 
-                <Header />
+                {/* <Header /> */}
                 <div
                     className={
                         !address

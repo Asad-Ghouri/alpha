@@ -366,7 +366,10 @@ ul li{
 
 /* ------ home page ------- */
 .App img{
-  border-radius: 35px;
+  border-radius: 15px;
+  padding: 12px;
+  /* padding-top: 30px; */
+  margin-top: 20px;
 }
 
 .flex-container{
@@ -384,7 +387,7 @@ ul li{
   padding-bottom: 17rem;
 }
 .flexb{
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
   /* padding-top: 5rem; */
 }
 .giftext{
@@ -396,7 +399,7 @@ ul li{
   /* -webkit-text-_stroke-color: #000; */
   /* _stroke: #000; */
   margin-bottom: 2rem;
-  font-size: 32px;
+  font-size: 22px;
   line-height: 1;
       /* font-family: cursive!important; */
 }
@@ -2798,7 +2801,7 @@ background-color: #000;
 }
 .footerss{
   margin-top: 660%;
-  background: black
+  /* background: black */
 
 }
 
@@ -2857,7 +2860,7 @@ background-color: #000;
 
 .Swapfooter{
   margin-top: 14%;
-  background: black;
+  /* background: black; */
 }
 @media (min-width:600px){
   .Swapfooter{
@@ -4927,5 +4930,58 @@ text-align: center;
 @media (min-width:600px){
   .foottert{
   margin-top: -30%;
+  }
+}
+
+html{
+  overflow-y: hidden;
+}
+
+.hma{
+  background: linear-gradient(180deg, #1A4591 0%, #631E2F 100%);
+  border-radius: 6px;
+  padding-top: 10px;
+  /* padding: 4px; */
+}
+
+.conbtn{
+  display: flex;
+  justify-content: center;
+}
+
+.flexfortopg{
+  background: linear-gradient(180deg, #1A4591 0%, #631E2F 100%);
+    border-radius: 6px;
+    /* width: 110%; */
+    margin-bottom: 19rem;
+
+}
+
+@media (min-width:600px){
+  .mint-text{
+    margin-top: 3rem!important;
+  }
+  /* #mint{
+    margin-top: 31rem!important;
+  } */
+}
+
+@media (max-width:600px){
+  html{
+    overflow: auto;
+  }
+  .hma{
+    width: 106%;
+    margin-bottom: 2rem;
+  }
+  .flexfortopg{
+    margin-bottom: 2rem;
+    width: 106%;
+  }
+  .App img{
+    margin-left: -27px;
+  }
+  .conbtn {
+    margin-bottom: 3rem;
   }
 }

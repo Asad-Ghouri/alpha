@@ -19,27 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider activeChain="polygon"
     clientId="c63fd3dcf8c9eec46c253e543b0ff569" >
-      <div className="setchangeLang">
-        {changeLan ? (
-          <button
-            className="changelang"
-            onClick={() => {
-              setchangeLan(false);
-            }}
-          >
-            English
-          </button>
-        ) : (
-          <button
-            className="changelang"
-            onClick={() => {
-              setchangeLan(true);
-            }}
-          >
-            Italiano
-          </button>
-        )}
-      </div>
+     
       <Component {...pageProps} changeLan={changeLan} />
       {/* <Footer /> */}
     </ThirdwebProvider>

@@ -5,7 +5,7 @@ const giankyAi: NextPage = () => {
 
     return (
     <>
-    <Header />
+    {/* <Header /> */}
 <iframe
       src="https://custom-bot-one.vercel.app/"
       title="CogniFlow Chat"

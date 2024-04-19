@@ -196,7 +196,7 @@ function Mint(props) {
   return (
     <>
       <div className="mint">
-        <Header />
+        {/* <Header /> */}
         <div className="banner">
           <section
             className="elementor-section elementor-element elementor-element-56830d7 elementor-section-boxed elementor-section-items-middle"
@@ -1184,10 +1184,15 @@ function Mint(props) {
                 : "footerssb"
             }
           >
-            <Footer changeLan={props.changeLan} />
+            {/* <Footer changeLan={props.changeLan} /> */}
           </div>
         </div>
       </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
 
       {/* <div className={selectedOption === "option1" ? "footer" : "footerb"}>
         <Footer />

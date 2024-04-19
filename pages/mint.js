@@ -406,11 +406,11 @@ function Mint() {
   // --------stake end--------
   return (
     <>
-      <div className="mint">
-        <Header />
+      <div className="mint" id="mint">
+        {/* <Header /> */}
              
-       <div className="connectbtn"> <ConnectWallet /></div>
         <div className="mint-text">
+       <div className="conbtn"> <ConnectWallet /></div>
           <h1 className="elementor-heading-title elementor-size-xxl">
             Mint Gianky
           </h1>
@@ -452,9 +452,10 @@ function Mint() {
               }}
             >
               <div
-                className={selectedOption === "option1" ? "flex" : "flex flexb"}
+                className={selectedOption === "option1" ? "flex hma" : "flex hma flexb"}
               >
                 <div
+                className="flex flex-col gap-8 border border-gray-700 rounded-xl p-12"
                   style={{
                     margin: "0 10px",
                     padding: "10px",
@@ -473,7 +474,7 @@ function Mint() {
                   />
                   <div className="giftext">
                     STARTER
-                    <br />
+                    {/* <br /> */}
                     (20Matic)
                   </div>
                   <div>
@@ -530,7 +531,7 @@ function Mint() {
               </div>
               <div
                 className={
-                  selectedOption === "option1" ? "flex" : "flex flexb flexd"
+                  selectedOption === "option1" ? "flex hma" : "flex flexb hma flexd"
                 }
               >
                 <div
@@ -553,7 +554,7 @@ function Mint() {
 
                   <div className="giftext">
                     Basic
-                    <br />
+                    {/* <br /> */}
                     (50Matic)
                   </div>
                   <div>
@@ -577,16 +578,7 @@ function Mint() {
                         placeholder="Enter Referral ID"
                       />
                     </form>
-                    {/* <button
-                      className={
-                        selectedOption === "option1"
-                          ? "mainButton spacerBottom} listbtn"
-                          : "mainButton spacerBottom} listbtn ec"
-                      }
-                      onClick={() => console.log("hello")}
-                    >
-                      Stake
-                    </button> */}
+                   
                     {selectedOption === "option1" ? (
                       <>
                         <button
@@ -595,14 +587,6 @@ function Mint() {
                         {loadingForBasic?"Loading..." :  "Buy Now"} 
                         </button>
 
-                        {/* <div id="stake">
-                          <Web3Button
-                            contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
-                            action={() => Stake_1()}
-                          >
-                            Stake
-                          </Web3Button>
-                        </div> */}
                       </>
                     ) : (
                       <button
@@ -618,7 +602,7 @@ function Mint() {
               </div>
               <div
                 className={
-                  selectedOption === "option1" ? "flex" : "flex flexb flexd"
+                  selectedOption === "option1" ? "flex hma" : "flex flexb hma flexd"
                 }
               >
                 <div
@@ -640,7 +624,7 @@ function Mint() {
                   />
                   <div className="giftext">
                     STANDARD
-                    <br />
+                    {/* <br /> */}
                     (100Matic)
                   </div>
                   <div>
@@ -664,16 +648,7 @@ function Mint() {
                         placeholder="Enter Referral ID"
                       />
                     </form>
-                    {/* <button
-                      className={
-                        selectedOption === "option1"
-                          ? "mainButton spacerBottom} listbtn"
-                          : "mainButton spacerBottom} listbtn ec"
-                      }
-                      onClick={() => console.log("hello")}
-                    >
-                      Stake
-                    </button> */}
+                    
                     {selectedOption === "option1" ? (
                       <>
                         <button
@@ -682,14 +657,7 @@ function Mint() {
                         {loadingForStandard?"Loading...":"Buy Now"}  
                         </button>
 
-                        {/* <div id="stake">
-                          <Web3Button
-                            contractAddress="0x06a9C40FB3581682448277a9EF3D4DBFfcc606e7"
-                            action={() => Stake_2()}
-                          >
-                            Stake
-                          </Web3Button>
-                        </div> */}
+                        
                       </>
                     ) : (
                       <button
@@ -717,8 +685,8 @@ function Mint() {
               <div
                 className={
                   selectedOption === "option1"
-                    ? "flex flexfortop"
-                    : "flex flexb flexc"
+                    ? "flex flexfortop flexfortopg"
+                    : "flex flexb  flexfortopg flexc"
                 }
               >
                 <div
@@ -740,7 +708,7 @@ function Mint() {
                   />
                   <div className="giftext">
                     VIP
-                    <br />
+                    {/* <br /> */}
                     (500Matic)
                   </div>
                   <div>
@@ -806,8 +774,8 @@ function Mint() {
               <div
                 className={
                   selectedOption === "option1"
-                    ? "flex flexfortop"
-                    : "flex flexb flexc"
+                    ? "flex flexfortop flexfortopg"
+                    : "flex flexb flexc flexfortopg"
                 }
               >
                 <div
@@ -829,7 +797,7 @@ function Mint() {
                   />
                   <div className="giftext">
                     PREMIUM
-                    <br />
+                    {/* <br /> */}
                     (1000Matic)
                   </div>
                   <div>
@@ -895,8 +863,8 @@ function Mint() {
               <div
                 className={
                   selectedOption === "option1"
-                    ? "flex flexfortop"
-                    : "flex flexb flexc"
+                    ? "flex flexfortop flexfortopg"
+                    : "flex flexb flexc flexfortopg"
                 }
               >
                 <div
@@ -918,7 +886,7 @@ function Mint() {
                   />
                   <div className="giftext">
                     DIAMOND
-                    <br />
+                    {/* <br /> */}
                     (5000Matic)
                   </div>
 
@@ -990,7 +958,7 @@ function Mint() {
               selectedOption === "option1" ? "footerss mintfooter" : "footerssb"
             }
           >
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </div>
       </div>

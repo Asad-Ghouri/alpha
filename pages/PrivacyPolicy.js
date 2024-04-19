@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const PrivacyPolicy = () => {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div className={styles.containert}>
       <h1 className={styles.titlet}>Privacy Policy</h1>
       <div className={styles.contentt}>
