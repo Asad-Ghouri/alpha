@@ -503,6 +503,7 @@ function Mint() {
                       <>
                         <button
                           onClick={() => StarterCall()}
+                          className="butNbtn"
                           
                         >
                          {loadingForStarter?"loading..." : "Buy Now"}
@@ -521,6 +522,7 @@ function Mint() {
                       <>
                         <button
                           onClick={() => mintStarter_without_id()}
+                          className="butNbtn"
                         >
                           Buy Now
                         </button>
@@ -583,6 +585,7 @@ function Mint() {
                       <>
                         <button
                           onClick={() => MintBasic()}
+                          className="butNbtn"
                         >
                         {loadingForBasic?"Loading..." :  "Buy Now"} 
                         </button>
@@ -593,6 +596,7 @@ function Mint() {
                         onClick={() =>
                           mintBasic_without_id()
                         }
+                        className="butNbtn"
                       >
                         Buy Now
                       </button>
@@ -653,6 +657,7 @@ function Mint() {
                       <>
                         <button
                           onClick={() => MintStandard()}
+                          className="butNbtn"
                         >
                         {loadingForStandard?"Loading...":"Buy Now"}  
                         </button>
@@ -664,6 +669,7 @@ function Mint() {
                         onClick={() =>
                           mintStandard_without_id()
                         }
+                        className="butNbtn"
                       >
                         Buy Now
                       </button>
@@ -746,6 +752,7 @@ function Mint() {
                       <>
                         <button
                          onClick={() => MintVIP()}
+                         className="butNbtn"
                         >
                          {loadingForVip?"Loading...":"Buy Now"} 
                         </button>
@@ -764,6 +771,7 @@ function Mint() {
                         onClick={() =>
                           mintVIP_without_id()
                         }
+                        className="butNbtn"
                       >
                         Buy Now
                       </button>
@@ -835,6 +843,7 @@ function Mint() {
                       <>
                         <button
                           onClick={() => MintPremium()}
+                          className="butNbtn"
                         >
                          {loadingForPremium?"Loading...":" Buy Now"}
                         </button>
@@ -853,6 +862,7 @@ function Mint() {
                         onClick={() =>
                           mintPremium_without_id()
                         }
+                        className="butNbtn"
                       >
                         Buy Now
                       </button>
@@ -925,6 +935,7 @@ function Mint() {
                       <>
                         <button
                           onClick={() => MintDiamond()}
+                          className="butNbtn"
                         >
                         {loadingForDimaond?"Loading...":"Buy Now"}  
                         </button>
@@ -943,6 +954,7 @@ function Mint() {
                         onClick={() =>
                           mintDiamond_without_id()
                         }
+                        className="butNbtn"
                       >
                         Buy Now
                       </button>

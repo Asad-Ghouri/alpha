@@ -4956,7 +4956,9 @@ html{
   background: linear-gradient(180deg, #1A4591 0%, #631E2F 100%);
     border-radius: 6px;
     /* width: 110%; */
-    margin-bottom: 19rem;
+    /* margin-bottom: 19rem; */
+  height: 34vh;
+
 
 }
 
@@ -4982,9 +4984,20 @@ html{
     width: 106%;
   }
   .App img{
-    margin-left: -27px;
+    /* margin-left: -27px; */
+    margin-left: -58px;
+    padding: 24px;
   }
   .conbtn {
     margin-bottom: 3rem;
+  }
+  .giftext{
+    margin-left: -49px;
+  }
+  .listingInput{
+    margin-left: -48px;
+  }
+  .butNbtn{
+    margin-left: -49px;
   }
 }
