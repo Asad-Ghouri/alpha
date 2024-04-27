@@ -455,7 +455,7 @@ function Mint() {
                 className={selectedOption === "option1" ? "flex hma" : "flex hma flexb"}
               >
                 <div
-                className="flex flex-col gap-8 border border-gray-700 rounded-xl p-12"
+                className="flex flex-col gap-8 border border-gray-700 rounded-xl p-12 fmbs"
                   style={{
                     margin: "0 10px",
                     padding: "10px",
@@ -536,7 +536,7 @@ function Mint() {
                   selectedOption === "option1" ? "flex hma" : "flex flexb hma flexd"
                 }
               >
-                <div
+                <div className="fmbs"
                   style={{
                     margin: "0 10px",
                     padding: "10px",
@@ -609,7 +609,7 @@ function Mint() {
                   selectedOption === "option1" ? "flex hma" : "flex flexb hma flexd"
                 }
               >
-                <div
+                <div className="fmbs"
                   style={{
                     margin: "0 10px",
                     padding: "10px",
@@ -695,7 +695,7 @@ function Mint() {
                     : "flex flexb  flexfortopg flexc"
                 }
               >
-                <div
+                <div className="fmbs"
                   style={{
                     margin: "0 10px",
                     padding: "10px",
@@ -786,7 +786,7 @@ function Mint() {
                     : "flex flexb flexc flexfortopg"
                 }
               >
-                <div
+                <div className="fmbs"
                   style={{
                     margin: "0 10px",
                     padding: "10px",
@@ -877,7 +877,7 @@ function Mint() {
                     : "flex flexb flexc flexfortopg"
                 }
               >
-                <div
+                <div className="fmbs"
                   style={{
                     margin: "0 10px",
                     padding: "10px",

@@ -4957,7 +4957,8 @@ html{
     border-radius: 6px;
     /* width: 110%; */
     /* margin-bottom: 19rem; */
-  height: 34vh;
+  /* height: 34vh; */
+  height: 526px;
 
 
 }
@@ -5000,4 +5001,22 @@ html{
   .butNbtn{
     margin-left: -49px;
   }
+}
+
+
+@media  (min-width: 391px) and (max-width: 529px) {
+ 
+  .fmbs{
+    height: auto!important;
+    width: 377px!important;
+    margin-left: 51px!important;
+  }
+}
+
+@media  (min-width: 250px) and (max-width: 391px) {
+ 
+  .fmbs{
+    margin-left: 32px!important;
+  }
+
 }
