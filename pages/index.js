@@ -360,7 +360,7 @@ function Mint(props) {
                 }}
               >
                 <img
-                  src="https://itishstudios.net/assert/ezgif.com-video-to-gif.gif"
+                  src="https://sovanza.com/assert/1.gif"
                   alt="GIF 1"
                   style={{
                     width: "100%",
@@ -390,7 +390,7 @@ function Mint(props) {
                 }}
               >
                 <img
-                  src="https://itishstudios.net/assert/2.gif"
+                  src="https://sovanza.com/assert/2.gif"
                   alt="GIF 2"
                   style={{
                     width: "100%",
@@ -421,7 +421,7 @@ function Mint(props) {
                 }}
               >
                 <img
-                  src="https://itishstudios.net/assert/3.gif"
+                  src="https://sovanza.com/assert/3.gif"
                   alt="GIF 3"
                   style={{
                     width: "100%",
@@ -462,7 +462,7 @@ function Mint(props) {
                 }}
               >
                 <img
-                  src="https://itishstudios.net/assert/4.gif"
+                  src="https://sovanza.com/assert/4.gif"
                   alt="GIF 1"
                   style={{
                     width: "100%",
@@ -492,7 +492,7 @@ function Mint(props) {
                 }}
               >
                 <img
-                  src="https://itishstudios.net/assert/five.gif"
+                  src="https://sovanza.com/assert/5.gif"
                   alt="GIF 5"
                   style={{
                     width: "100%",
@@ -522,7 +522,7 @@ function Mint(props) {
                 }}
               >
                 <img
-                  src="https://itishstudios.net/assert/6.gif"
+                  src="https://sovanza.com/assert/6.gif"
                   alt="GIF 3"
                   style={{
                     width: "100%",

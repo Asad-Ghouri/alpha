@@ -21,7 +21,7 @@ const NFTCard = () => {
       <CardContainer>
         <Card>
           <CardImage
-            src="https://itishstudios.net/assert/ezgif.com-video-to-gif.gif"
+            src="https://sovanza.com/assert/1.gif"
             alt="NFT Title 1"
           />
           <CardBody>
@@ -33,7 +33,7 @@ const NFTCard = () => {
 
         <Card>
           <CardImage
-            src="https://itishstudios.net/assert/2.gif"
+            src="https://sovanza.com/assert/2.gif"
             alt="NFT Title 2"
           />
           <CardBody>
@@ -45,7 +45,7 @@ const NFTCard = () => {
 
         <Card>
           <CardImage
-            src="https://itishstudios.net/assert/3.gif"
+            src="https://sovanza.com/assert/3.gif"
             alt="NFT Title 3"
           />
           <CardBody>

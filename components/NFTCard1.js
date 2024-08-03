@@ -20,7 +20,7 @@ const NFTCard1 = () => {
       <CardContainer>
         <Card>
           <CardImage
-            src="https://itishstudios.net/assert/4.gif"
+            src="https://sovanza.com/assert/4.gif"
             alt="NFT Title 1"
           />
           <CardBody>
@@ -32,7 +32,7 @@ const NFTCard1 = () => {
 
         <Card>
           <CardImage
-            src="https://itishstudios.net/assert/five.gif"
+            src="https://sovanza.com/assert/5.gif"
             alt="NFT Title 2"
           />
           <CardBody>
@@ -44,7 +44,7 @@ const NFTCard1 = () => {
 
         <Card>
           <CardImage
-            src="https://itishstudios.net/assert/6.gif"
+            src="https://sovanza.com/assert/6.gif"
             alt="NFT Title 3"
           />
           <CardBody>
