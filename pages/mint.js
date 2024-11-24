@@ -475,7 +475,7 @@ function Mint() {
                   <div className="giftext">
                     STARTER
                     {/* <br /> */}
-                    (20Matic)
+                    (20POL)
                   </div>
                   <div>
                     <form
@@ -557,7 +557,7 @@ function Mint() {
                   <div className="giftext">
                     Basic
                     {/* <br /> */}
-                    (50Matic)
+                    (50POL)
                   </div>
                   <div>
                     <form
@@ -629,7 +629,7 @@ function Mint() {
                   <div className="giftext">
                     STANDARD
                     {/* <br /> */}
-                    (100Matic)
+                    (100POL)
                   </div>
                   <div>
                     <form
@@ -715,7 +715,7 @@ function Mint() {
                   <div className="giftext">
                     VIP
                     {/* <br /> */}
-                    (500Matic)
+                    (500POL)
                   </div>
                   <div>
                     <form
@@ -806,7 +806,7 @@ function Mint() {
                   <div className="giftext">
                     PREMIUM
                     {/* <br /> */}
-                    (1000Matic)
+                    (1000POL)
                   </div>
                   <div>
                     <form
@@ -897,7 +897,7 @@ function Mint() {
                   <div className="giftext">
                     DIAMOND
                     {/* <br /> */}
-                    (5000Matic)
+                    (5000POL)
                   </div>
 
                   <div>
