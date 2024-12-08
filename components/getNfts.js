@@ -24,7 +24,7 @@ export default function GetNfts(props) {
     }
 
     getData();  // Call the function to fetch NFTs
-  }, []); // Empty dependency array to call only once on mount
+  }, [address]); // Empty dependency array to call only once on mount
 
   return (
     <>

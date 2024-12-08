@@ -41,27 +41,12 @@ const Stake: NextPage = () => {
         [address]
     );
 
-    // useEffect(() => {
-    //     if (!contract || !address) return;
-
-    //     async function loadClaimableRewards() {
-    //         const stakeInfo = await contract?.call("getStakeInfo", [address]);
-    //         console.log("rewards are " + stakeInfo)
-    //         setClaimableRewards(stakeInfo[1]);
-    //     }
-
-    //     loadClaimableRewards();
-    // }, [address, contract, claimableRewards, setClaimableRewards]);
-
-
-
     const minvalue = 2000001;
     const maxval = 3000000;
     return (
         <>
             <div className={address ? "stake loadingstake" : "stake loadingstake"}>
 
-                {/* <Header /> */}
                 <div
                     className={
                         !address
@@ -74,7 +59,6 @@ const Stake: NextPage = () => {
                     {!address ? (
 
                         <div className="connect"> <ConnectWallet /> </div>
-                        // undefined
                     ) : (
                         <div className={styles.container}>
                         <div className=""> <ConnectWallet /> </div>
