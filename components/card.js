@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
 
@@ -61,24 +62,71 @@ export default function Card(props) {
   }
   return (
     <section className={styles.cardContainer}>
-      {nft?.name ? <h1>{nft.name}</h1> : <h1>No NFT title can be shown.</h1>}
-      {nftImage ? <img src={nftImage} /> : <p>No NFT image can be shown.</p>}
-      {props.id ? (
-        <h3 onClick={handleCopyClick}>id is : {props.id}</h3>
-      ) : (
-        <p>No id can be shown.</p>
-      )}
-      <ToastContainer />
-
-      <br />
-      <Web3Button
-        contractAddress={props.stakingContractAddres}
-        action={() => {
-          stakeNft();
-        }}
-      >
-        stake
-      </Web3Button>
-    </section>
+    {/* Display NFT name based on ID ranges */}
+    {props.id ? (
+      <>
+        {props.id >= 0 && props.id <= 1000000 ? (
+          <h1>Starter</h1>
+        ) : props.id >= 1000001 && props.id <= 2000000 ? (
+          <h1>Basic</h1>
+        ) : props.id >= 2000001 && props.id <= 3000000 ? (
+          <h1>Standard</h1>
+        ) : props.id >= 3000001 && props.id <= 4000000 ? (
+          <h1>VIP</h1>
+        ) : props.id >= 4000001 && props.id <= 5000000 ? (
+          <h1>Premium</h1>
+        ) : props.id >= 5000001 && props.id <= 6000000 ? (
+          <h1>Diamond</h1>
+        ) : (
+          <h1>No NFT title can be shown.</h1>
+        )}
+      </>
+    ) : (
+      <h1>No NFT title can be shown.</h1>
+    )}
+  
+    {/* Display NFT image based on ID ranges */}
+    {props.id ? (
+      <>
+        {props.id >= 0 && props.id <= 1000000 ? (
+          <img src="https://giankycoin.com/wp-content/uploads/2024/04/starter.gif" alt="Starter" />
+        ) : props.id >= 1000001 && props.id <= 2000000 ? (
+          <img src="https://giankycoin.com/wp-content/uploads/2024/04/baicgk.gif" alt="Basic" />
+        ) : props.id >= 2000001 && props.id <= 3000000 ? (
+          <img src="https://giankycoin.com/wp-content/uploads/2024/04/standardgk.gif" alt="Standard" />
+        ) : props.id >= 3000001 && props.id <= 4000000 ? (
+          <img src="https://giankycoin.com/wp-content/uploads/2024/04/vipgk.gif" alt="VIP" />
+        ) : props.id >= 4000001 && props.id <= 5000000 ? (
+          <img src="https://giankycoin.com/wp-content/uploads/2024/04/piem.gif" alt="Premium" />
+        ) : props.id >= 5000001 && props.id <= 6000000 ? (
+          <img src="https://giankycoin.com/wp-content/uploads/2024/04/diamondet.gif" alt="Diamond" />
+        ) : (
+          <p>No NFT image can be shown.</p>
+        )}
+      </>
+    ) : (
+      <p>No NFT image can be shown.</p>
+    )}
+  
+    {/* Display ID if available */}
+    {props.id ? (
+      <h3 onClick={handleCopyClick}>id is : {props.id}</h3>
+    ) : (
+      <p>No id can be shown.</p>
+    )}
+  
+    <ToastContainer />
+  
+    <br />
+    <Web3Button
+      contractAddress={props.stakingContractAddres}
+      action={() => {
+        stakeNft();
+      }}
+    >
+      stake
+    </Web3Button>
+  </section>
+  
   );
 }

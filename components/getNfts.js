@@ -33,7 +33,6 @@ export default function GetNfts(props) {
           {nfts.map((nft) => {
             // Filter NFTs based on conditions like token_id, min/max value, and symbol
             return (
-              nft.metadata &&
               nft.token_id > props.minvalue &&
               nft.token_id < props.maxvalue &&
               nft.symbol === "GK" && (
@@ -43,6 +42,7 @@ export default function GetNfts(props) {
                   id={nft.token_id}
                   stakingContractAddres={props.stakingContractAddres}
                 />
+                
               )
             );
           })}
