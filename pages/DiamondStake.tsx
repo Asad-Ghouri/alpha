@@ -22,9 +22,9 @@ import ClaimableRewards from "../components/ClaimableRewards"
 
 const Stake: NextPage = () => {
 
-    const nftDropContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
-    const stakingContractAddress = "0x960Add0903a902E9e902d42364304B4C0A47b423";
-    const tokenContractAddress = "0x370806781689E670f85311700445449aC7C3Ff7a";
+    const nftDropContractAddress = "0x106fb804D03D4EA95CaeFA45C3215b57D8E6835D";
+    const stakingContractAddress = "0x8e5c4aFd3ba4380005b4E422BFdA178Ab25C983D";
+    const tokenContractAddress = "0x64487539aa9d61Bdc652A5755bbe30Ee96cFcEb2";
 
     const address = useAddress();
     const { contract: nftDropContract } = useContract(
