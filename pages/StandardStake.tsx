@@ -20,9 +20,9 @@ import LoggedIn from "../components/loggedIn";
 import ClaimableRewards from "../components/ClaimableRewards"
 const Stake: NextPage = () => {
 
-    const nftDropContractAddress = "0xdc91E2fD661E88a9a1bcB1c826B5579232fc9898";
-    const stakingContractAddress = "0xcdc5bAba24A8f6920307ee870632ab1B1F87C25C";
-    const tokenContractAddress = "0x370806781689E670f85311700445449aC7C3Ff7a";
+    const nftDropContractAddress = "0x106fb804D03D4EA95CaeFA45C3215b57D8E6835D";
+    const stakingContractAddress = "0x649c86f3438d1129DDc912A44E90Ea9F3F973D4B";
+    const tokenContractAddress = "0x64487539aa9d61Bdc652A5755bbe30Ee96cFcEb2";
 
     const address = useAddress();
     const { contract: nftDropContract } = useContract(
