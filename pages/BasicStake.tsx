@@ -74,7 +74,7 @@ const Stake: NextPage = () => {
                     {!address ? (
 
                         <div className="connect"> <ConnectWallet /> </div>
-                        // undefined
+                        // undefined address
                     ) : (
                         <div className={styles.container}>
                         <div className=""> <ConnectWallet /> </div>
